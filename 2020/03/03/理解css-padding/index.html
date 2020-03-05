@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//noney.github.io">
   <title>理解css-padding | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面padding是盒模形中的内边距。中规中矩，兼容性很好。 padding与容器的尺寸block元素    宽度值固定 宽度值为auto box-sizing 值为 border-box     会影响元素宽度 不会影响元素宽度 不会影响元素宽度 padding值大于宽度时会影响    高度值无论为什么，都会影响元素高度。">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面padding是盒模形中的内边距。中规中矩，兼容性很好。 padding与容器的尺寸block元素    宽度值固定 宽度值为auto box-sizing 值为 border-box     会影响元素宽度 不会影响元素宽度 不会影响元素宽度 padding值大于宽度时会影响    高度值无论是什么，都会影响元素高度。">
 <meta name="keywords" content="日积月累,CSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解css-padding">
 <meta property="og:url" content="//noney.github.io/2020/03/03/理解css-padding/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面padding是盒模形中的内边距。中规中矩，兼容性很好。 padding与容器的尺寸block元素    宽度值固定 宽度值为auto box-sizing 值为 border-box     会影响元素宽度 不会影响元素宽度 不会影响元素宽度 padding值大于宽度时会影响    高度值无论为什么，都会影响元素高度。">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面padding是盒模形中的内边距。中规中矩，兼容性很好。 padding与容器的尺寸block元素    宽度值固定 宽度值为auto box-sizing 值为 border-box     会影响元素宽度 不会影响元素宽度 不会影响元素宽度 padding值大于宽度时会影响    高度值无论是什么，都会影响元素高度。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-03T09:04:21.883Z">
+<meta property="og:updated_time" content="2020-03-04T02:40:00.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解css-padding">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面padding是盒模形中的内边距。中规中矩，兼容性很好。 padding与容器的尺寸block元素    宽度值固定 宽度值为auto box-sizing 值为 border-box     会影响元素宽度 不会影响元素宽度 不会影响元素宽度 padding值大于宽度时会影响    高度值无论为什么，都会影响元素高度。">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面padding是盒模形中的内边距。中规中矩，兼容性很好。 padding与容器的尺寸block元素    宽度值固定 宽度值为auto box-sizing 值为 border-box     会影响元素宽度 不会影响元素宽度 不会影响元素宽度 padding值大于宽度时会影响    高度值无论是什么，都会影响元素高度。">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -207,16 +207,21 @@ var _hmt = _hmt || [];
 </tr>
 </tbody>
 </table>
-<p>高度值无论为什么，都会影响元素高度。</p>
+<p>高度值无论是什么，都会影响元素高度。</p>
 <a id="more"></a>
 <p><em>inline元素</em></p>
 <p>会影响元素宽度，不会影响元素高度（会占据空间，加背影色验证）。</p>
 <p><em>利用inline元素，实现分隔符</em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>注册<span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span>退出登录<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">2px</span> solid;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">13px</span> <span class="number">5px</span> <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="padding负值和百分比值"><a href="#padding负值和百分比值" class="headerlink" title="padding负值和百分比值"></a>padding负值和百分比值</h4><p><em>padding不支持负值</em></p>
-<p><em>padding百分笔值是根据**</em>父元素*<em>宽度计算的</em></p>
-<p><em>inline元素同样的padding，高度会大于宽度（设置font-size: 0会解决这个问题，行内元素的空白节点所置），会断行</em></p>
+<h4 id="padding负值和百分比值"><a href="#padding负值和百分比值" class="headerlink" title="padding负值和百分比值"></a>padding负值和百分比值</h4><ul>
+<li><p>padding不支持负值</p>
+</li>
+<li><p>padding百分笔值是根据<strong>父元素</strong>宽度计算的，如果当前元素为定位元素，其padding值是根据第一个有定位属性的祖先元素计算的</p>
+</li>
+<li><p>inline元素同样的padding，高度会大于宽度（设置font-size: 0会解决这个问题，行内元素的空白节点所置），会断行</p>
+</li>
+</ul>
 <h4 id="标签元素的内置padding"><a href="#标签元素的内置padding" class="headerlink" title="标签元素的内置padding"></a>标签元素的内置padding</h4><h4 id="padding与图形绘制"><a href="#padding与图形绘制" class="headerlink" title="padding与图形绘制"></a>padding与图形绘制</h4><p><em>实现三道杠</em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"line-tri"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.line-tri</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">30px</span> solid;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">30px</span> solid;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: currentColor;</span><br><span class="line">    <span class="attribute">background-clip</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -225,7 +230,7 @@ var _hmt = _hmt || [];
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.eye</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: currentColor;</span><br><span class="line">    <span class="attribute">background-clip</span>: content-box;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">10px</span> solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="padding与布局"><a href="#padding与布局" class="headerlink" title="padding与布局"></a>padding与布局</h4><p><em>两栏自适应布局</em></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"mm.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"auto"</span>&gt;</span>中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来。<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.auto</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.auto</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"mm.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来。</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">120px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.auto</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.imooc.com/learn/710" target="_blank" rel="noopener">CSS深入理解之padding</a></p>
@@ -315,6 +320,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/03/03/理解css-margin/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          理解css-margin
+        
+      </div>
+    </a>
   
   
     <a href="/2020/03/02/理解css-border/" id="article-nav-older" class="article-nav-link-wrap">
@@ -438,19 +452,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,11 +472,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,7 +488,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
