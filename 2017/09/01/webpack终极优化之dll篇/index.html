@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。 当我们用到这些库或框架的时">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-02-27T08:02:46.981Z">
+<meta property="og:updated_time" content="2020-03-10T10:27:42.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack终极优化之dll篇">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。 当我们用到这些库或框架的时">
@@ -187,7 +187,7 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><em>—— 同时发表于<a href="http://noney.coding.me/" target="_blank" rel="noopener">coding</a></em></p>
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
 <h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。</p>
 <p>当我们用到这些库或框架的时候，我们用webpack打包的时候往往不需要把它们和逻辑代码打到一起，因为第三方库我们不需要去对它进行经常更新，需逻辑代码是我们需要经常更新的，而且如果每次我们修改逻辑代码的时候都要打包第三方库或框架，还会拖慢打包构建速度，做了一些无用功，所以接下来就和大家一起讨论一下如何单独打包第三方库或框架，我们的主角要登场了，那就是dll。</p>
@@ -434,6 +434,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
               </li>
              
@@ -443,10 +447,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
