@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>理解css z-index | 三人行必有我师</title>
+  <title>理解css relative | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面z-index表示元素的层叠顺序。 z-index基础属性值  z-index: auto（默认值） z-index:  整数值 z-index: inherit 继承  特性  支持负值 支持css animation动画 在css2.1时代，需要和定位元素配合使用">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面relative表示元素相对定位。 relative限制absolute 限制定位，absolute位置被限制在relative内 限制层级，absolute层级以relative层级为准 限制overflow，absolute是不受overflow限制，加上relative，就会被限制。  relative限制fixed 限制层级，a">
 <meta name="keywords" content="日积月累,CSS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解css z-index">
-<meta property="og:url" content="//noney.github.io/2020/03/05/理解css-z-index/index.html">
+<meta property="og:title" content="理解css relative">
+<meta property="og:url" content="//noney.github.io/2020/03/10/理解css-relative/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面z-index表示元素的层叠顺序。 z-index基础属性值  z-index: auto（默认值） z-index:  整数值 z-index: inherit 继承  特性  支持负值 支持css animation动画 在css2.1时代，需要和定位元素配合使用">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面relative表示元素相对定位。 relative限制absolute 限制定位，absolute位置被限制在relative内 限制层级，absolute层级以relative层级为准 限制overflow，absolute是不受overflow限制，加上relative，就会被限制。  relative限制fixed 限制层级，a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-09T07:54:06.973Z">
+<meta property="og:updated_time" content="2020-03-10T09:42:54.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="理解css z-index">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面z-index表示元素的层叠顺序。 z-index基础属性值  z-index: auto（默认值） z-index:  整数值 z-index: inherit 继承  特性  支持负值 支持css animation动画 在css2.1时代，需要和定位元素配合使用">
+<meta name="twitter:title" content="理解css relative">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面relative表示元素相对定位。 relative限制absolute 限制定位，absolute位置被限制在relative内 限制层级，absolute层级以relative层级为准 限制overflow，absolute是不受overflow限制，加上relative，就会被限制。  relative限制fixed 限制层级，a">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-理解css-z-index" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-理解css-relative" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      理解css z-index
+      理解css relative
     </h1>
   
 
         
-        <a href="/2020/03/05/理解css-z-index/" class="archive-article-date">
-  	<time datetime="2020-03-05T06:40:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
+        <a href="/2020/03/10/理解css-relative/" class="archive-article-date">
+  	<time datetime="2020-03-10T06:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
 </a>
         
       </header>
@@ -189,121 +189,27 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://noney.coding.me/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>z-index表示元素的层叠顺序。</p>
-<h4 id="z-index基础"><a href="#z-index基础" class="headerlink" title="z-index基础"></a>z-index基础</h4><p><em>属性值</em></p>
-<ul>
-<li>z-index: auto（默认值）</li>
-<li>z-index: <integer> 整数值</integer></li>
-<li>z-index: inherit 继承</li>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>relative表示元素相对定位。</p>
+<h4 id="relative限制absolute"><a href="#relative限制absolute" class="headerlink" title="relative限制absolute"></a>relative限制absolute</h4><ul>
+<li>限制定位，absolute位置被限制在relative内</li>
+<li>限制层级，absolute层级以relative层级为准</li>
+<li>限制overflow，absolute是不受overflow限制，加上relative，就会被限制。</li>
 </ul>
-<p><em>特性</em></p>
-<ul>
-<li>支持负值</li>
-<li>支持css animation动画</li>
-<li>在css2.1时代，需要和定位元素配合使用</li>
+<h4 id="relative限制fixed"><a href="#relative限制fixed" class="headerlink" title="relative限制fixed"></a>relative限制fixed</h4><ul>
+<li>限制层级，absolute层级以relative层级为准</li>
 </ul>
 <a id="more"></a>
-<h4 id="z-index与定位元素"><a href="#z-index与定位元素" class="headerlink" title="z-index与定位元素"></a>z-index与定位元素</h4><p><em>无嵌套情况</em></p>
-<ul>
-<li>后来者居上</li>
-<li>哪个z-index值大，哪个在上面</li>
+<h4 id="relative与定位"><a href="#relative与定位" class="headerlink" title="relative与定位"></a>relative与定位</h4><ul>
+<li>相对自身</li>
+<li>无侵入，不会影响其它元素布局</li>
+<li>top/bottom同时存在，bottom不起作用</li>
+<li>left/right同时存在，right不起作用</li>
 </ul>
-<p><em>嵌套情况</em></p>
-<ul>
-<li>祖先优先原则，前提是z-index的值是数值，非auto</li>
+<h4 id="relative与层级"><a href="#relative与层级" class="headerlink" title="relative与层级"></a>relative与层级</h4><p>z-index: auto不会限制absolute层级，不包括ie6/ie7，因为ie6/ie7下z-index: auto也会创建层叠上下文。</p>
+<h4 id="最小化影响元则"><a href="#最小化影响元则" class="headerlink" title="最小化影响元则"></a>最小化影响元则</h4><ul>
+<li>尽量避免使用relative，absolute定位不依赖relative</li>
 </ul>
-<h4 id="层叠上下文和层叠基础"><a href="#层叠上下文和层叠基础" class="headerlink" title="层叠上下文和层叠基础"></a>层叠上下文和层叠基础</h4><p><em>层叠上下文，是元素在Z轴上的表现</em></p>
-<ul>
-<li>页面根元素天生具有层叠上下文</li>
-<li>z-index值为数值的定位元素也具有层叠上下文</li>
-<li>其它属性</li>
-</ul>
-<p><em>层叠水平</em></p>
-<ul>
-<li>决定了同一个层叠上下文中元素在Z轴上的显示顺序</li>
-<li>层叠水平不等于z-index，普通元素也有层叠水平</li>
-</ul>
-<h4 id="层叠顺序"><a href="#层叠顺序" class="headerlink" title="层叠顺序"></a>层叠顺序</h4><p><em>7阶层叠水平</em></p>
-<ul>
-<li>层叠上下文background/border</li>
-<li>负z-index</li>
-<li>block块状水平盒子</li>
-<li>float浮动盒子</li>
-<li>Inline/inline-block水平盒子</li>
-<li>z-index: auto或看成z-index: 0，不依赖z-index的层叠上下文</li>
-<li>正z-index</li>
-</ul>
-<h4 id="z-index与层叠上下文"><a href="#z-index与层叠上下文" class="headerlink" title="z-index与层叠上下文"></a>z-index与层叠上下文</h4><ul>
-<li>定位元素默认z-index: auto，可以看成z-index: 0</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"z1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"z2"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.z1</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.z2</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>z-index值不为auto的定位元素会创建层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"z1"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>z-index层叠顺序受限于层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box2"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box1</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box1</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box2</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">9999999</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="其它css属性与层叠上下文"><a href="#其它css属性与层叠上下文" class="headerlink" title="其它css属性与层叠上下文"></a>其它css属性与层叠上下文</h4><ul>
-<li>父元素为display: flex或inline-flex，子元素z-index值不为auto</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">div</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>opacity不等于1与层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>transform不等于none与层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(0);</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Mix-blend-mode不等于normal与层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">mix-blend-mode</span>: screen;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>filter与层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">blur</span>(5px);</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>isolation: idsolate与层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">isolation</span>: idsolate;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>position: fixed与层叠上下文（不需要z-index值辅助）</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>will-change与层叠上下文</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">will-change</span>: transform;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: -<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Webkit-overflow-scrolling与层叠上下文</li>
-</ul>
-<h4 id="z-index与其它css属性层叠上下文"><a href="#z-index与其它css属性层叠上下文" class="headerlink" title="z-index与其它css属性层叠上下文"></a>z-index与其它css属性层叠上下文</h4><ul>
-<li><p>不依赖z-index值创建层叠上下文的层叠顺序均是z-index: auto级别</p>
-</li>
-<li><p>依赖z-index值创建层叠上下文的层叠顺序取决于z-index值</p>
-</li>
-</ul>
-<blockquote>
-<p>position值为relative/absolute或fixed（部分浏览器）</p>
-<p>Display: flex|inline-flex的子flex项</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img.jpg"</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span><span class="selector-class">.a</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.imooc.com/learn/643" target="_blank" rel="noopener">CSS深入理解之z-index</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.imooc.com/learn/565" target="_blank" rel="noopener">CSS深入理解之relative</a></p>
 
       
 
@@ -377,7 +283,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/03/05/理解css-z-index/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/03/10/理解css-relative/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -391,18 +297,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/03/10/理解css-relative/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          理解css relative
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/03/理解css-margin/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">理解css margin</div>
+    <a href="/2020/03/05/理解css-z-index/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">理解css z-index</div>
       <i class="icon-circle-right"></i>
     </a>
   
