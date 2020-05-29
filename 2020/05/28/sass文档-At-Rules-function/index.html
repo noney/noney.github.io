@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>sass文档-At-Rules-forward | 三人行必有我师</title>
+  <title>sass文档-At-Rules-function | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面@forward可以用来将多个partials集合起来，使用@use加载它们的mixin、函数、变量。 12345// forms/_index.scss@forward &apos;input&apos;;@forward &apos;textarea&apos;;@forward &apos;select&apos;;@forward &apos;buttons&apos;; 12// styles.scss@">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面@function可以用来进行样式的计算，可以在样式表的中重复调用。同变量名一样，-_是不区分的，也就是reset-list与reset_list表示同一个函数，这是历史遗留问题，在早期版本sass只允许函数中出现_。 123456789101112@function pow($base, $exponent) &amp;#123;    $r">
 <meta name="keywords" content="日积月累,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sass文档-At-Rules-forward">
-<meta property="og:url" content="//noney.github.io/2020/05/25/sass文档-At-Rules-forward/index.html">
+<meta property="og:title" content="sass文档-At-Rules-function">
+<meta property="og:url" content="//noney.github.io/2020/05/28/sass文档-At-Rules-function/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@forward可以用来将多个partials集合起来，使用@use加载它们的mixin、函数、变量。 12345// forms/_index.scss@forward &apos;input&apos;;@forward &apos;textarea&apos;;@forward &apos;select&apos;;@forward &apos;buttons&apos;; 12// styles.scss@">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@function可以用来进行样式的计算，可以在样式表的中重复调用。同变量名一样，-_是不区分的，也就是reset-list与reset_list表示同一个函数，这是历史遗留问题，在早期版本sass只允许函数中出现_。 123456789101112@function pow($base, $exponent) &amp;#123;    $r">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-25T08:34:16.226Z">
+<meta property="og:updated_time" content="2020-05-29T07:18:39.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass文档-At-Rules-forward">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@forward可以用来将多个partials集合起来，使用@use加载它们的mixin、函数、变量。 12345// forms/_index.scss@forward &apos;input&apos;;@forward &apos;textarea&apos;;@forward &apos;select&apos;;@forward &apos;buttons&apos;; 12// styles.scss@">
+<meta name="twitter:title" content="sass文档-At-Rules-function">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@function可以用来进行样式的计算，可以在样式表的中重复调用。同变量名一样，-_是不区分的，也就是reset-list与reset_list表示同一个函数，这是历史遗留问题，在早期版本sass只允许函数中出现_。 123456789101112@function pow($base, $exponent) &amp;#123;    $r">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass文档-At-Rules-forward" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sass文档-At-Rules-function" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      sass文档-At-Rules-forward
+      sass文档-At-Rules-function
     </h1>
   
 
         
-        <a href="/2020/05/25/sass文档-At-Rules-forward/" class="archive-article-date">
-  	<time datetime="2020-05-25T07:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
+        <a href="/2020/05/28/sass文档-At-Rules-function/" class="archive-article-date">
+  	<time datetime="2020-05-28T09:48:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
 </a>
         
       </header>
@@ -189,23 +189,40 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@forward</code>可以用来将多个<code>partials</code>集合起来，使用<code>@use</code>加载它们的<code>mixin、函数、变量</code>。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// forms/_index.scss</span></span><br><span class="line">@forward <span class="string">'input'</span>;</span><br><span class="line">@forward <span class="string">'textarea'</span>;</span><br><span class="line">@forward <span class="string">'select'</span>;</span><br><span class="line">@forward <span class="string">'buttons'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// styles.scss</span></span><br><span class="line">@use <span class="string">'forms'</span>; <span class="comment">// 导入`forms` 命名空间下的所有被转发的成员</span></span><br></pre></td></tr></table></figure>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@function</code>可以用来进行样式的计算，可以在样式表的中重复调用。同变量名一样，<code>-_</code>是不区分的，也就是<code>reset-list与reset_list</code>表示同一个<code>函数</code>，这是历史遗留问题，在早期版本<code>sass</code>只允许<code>函数</code>中出现<code>_</code>。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@function pow(<span class="variable">$base</span>, <span class="variable">$exponent</span>) &#123;</span><br><span class="line">    <span class="variable">$result</span>: <span class="number">1</span>;</span><br><span class="line">    @<span class="keyword">for</span> $_ from 1 through <span class="variable">$exponent</span> &#123;</span><br><span class="line">        <span class="variable">$result</span>: <span class="variable">$result</span> * <span class="variable">$base</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    @return <span class="variable">$result</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: pow(<span class="number">4</span>, <span class="number">3</span>) * <span class="number">1px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="添加前缀"><a href="#添加前缀" class="headerlink" title="添加前缀"></a>添加前缀</h4><p>通过<code>@forward &quot;&lt;url&gt;&quot; as &lt;prefix&gt;-*</code>方式来添加前缀，它会为模块的每个<code>mixin、函数、变量</code>添加前缀。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_list.scss</span></span><br><span class="line">@<span class="keyword">mixin</span> reset &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bootstrap.scss</span></span><br><span class="line">@forward <span class="string">"src/list"</span> as list-*;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// styles.scss</span></span><br><span class="line">@use <span class="string">"bootstrap"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> bootstrap.list-reset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="控制显示"><a href="#控制显示" class="headerlink" title="控制显示"></a>控制显示</h4><p>有时，我们可能希望只显示一部分<code>mixin、函数、变量</code>，我们可以使用<code>@forward &quot;&lt;url&gt;&quot; hide &lt;members...&gt;</code>来控制哪些成员被隐藏，使用<code>@forward &quot;&lt;url&gt;&quot; show &lt;members...&gt;</code>控制哪些成员被显示。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_list.scss</span></span><br><span class="line"><span class="variable">$horizontal-list-gap</span>: <span class="number">2em</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> list-reset &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> list-horizontal &#123;</span><br><span class="line">    @<span class="keyword">include</span> reset;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">margin</span>: &#123;</span><br><span class="line">      left: -<span class="number">2px</span>;</span><br><span class="line">      <span class="attribute">right</span>: <span class="variable">$horizontal-list-gap</span>;</span><br><span class="line">  &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bootstrap.scss</span></span><br><span class="line">@forward <span class="string">"src/list"</span> hide list-reset, <span class="variable">$horizontal-list-gap</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="配置模块"><a href="#配置模块" class="headerlink" title="配置模块"></a>配置模块</h4><p><code>@forword</code>也可以对模块进行配置。它和<code>@use</code>的区别是，它可以在配置中使用<code>!default</code>，允许下游覆盖它。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _library.scss</span></span><br><span class="line"><span class="variable">$black</span>: <span class="number">#000</span> !default;</span><br><span class="line"><span class="variable">$border-radius</span>: <span class="number">0.25rem</span> !default;</span><br><span class="line"><span class="variable">$box-shadow</span>: <span class="number">0</span> <span class="number">0.5rem</span> <span class="number">1rem</span> rgba(<span class="variable">$black</span>, <span class="number">0.15</span>) !default;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$border-radius</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">$box-shadow</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _opinionated.scss</span></span><br><span class="line">@forward <span class="string">'library'</span> with (</span><br><span class="line">    <span class="variable">$black</span>: <span class="number">#222</span> !default,</span><br><span class="line">    <span class="variable">$border-radius</span>: 0.1rem !default</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'opinionated'</span> with (<span class="variable">$black</span>: <span class="number">#333</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.jianshu.com/p/ab700c9ba92a" target="_blank" rel="noopener">Sass Module 介绍</a><br><a href="https://sass-lang.com/documentation/at-rules/forward" target="_blank" rel="noopener">@forward</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">64px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>虽然函数在技术上可以设置全局变量，但是强烈不建议这样做。使用mixin来处理，使用函数来计算值。</p>
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><ul>
+<li>可选参数 同<code>mxin</code></li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@function invert(<span class="variable">$color</span>, <span class="variable">$amount</span>: 100%) &#123;</span><br><span class="line">    <span class="variable">$inverse</span>: change-color(<span class="variable">$color</span>, <span class="variable">$hue</span>: hue(<span class="variable">$color</span>) + <span class="number">180</span>);</span><br><span class="line">    @return mix(<span class="variable">$inverse</span>, <span class="variable">$color</span>, <span class="variable">$amount</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$primary-color</span>: <span class="number">#036</span>;</span><br><span class="line"><span class="selector-class">.header</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: invert(<span class="variable">$primary-color</span>, <span class="number">80%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.header</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#523314</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>关键字参数 同<code>mixin</code></li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary-color</span>: <span class="number">#036</span>;</span><br><span class="line"><span class="selector-class">.banner</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">$primary-color</span>;</span><br><span class="line">    <span class="attribute">color</span>: scale-color(<span class="variable">$primary-color</span>, <span class="variable">$lightness</span>: +<span class="number">40%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.banner</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#036</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0a85ff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>任意参数 同<code>mixin</code></li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@function sum(<span class="variable">$numbers</span>...) &#123;</span><br><span class="line">    <span class="variable">$sum</span>: <span class="number">0</span>;</span><br><span class="line">    @<span class="keyword">each</span> <span class="variable">$number</span> in <span class="variable">$numbers</span> &#123;</span><br><span class="line">        <span class="variable">$sum</span>: <span class="variable">$sum</span> + <span class="variable">$number</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    @return <span class="variable">$sum</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.micro</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: sum(<span class="number">50px</span>, <span class="number">30px</span>, <span class="number">100px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.micro</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">180px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>接受任意关键字参数 同<code>mixin</code></p>
+</li>
+<li><p>传递任意关键字参数 同<code>mixin</code></p>
+</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$widths</span>: <span class="number">50px</span>, <span class="number">30px</span>, <span class="number">100px</span>;</span><br><span class="line"><span class="selector-class">.micro</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: min(<span class="variable">$widths</span>...);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.micro</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h4><p><code>@return</code>返回计算结果，它只能出现在函数体内，函数必须以它结束。当函数遇到它时，立刻返回计算结果，忽略后面的计算。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:string"</span>;</span><br><span class="line"></span><br><span class="line">@function str-insert(<span class="variable">$string</span>, <span class="variable">$insert</span>, <span class="variable">$index</span>) &#123;</span><br><span class="line">    <span class="comment">// Avoid making new strings if we don't need to.</span></span><br><span class="line">    @<span class="keyword">if</span> string.length(<span class="variable">$string</span>) == 0 &#123;</span><br><span class="line">        @return <span class="variable">$insert</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$before</span>: string.slice(<span class="variable">$string</span>, <span class="number">0</span>, <span class="variable">$index</span>);</span><br><span class="line">    <span class="variable">$after</span>: string.slice(<span class="variable">$string</span>, <span class="variable">$index</span>);</span><br><span class="line">    @return <span class="variable">$before</span> + <span class="variable">$insert</span> + <span class="variable">$after</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="其它函数"><a href="#其它函数" class="headerlink" title="其它函数"></a>其它函数</h4><p>除了自定义函数外，<code>sass</code>提示了很多<code>内置函数</code>，同时它也支持<code>原生css函数</code>。</p>
+<p>除了自定义函数和内置函数外的其它函数，都会被编译为<code>css函数</code>，参数也会被编译为<code>css</code>，按原样包含在函数调用中。这样处理的好处就是在增加新的<code>css函数</code>时，不需要升级<code>sass</code></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> var(--main-bg-color); <span class="comment">// var(--main-bg-color)</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$primary</span>: <span class="number">#f2ece4</span>;</span><br><span class="line"><span class="variable">$accent</span>: <span class="number">#e1d7d2</span>;</span><br><span class="line">@<span class="keyword">debug</span> radial-gradient(<span class="variable">$primary</span>, <span class="variable">$accent</span>); <span class="comment">// radial-gradient(#f2ece4, #e1d7d2)</span></span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/at-rules/function" target="_blank" rel="noopener">@function</a></p>
 
       
 
@@ -279,7 +296,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/05/25/sass文档-At-Rules-forward/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/05/28/sass文档-At-Rules-function/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +310,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/05/25/sass文档-At-Rules-import/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sass文档-At-Rules-import
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/21/sass文档-At-Rules-use/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass文档-At-Rules-@use</div>
+    <a href="/2020/05/28/sass文档-At-Rules-mixin-and-include/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-At-Rules-mixin-and-include</div>
       <i class="icon-circle-right"></i>
     </a>
   

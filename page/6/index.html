@@ -6,20 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>sass文档-At-Rules-forward | 三人行必有我师</title>
+  <title>三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面@forward可以用来将多个partials集合起来，使用@use加载它们的mixin、函数、变量。 12345// forms/_index.scss@forward &apos;input&apos;;@forward &apos;textarea&apos;;@forward &apos;select&apos;;@forward &apos;buttons&apos;; 12// styles.scss@">
-<meta name="keywords" content="日积月累,css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="sass文档-At-Rules-forward">
-<meta property="og:url" content="//noney.github.io/2020/05/25/sass文档-At-Rules-forward/index.html">
+  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="三人行必有我师">
+<meta property="og:url" content="//noney.github.io/page/6/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@forward可以用来将多个partials集合起来，使用@use加载它们的mixin、函数、变量。 12345// forms/_index.scss@forward &apos;input&apos;;@forward &apos;textarea&apos;;@forward &apos;select&apos;;@forward &apos;buttons&apos;; 12// styles.scss@">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-25T08:34:16.226Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass文档-At-Rules-forward">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@forward可以用来将多个partials集合起来，使用@use加载它们的mixin、函数、变量。 12345// forms/_index.scss@forward &apos;input&apos;;@forward &apos;textarea&apos;;@forward &apos;select&apos;;@forward &apos;buttons&apos;; 12// styles.scss@">
+<meta name="twitter:title" content="三人行必有我师">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +163,22 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass文档-At-Rules-forward" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-webpack终极优化之dll篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      sass文档-At-Rules-forward
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/01/webpack终极优化之dll篇/">webpack终极优化之dll篇</a>
     </h1>
   
 
         
-        <a href="/2020/05/25/sass文档-At-Rules-forward/" class="archive-article-date">
-  	<time datetime="2020-05-25T07:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
+        <a href="/2017/09/01/webpack终极优化之dll篇/" class="archive-article-date">
+  	<time datetime="2017-09-01T03:40:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
 </a>
         
       </header>
@@ -189,24 +187,13 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@forward</code>可以用来将多个<code>partials</code>集合起来，使用<code>@use</code>加载它们的<code>mixin、函数、变量</code>。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// forms/_index.scss</span></span><br><span class="line">@forward <span class="string">'input'</span>;</span><br><span class="line">@forward <span class="string">'textarea'</span>;</span><br><span class="line">@forward <span class="string">'select'</span>;</span><br><span class="line">@forward <span class="string">'buttons'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// styles.scss</span></span><br><span class="line">@use <span class="string">'forms'</span>; <span class="comment">// 导入`forms` 命名空间下的所有被转发的成员</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h4 id="添加前缀"><a href="#添加前缀" class="headerlink" title="添加前缀"></a>添加前缀</h4><p>通过<code>@forward &quot;&lt;url&gt;&quot; as &lt;prefix&gt;-*</code>方式来添加前缀，它会为模块的每个<code>mixin、函数、变量</code>添加前缀。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_list.scss</span></span><br><span class="line">@<span class="keyword">mixin</span> reset &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bootstrap.scss</span></span><br><span class="line">@forward <span class="string">"src/list"</span> as list-*;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// styles.scss</span></span><br><span class="line">@use <span class="string">"bootstrap"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> bootstrap.list-reset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="控制显示"><a href="#控制显示" class="headerlink" title="控制显示"></a>控制显示</h4><p>有时，我们可能希望只显示一部分<code>mixin、函数、变量</code>，我们可以使用<code>@forward &quot;&lt;url&gt;&quot; hide &lt;members...&gt;</code>来控制哪些成员被隐藏，使用<code>@forward &quot;&lt;url&gt;&quot; show &lt;members...&gt;</code>控制哪些成员被显示。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_list.scss</span></span><br><span class="line"><span class="variable">$horizontal-list-gap</span>: <span class="number">2em</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> list-reset &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> list-horizontal &#123;</span><br><span class="line">    @<span class="keyword">include</span> reset;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">margin</span>: &#123;</span><br><span class="line">      left: -<span class="number">2px</span>;</span><br><span class="line">      <span class="attribute">right</span>: <span class="variable">$horizontal-list-gap</span>;</span><br><span class="line">  &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bootstrap.scss</span></span><br><span class="line">@forward <span class="string">"src/list"</span> hide list-reset, <span class="variable">$horizontal-list-gap</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="配置模块"><a href="#配置模块" class="headerlink" title="配置模块"></a>配置模块</h4><p><code>@forword</code>也可以对模块进行配置。它和<code>@use</code>的区别是，它可以在配置中使用<code>!default</code>，允许下游覆盖它。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _library.scss</span></span><br><span class="line"><span class="variable">$black</span>: <span class="number">#000</span> !default;</span><br><span class="line"><span class="variable">$border-radius</span>: <span class="number">0.25rem</span> !default;</span><br><span class="line"><span class="variable">$box-shadow</span>: <span class="number">0</span> <span class="number">0.5rem</span> <span class="number">1rem</span> rgba(<span class="variable">$black</span>, <span class="number">0.15</span>) !default;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$border-radius</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">$box-shadow</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _opinionated.scss</span></span><br><span class="line">@forward <span class="string">'library'</span> with (</span><br><span class="line">    <span class="variable">$black</span>: <span class="number">#222</span> !default,</span><br><span class="line">    <span class="variable">$border-radius</span>: 0.1rem !default</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'opinionated'</span> with (<span class="variable">$black</span>: <span class="number">#333</span>);</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.jianshu.com/p/ab700c9ba92a" target="_blank" rel="noopener">Sass Module 介绍</a><br><a href="https://sass-lang.com/documentation/at-rules/forward" target="_blank" rel="noopener">@forward</a></p>
-
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。</p>
+<p>当我们用到这些库或框架的时候，我们用webpack打包的时候往往不需要把它们和逻辑代码打到一起，因为第三方库我们不需要去对它进行经常更新，需逻辑代码是我们需要经常更新的，而且如果每次我们修改逻辑代码的时候都要打包第三方库或框架，还会拖慢打包构建速度，做了一些无用功，所以接下来就和大家一起讨论一下如何单独打包第三方库或框架，我们的主角要登场了，那就是dll。</p>
+<h4 id="使用CommonsChunkPlugin"><a href="#使用CommonsChunkPlugin" class="headerlink" title="使用CommonsChunkPlugin"></a>使用CommonsChunkPlugin</h4><p>webpack官方建议使用CommonsChunkPlugin插件去处理第三方库或框架，它的作用是可以把第三方库或框架放在entry的vendor里面单独打包下面是部分代码完整代码请查看[bingoo]工具</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">entry</span>: &#123;</span><br><span class="line">        <span class="attribute">vendors</span>: [<span class="string">'vue'</span>, <span class="string">'vuex'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">            <span class="attribute">name</span>: [<span class="string">'vendors'</span>],</span><br><span class="line">            <span class="attribute">filename</span>: <span class="string">'vendors.js'</span>,</span><br><span class="line">            <span class="attribute">minChunks</span>: <span class="number">2</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/#more">more >></a>
+        
       
 
       
@@ -219,11 +206,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端工具</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -232,84 +219,16 @@ var _hmt = _hmt || [];
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/05/25/sass文档-At-Rules-forward/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/05/25/sass文档-At-Rules-import/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sass文档-At-Rules-import
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/05/21/sass文档-At-Rules-use/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass文档-At-Rules-@use</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -329,12 +248,12 @@ var _hmt = _hmt || [];
 
 
 
-  
-  
-  
 
   
-
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+    </nav>
   
 
 
@@ -357,8 +276,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
