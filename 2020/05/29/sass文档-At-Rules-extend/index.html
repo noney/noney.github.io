@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@extend扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。 123&amp;lt;div class=&quot;error error--serious&quot;&amp;gt;    Oh no! You&apos;ve been hacked!&amp;lt;/div&amp;gt; 123456789.error &amp;#123;    bord">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-02T07:37:40.146Z">
+<meta property="og:updated_time" content="2020-06-02T08:32:54.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass文档-At-Rules-extend">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@extend扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。 123&amp;lt;div class=&quot;error error--serious&quot;&amp;gt;    Oh no! You&apos;ve been hacked!&amp;lt;/div&amp;gt; 123456789.error &amp;#123;    bord">
@@ -218,7 +218,7 @@ var _hmt = _hmt || [];
 <li>mixin 需要参数配置时，样式的非语义集合，使用<code>mixin</code>可以避免级联问题，并简化配置</li>
 <li>extend 纯样式块扩展时，表示语义类之间的关系时，如<code>.error、.error-serious</code></li>
 </ul>
-<h4 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h4><p>只有简单的选择器才能被扩展，如<code>.info、a</code>，如果<code>.message.info</code>可以被扩展，那么<code>@extend</code>的定义表明，与扩展器匹配的元素将被设计成与<code>.message.info</code>匹配的样式。这和匹配<code>.message</code>和<code>.info</code>是一样的，所以可以用这个代替`@extend .message, .info。</p>
+<h4 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h4><p>只有简单的选择器才能被扩展，如<code>.info、a</code>，如果<code>.message.info</code>可以被扩展，那么<code>@extend</code>的定义表明，与扩展器匹配的元素将被设计成与<code>.message.info</code>匹配的样式。这和匹配<code>.message</code>和<code>.info</code>是一样的，所以可以用这个代替<code>@extend .message, .info</code>。</p>
 <p>类似地，如果<code>.main .info</code>可以被扩展，它会做(几乎)与扩展<code>.info</code>相同的事情。细微的差别不值得让人觉得它在做一些本质上不同的事情，所以这也是不允许的。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.alert</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> .message.info;</span><br><span class="line">    <span class="comment">//      ^^^^^^^^^^^^^</span></span><br><span class="line">    <span class="comment">// Error: Write @extend .message, .info instead.</span></span><br><span class="line"></span><br><span class="line">    @<span class="keyword">extend</span> .main .info;</span><br><span class="line">    <span class="comment">//      ^^^^^^^^^^^</span></span><br><span class="line">    <span class="comment">// Error: write @extend .info instead.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="HTML启发式"><a href="#HTML启发式" class="headerlink" title="HTML启发式"></a>HTML启发式</h4><p>当<code>@extend</code>交错复杂的选择器时，它不会生成所有可能的祖先选择器组合。它可能生成的许多选择器实际上不太可能匹配实际的<code>HTML</code>，并且生成它们会使样式表太大而没有实际价值。相反，它使用了一种启发式方法:它假设每个选择器的祖先将是自包含的，而不与任何其他选择器的祖先交错</p>
@@ -444,19 +444,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,15 +460,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -496,15 +496,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面当@mixin、@function在接收参数时  如果不是我们预期的格式和类型时，可以用@error来中断并报错 如果传递的值并不是理想的值时，可以用@warn来做一个警告。  我们可以使用@debug来做调试，可以使用它来打印变量或者表达式的值，同时还会输出文件名和行号。 error@error &amp;lt;expression&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-02T08:07:08.335Z">
+<meta property="og:updated_time" content="2020-06-02T08:33:01.750Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass文档-At-Rules-error-warn-debug">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面当@mixin、@function在接收参数时  如果不是我们预期的格式和类型时，可以用@error来中断并报错 如果传递的值并不是理想的值时，可以用@warn来做一个警告。  我们可以使用@debug来做调试，可以使用它来打印变量或者表达式的值，同时还会输出文件名和行号。 error@error &amp;lt;expression&amp;gt;">
@@ -210,7 +210,7 @@ var _hmt = _hmt || [];
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="built_in">calc</span>(100% - 80px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>命令行输出</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style.scss:3 Debug: divider offset: 80px</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意：</em></strong>您可以将任何值传递给<code>@debug</code>，而不仅仅是字符串!它打印该值的表示形式与<code>meta.inspect()</code>函数相同</p>
+<p><strong><em>注意：</em></strong>您可以将任何值传递给<code>@debug</code>，而不仅仅是字符串!它打印该值的表示形式与<code>meta.inspect()</code>函数相同。</p>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/at-rules/error" target="_blank" rel="noopener">@error</a><br><a href="https://sass-lang.com/documentation/at-rules/warn" target="_blank" rel="noopener">@warn</a><br><a href="https://sass-lang.com/documentation/at-rules/debug" target="_blank" rel="noopener">@debug</a></p>
 
       
@@ -298,6 +298,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/06/02/sass文档-At-Rules-root/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          sass文档-At-Rules-root
+        
+      </div>
+    </a>
   
   
     <a href="/2020/05/29/sass文档-At-Rules-extend/" id="article-nav-older" class="article-nav-link-wrap">
@@ -421,19 +430,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,15 +446,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -473,15 +482,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
