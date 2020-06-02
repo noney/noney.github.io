@@ -6,20 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>sass文档-At-Rules-extend | 三人行必有我师</title>
+  <title>Archives: 2020/6 | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面@extend扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。 123&amp;lt;div class=&quot;error error--serious&quot;&amp;gt;    Oh no! You&apos;ve been hacked!&amp;lt;/div&amp;gt; 123456789.error &amp;#123;    bord">
-<meta name="keywords" content="日积月累,css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="sass文档-At-Rules-extend">
-<meta property="og:url" content="//noney.github.io/2020/05/29/sass文档-At-Rules-extend/index.html">
+  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="三人行必有我师">
+<meta property="og:url" content="//noney.github.io/archives/2020/06/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@extend扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。 123&amp;lt;div class=&quot;error error--serious&quot;&amp;gt;    Oh no! You&apos;ve been hacked!&amp;lt;/div&amp;gt; 123456789.error &amp;#123;    bord">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-02T07:37:40.146Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass文档-At-Rules-extend">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@extend扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。 123&amp;lt;div class=&quot;error error--serious&quot;&amp;gt;    Oh no! You&apos;ve been hacked!&amp;lt;/div&amp;gt; 123456789.error &amp;#123;    bord">
+<meta name="twitter:title" content="三人行必有我师">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,73 +163,36 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass文档-At-Rules-extend" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      sass文档-At-Rules-extend
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/06/02/sass文档-At-Rules-error-warn-debug/" class="archive-article-date">
+  	<time datetime="2020-06-02T07:37:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/06/02/sass文档-At-Rules-error-warn-debug/">sass文档-At-Rules-error-warn-debug</a>
     </h1>
   
 
-        
-        <a href="/2020/05/29/sass文档-At-Rules-extend/" class="archive-article-date">
-  	<time datetime="2020-05-29T07:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@extend</code>扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"error error--serious"</span>&gt;</span></span><br><span class="line">    Oh no! You've been hacked!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line"></span><br><span class="line">    &amp;--serious &#123;</span><br><span class="line">        @<span class="keyword">extend</span> .error;</span><br><span class="line">        <span class="attribute">border-width</span>: <span class="number">3px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span>, <span class="selector-class">.error--serious</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.error--serious</span> &#123;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意：</em></strong>扩展只针对父选择器，不会扩展子选择器的样式</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    &amp;--circle &#123;</span><br><span class="line">        <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.warn</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> .error;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span>, <span class="selector-class">.warn</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.error--circle</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.warn</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="如何工作"><a href="#如何工作" class="headerlink" title="如何工作"></a>如何工作</h3><p><code>@extend</code>与<code>@mixin</code>不同，<code>@mixin</code>是将样式复制到当前样式规则中。<code>@extend</code>是对<code>选择器</code>做扩展。</p>
-<ul>
-<li>它不会生成像<code>#main #sub</code>的选择器，因为它们不会匹配任何元素</li>
-<li>它确保复杂的选择器是交错的，这样无论HTML元素是按什么顺序嵌套的，它们都可以工作</li>
-<li>它尽可能地减少冗余选择器，同时仍然确保特异性大于或等于extender</li>
-<li>它知道一个选择器何时匹配另一个选择器所做的一切，并可以将它们组合在一起</li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.content</span> <span class="selector-tag">nav</span><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> .info;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个不会被扩展，因为p和nav不兼容</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.info</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#dee9fc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不确定.guide会在.content里面还是外面，所以两种情况都生成</span></span><br><span class="line"><span class="selector-class">.guide</span> <span class="selector-class">.info</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid rgba(<span class="number">#000</span>, <span class="number">0.8</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配main.content肯定也会匹配.content，所以不会产生不必要的交换选择器</span></span><br><span class="line">main<span class="selector-class">.content</span> <span class="selector-class">.info</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.8em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-class">.info</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#dee9fc</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.guide</span> <span class="selector-class">.info</span>, <span class="selector-class">.guide</span> <span class="selector-class">.content</span> <span class="selector-tag">nav</span><span class="selector-class">.sidebar</span>, <span class="selector-class">.content</span> <span class="selector-class">.guide</span> <span class="selector-tag">nav</span><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="built_in">rgba</span>(0, 0, 0, 0.8);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">main</span><span class="selector-class">.content</span> <span class="selector-class">.info</span>, <span class="selector-tag">main</span><span class="selector-class">.content</span> <span class="selector-tag">nav</span><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.8em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="占位符选择器"><a href="#占位符选择器" class="headerlink" title="占位符选择器"></a>占位符选择器</h4><p><code>%</code>代表点位符选择器，可以用来进行简单的样式扩展，它必须使用<code>@extend</code>来调用，否则不会在<code>css</code>中有任何输出</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.alert</span>:hover, %<span class="selector-tag">strong</span>-alert &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">%<span class="selector-tag">strong</span>-alert:hover &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %strong-alert</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.alert</span><span class="selector-pseudo">:hover</span>, <span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>与模块成员一样，可以使用<code>-_</code>来标记私有占位符，它只能在定义它的样式表中使用</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _alert.scss</span></span><br><span class="line"><span class="variable">$color</span>: red;</span><br><span class="line"></span><br><span class="line">%-alert &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"alert"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: alert.<span class="variable">$color</span>;</span><br><span class="line">    @<span class="keyword">extend</span> %-alert; <span class="comment">/*报错*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="扩展作用域"><a href="#扩展作用域" class="headerlink" title="扩展作用域"></a>扩展作用域</h4><p>使用<code>@use或者@forward</code>加载的模块，扩展的作用域只会影响上游的模块。使用<code>@import</code>加载的模块，扩展的作用域是全局的，不仅会影响上游还会影响下游，也就是说它会影响整个样式表。</p>
-<h4 id="强制和可选扩展"><a href="#强制和可选扩展" class="headerlink" title="强制和可选扩展"></a>强制和可选扩展</h4><p>默认在使用<code>@extend</code>时，如果没有可匹配的选择器，<code>sass</code>会产生一个错误，这有助于防止输入错误或重命名选择器。如果我们不需要这个错误时，只需在未尾添加<code>!optional</code>。</p>
-<h4 id="何时使用-extend和-mixin"><a href="#何时使用-extend和-mixin" class="headerlink" title="何时使用@extend和@mixin"></a>何时使用<code>@extend</code>和<code>@mixin</code></h4><ul>
-<li>mixin 需要参数配置时，样式的非语义集合，使用<code>mixin</code>可以避免级联问题，并简化配置</li>
-<li>extend 纯样式块扩展时，表示语义类之间的关系时，如<code>.error、.error-serious</code></li>
-</ul>
-<h4 id="限制"><a href="#限制" class="headerlink" title="限制"></a>限制</h4><p>只有简单的选择器才能被扩展，如<code>.info、a</code>，如果<code>.message.info</code>可以被扩展，那么<code>@extend</code>的定义表明，与扩展器匹配的元素将被设计成与<code>.message.info</code>匹配的样式。这和匹配<code>.message</code>和<code>.info</code>是一样的，所以可以用这个代替`@extend .message, .info。</p>
-<p>类似地，如果<code>.main .info</code>可以被扩展，它会做(几乎)与扩展<code>.info</code>相同的事情。细微的差别不值得让人觉得它在做一些本质上不同的事情，所以这也是不允许的。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.alert</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> .message.info;</span><br><span class="line">    <span class="comment">//      ^^^^^^^^^^^^^</span></span><br><span class="line">    <span class="comment">// Error: Write @extend .message, .info instead.</span></span><br><span class="line"></span><br><span class="line">    @<span class="keyword">extend</span> .main .info;</span><br><span class="line">    <span class="comment">//      ^^^^^^^^^^^</span></span><br><span class="line">    <span class="comment">// Error: write @extend .info instead.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="HTML启发式"><a href="#HTML启发式" class="headerlink" title="HTML启发式"></a>HTML启发式</h4><p>当<code>@extend</code>交错复杂的选择器时，它不会生成所有可能的祖先选择器组合。它可能生成的许多选择器实际上不太可能匹配实际的<code>HTML</code>，并且生成它们会使样式表太大而没有实际价值。相反，它使用了一种启发式方法:它假设每个选择器的祖先将是自包含的，而不与任何其他选择器的祖先交错</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span> <span class="selector-class">.warning</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">aside</span> <span class="selector-class">.notice</span> <span class="selector-tag">dd</span> &#123;</span><br><span class="line">    <span class="comment">// Sass doesn't generate CSS to match the &lt;dd&gt; in</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">// &lt;header&gt;</span></span><br><span class="line">    <span class="comment">//   &lt;aside&gt;</span></span><br><span class="line">    <span class="comment">//     &lt;div class="warning"&gt;</span></span><br><span class="line">    <span class="comment">//       &lt;div class="notice"&gt;</span></span><br><span class="line">    <span class="comment">//         &lt;dd&gt;...&lt;/dd&gt;</span></span><br><span class="line">    <span class="comment">//       &lt;/div&gt;</span></span><br><span class="line">    <span class="comment">//     &lt;/div&gt;</span></span><br><span class="line">    <span class="comment">//   &lt;/aside&gt;</span></span><br><span class="line">    <span class="comment">// &lt;/header&gt;</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    <span class="comment">// because matching all elements like that would require us to generate nine</span></span><br><span class="line">    <span class="comment">// new selectors instead of just two.</span></span><br><span class="line">    @<span class="keyword">extend</span> li;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="媒体查询中扩展"><a href="#媒体查询中扩展" class="headerlink" title="媒体查询中扩展"></a>媒体查询中扩展</h4><p>虽然<code>@extend</code>允许在<code>@media</code>和其他<code>CSS at</code>规则中使用，但不允许扩展出现在其<code>at</code>规则之外的选择器。这是因为扩展选择器只适用于给定的媒体上下文中，而且无法确保在不复制整个样式规则的情况下保留生成的选择器中的限制。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-width: 600px) &#123;</span><br><span class="line">    <span class="selector-class">.error--serious</span> &#123;</span><br><span class="line">        @<span class="keyword">extend</span> .error;</span><br><span class="line">        <span class="comment">//      ^^^^^^</span></span><br><span class="line">        <span class="comment">// Error: ".error" was extended in @media, but used outside it.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/at-rules/extend" target="_blank" rel="noopener">@extend</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -249,113 +208,19 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/05/29/sass文档-At-Rules-extend/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/06/02/sass文档-At-Rules-error-warn-debug/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sass文档-At-Rules-error-warn-debug
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/05/28/sass文档-At-Rules-function/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass文档-At-Rules-function</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -378,8 +243,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
