@@ -165,6 +165,90 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-exports和module-exports的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/14/exports和module-exports的区别/">exports和module.exports的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/14/exports和module-exports的区别/" class="archive-article-date">
+  	<time datetime="2019-11-14T08:10:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/noney/2017/09/01/webpack终极优化之dll篇/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>Node.js模块遵循Commandjs规范。Commandjs使用<strong>require</strong>和<strong>exports</strong>进行模块的导入和导出，每个JS文件就是一个模块。在使用模块导出时，经常会看到别人的代码里会出现<strong>exports</strong>或<strong>module.exports</strong>，下面我们来看看他们的区别和用法。</p>
+<h4 id="创建测试目录"><a href="#创建测试目录" class="headerlink" title="创建测试目录"></a>创建测试目录</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> testExports</span><br><span class="line"><span class="keyword">cd</span> testExports</span><br><span class="line">touch <span class="built_in">index</span>.js <span class="keyword">cal</span>.js</span><br></pre></td></tr></table></figure>
+<h4 id="打印对象"><a href="#打印对象" class="headerlink" title="打印对象"></a>打印对象</h4><p>首先我们先来打印一下<strong>module.exports</strong>和<strong>exports</strong>, cal.js文件如下:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">`1、module: <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(<span class="built_in">module</span>)&#125;</span>\n`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`2、exports: <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(exports)&#125;</span>\n`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`3、module.exports: <span class="subst">$&#123;<span class="built_in">JSON</span>.stringify(<span class="built_in">module</span>.exports)&#125;</span>\n`</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`4、是否相待: <span class="subst">$&#123;exports === <span class="built_in">module</span>.exports&#125;</span>\n`</span>);</span><br></pre></td></tr></table></figure></p>
+        
+          <a class="article-more-a" href="/2019/11/14/exports和module-exports的区别/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/14/exports和module-exports的区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ESLint配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -206,11 +290,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ESLint</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ESLint</a>
         		</li>
       		
 		</ul>
@@ -684,15 +768,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -704,15 +792,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Tag: MarkDown | 三人行必有我师</title>
+  <title>sass文档-At-Rules-css | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/tags/MarkDown/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass支持所有CSS at-rule规则。为了兼容未来的原生规则和向前兼容，sass提供了几乎覆盖所有的CSS at-rule规则，CSS at-rule写法@&amp;lt;name&amp;gt; &amp;lt;value&amp;gt;, @&amp;lt;name&amp;gt; { ... }, or @&amp;lt;name&amp;gt; &amp;lt;value&amp;gt; { ...">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass文档-At-Rules-css">
+<meta property="og:url" content="//noney.github.io/2020/06/03/sass文档-At-Rules-css/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass支持所有CSS at-rule规则。为了兼容未来的原生规则和向前兼容，sass提供了几乎覆盖所有的CSS at-rule规则，CSS at-rule写法@&amp;lt;name&amp;gt; &amp;lt;value&amp;gt;, @&amp;lt;name&amp;gt; { ... }, or @&amp;lt;name&amp;gt; &amp;lt;value&amp;gt; { ...">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-03T07:43:32.132Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="sass文档-At-Rules-css">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass支持所有CSS at-rule规则。为了兼容未来的原生规则和向前兼容，sass提供了几乎覆盖所有的CSS at-rule规则，CSS at-rule写法@&amp;lt;name&amp;gt; &amp;lt;value&amp;gt;, @&amp;lt;name&amp;gt; { ... }, or @&amp;lt;name&amp;gt; &amp;lt;value&amp;gt; { ...">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,36 +167,55 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-sass文档-At-Rules-css" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/用MarkDown写博客/" class="archive-article-date">
-  	<time datetime="2019-10-22T06:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/用MarkDown写博客/">用MarkDown写博客</a>
+    <h1 class="article-title" itemprop="name">
+      sass文档-At-Rules-css
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/06/03/sass文档-At-Rules-css/" class="archive-article-date">
+  	<time datetime="2020-06-03T07:25:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>支持所有<code>CSS at-rule</code>规则。为了兼容未来的原生规则和向前兼容，<code>sass</code>提供了几乎覆盖所有的<code>CSS at-rule</code>规则，<code>CSS at-rule</code>写法<code>@&lt;name&gt; &lt;value&gt;, @&lt;name&gt; { ... }, or @&lt;name&gt; &lt;value&gt; { ... }</code>，名称必须是一个<code>标识符</code>，值可以是任何东西。名称和值都可以是<code>插值表达式</code></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">namespace</span> svg url(http://www.w3.org/<span class="number">2000</span>/svg);</span><br><span class="line"></span><br><span class="line">@font-face &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Open Sans"</span>;</span><br><span class="line">    src: url(<span class="string">"/fonts/OpenSans-Regular-webfont.woff2"</span>) format(<span class="string">"woff2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@counter-style thumbs &#123;</span><br><span class="line">    system: cyclic;</span><br><span class="line">    symbols: <span class="string">"\1F44D"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>如果<code>CSS at-rule</code>嵌套在样式规则中，那么这两个规则会自动交换位置，以便<code>at-rule</code>位于<code>CSS</code>输出的顶层，样式规则也在其中。这使得添加条件样式很容易，而不必重写样式规则的选择器。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.print-only</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line"></span><br><span class="line">    @<span class="keyword">media</span> print &#123; <span class="attribute">display</span>: block; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.print-only</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> print &#123;</span><br><span class="line">    <span class="selector-class">.print-only</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="media"><a href="#media" class="headerlink" title="@media"></a>@media</h4><p>除了允许<code>插值</code>之外，它还允许在特性查询中直接使用<code>SassScript</code>表达式</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$layout-breakpoint-small</span>: <span class="number">960px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="variable">$layout-breakpoint-small</span>) &#123;</span><br><span class="line">    <span class="selector-class">.hide-extra-small</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">960px</span>) &#123;</span><br><span class="line">    <span class="selector-class">.hide-extra-small</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在可能的情况下，Sass还将合并彼此嵌套的媒体查询，以便更容易地支持还不支持嵌套@media规则的浏览器。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (hover: hover) &#123;</span><br><span class="line">    <span class="selector-class">.button</span>:hover &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid black;</span><br><span class="line"></span><br><span class="line">    @<span class="keyword">media</span> (color) &#123;</span><br><span class="line">        <span class="attribute">border-color</span>: <span class="number">#036</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (hover: hover) &#123;</span><br><span class="line">    <span class="selector-class">.button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid black;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> (hover: hover) and (color) &#123;</span><br><span class="line">    <span class="selector-class">.button</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">border-color</span>: <span class="number">#036</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="supports"><a href="#supports" class="headerlink" title="@supports"></a>@supports</h4><p><code>@supports</code>规则还允许在声明查询中使用SassScript表达式</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> sticky-position &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">    @supports (position: sticky) &#123;</span><br><span class="line">    <span class="attribute">position</span>: sticky;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.banner</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> sticky-position;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.banner</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: fixed;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">supports</span> (position: sticky) &#123;</span><br><span class="line">    <span class="selector-class">.banner</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: sticky;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="keyframes"><a href="#keyframes" class="headerlink" title="@keyframes"></a>@keyframes</h4><p>它的子规则必须是有效的关键帧规则(<number>%， from, or to)，而不是普通的选择器</number></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@keyframes slide-in &#123;</span><br><span class="line">    from &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    70% &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">90%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150%</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    to &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> slide-in &#123;</span><br><span class="line">    <span class="selector-tag">from</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    70% &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">90%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">to</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">0%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/at-rules/css#media" target="_blank" rel="noopener">CSS At-Rules</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,25 +225,110 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MarkDown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/06/03/sass文档-At-Rules-css/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/06/03/sass文档-流程控制/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-流程控制</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -243,9 +351,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
