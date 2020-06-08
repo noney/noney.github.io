@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Tag: DOM | 三人行必有我师</title>
+  <title>sass文档-数据类型-number | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/tags/DOM/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass文档-数据类型-number">
+<meta property="og:url" content="//noney.github.io/2020/06/08/sass文档-数据类型-number/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-08T08:52:01.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="sass文档-数据类型-number">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,36 +167,58 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-sass文档-数据类型-number" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/16/元素偏移量/" class="archive-article-date">
-  	<time datetime="2020-01-16T02:17:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/16/元素偏移量/">元素偏移量</a>
+    <h1 class="article-title" itemprop="name">
+      sass文档-数据类型-number
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/06/08/sass文档-数据类型-number/" class="archive-article-date">
+  	<time datetime="2020-06-08T03:28:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>中<code>number</code>类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100; <span class="comment">// 100</span></span><br><span class="line">@<span class="keyword">debug</span> 0.8; <span class="comment">// 0.8</span></span><br><span class="line">@<span class="keyword">debug</span> 16px; <span class="comment">// 16px</span></span><br><span class="line">@<span class="keyword">debug</span> 5px * 2px; <span class="comment">// 10px*px (read "square pixels")</span></span><br></pre></td></tr></table></figure>
+<p>Sass数字支持与CSS数字相同的格式，包括科学表示法，该表示法在数字和它的10次方之间使用一个e。由于浏览器对科学表示法的支持历来参差不齐，Sass总是将其编译为完全扩展的数字。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 5.2e3; <span class="comment">// 5200</span></span><br><span class="line">@<span class="keyword">debug</span> 6e-2; <span class="comment">// 0.06</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h4><ul>
+<li>两个数相乘，它们的单位也相乘 <code>4px * 6px; // 24px*px</code></li>
+<li>两个数相除，它们的单位<code>一个数的单位 / 第二个数的单位</code> <code>5px / 2s; // 2.5px/s</code></li>
+<li>一个数的分子分母可以有任意多个 <code>5px * 30deg / 2s / 24em; // 3.125px*deg/s*em</code></li>
+</ul>
+<p><strong><em>注意：</em></strong> 我们随时可以使用<code>@debug</code>规则来检查任何变量或表达式</p>
+<p><code>sass</code>会自动在兼容的单位之间进行转换，然后选择一个单位做为结果单位，如果出现不兼容的单位，它将会抛出错误</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CSS defines one inch as 96 pixels.</span></span><br><span class="line">@<span class="keyword">debug</span> 1in + 6px; <span class="comment">// 102px or 1.0625in</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> 1in + 1s;</span><br><span class="line"><span class="comment">//     ^^^^^^^^</span></span><br><span class="line"><span class="comment">// Error: Incompatible units s and in.</span></span><br></pre></td></tr></table></figure>
+<p>在现实世界的单位计算中，如果分子包含与分母兼容的单位(比如96px / 1in)，它们就会被抵消。这样就可以很容易地定义用于单位之间转换的比率。在下面的示例中，我们将所需的速度设置为1秒/ 50像素，然后将该速度乘以过渡覆盖的像素数，以获得所需的时间。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$transition-speed</span>: <span class="number">1s</span>/<span class="number">50px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> move(<span class="variable">$left-start</span>, <span class="variable">$left-stop</span>) &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="variable">$left-start</span>;</span><br><span class="line">    <span class="attribute">transition</span>: left (<span class="variable">$left-stop</span> - <span class="variable">$left-start</span>) * <span class="variable">$transition-speed</span>;</span><br><span class="line"></span><br><span class="line">    &amp;:hover &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="variable">$left-stop</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.slider</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> move(<span class="number">10px</span>, 120px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.slider</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">transition</span>: left <span class="number">2.2s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slider</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">120px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>如果计算结果出现错误，需要检查一下是否遗忘了单位。避免使用<code>#{$number}px</code>这样的插值，它创建的不是一个<code>数字</code>，而是一个字符串，不能与任何数字操作和函数一起工作，可以在定论<code>$number</code>时加上单位，或者<code>$number * 1px</code>让它有单位</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$number</span>: <span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="variable">$number</span> + <span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.dev</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: #&#123;<span class="variable">$number</span>&#125; + <span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.dev</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>10;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>sass</code>中<code>50% 不等于 0.5</code>，它是一个独立单位，可以通过计算对它们进行转换<code>50% / 100%</code>转换为小数，<code>0.5 * 100%</code>转换为百分比，还可以使用<code>math.percentage</code>将小数转换为相应的百分比</p>
+<h4 id="精度"><a href="#精度" class="headerlink" title="精度"></a>精度</h4><p><code>sass</code>支持小数点后<code>10</code>位</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 0.012345678912345; <span class="comment">// 0.0123456789</span></span><br><span class="line">@<span class="keyword">debug</span> 0.01234567891 == 0.01234567899; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> 1.00000000009; <span class="comment">// 1</span></span><br><span class="line">@<span class="keyword">debug</span> 0.99999999991; <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,25 +228,110 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/06/08/sass文档-数据类型-number/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/06/03/sass文档-At-Rules-css/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-At-Rules-css</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -243,9 +354,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
