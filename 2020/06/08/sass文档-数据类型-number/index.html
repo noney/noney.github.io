@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//noney.github.io">
   <title>sass文档-数据类型-number | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有多个单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
 <meta name="keywords" content="日积月累,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sass文档-数据类型-number">
 <meta property="og:url" content="//noney.github.io/2020/06/08/sass文档-数据类型-number/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有多个单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-08T08:52:01.008Z">
+<meta property="og:updated_time" content="2020-06-09T02:53:29.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass文档-数据类型-number">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass中number类型包括两个部分，数字本身和单位（可以没有单位，也可以有多个单位）。 1234@debug 100; // 100@debug 0.8; // 0.8@debug 16px; // 16px@debug 5px * 2px; // 10px*px (read &quot;square pixels&quot;) Sass数字支持与CS">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -189,7 +189,7 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>中<code>number</code>类型包括两个部分，数字本身和单位（可以没有单位，也可以有复数单位）。</p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>中<code>number</code>类型包括两个部分，数字本身和单位（可以没有单位，也可以有多个单位）。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100; <span class="comment">// 100</span></span><br><span class="line">@<span class="keyword">debug</span> 0.8; <span class="comment">// 0.8</span></span><br><span class="line">@<span class="keyword">debug</span> 16px; <span class="comment">// 16px</span></span><br><span class="line">@<span class="keyword">debug</span> 5px * 2px; <span class="comment">// 10px*px (read "square pixels")</span></span><br></pre></td></tr></table></figure>
 <p>Sass数字支持与CSS数字相同的格式，包括科学表示法，该表示法在数字和它的10次方之间使用一个e。由于浏览器对科学表示法的支持历来参差不齐，Sass总是将其编译为完全扩展的数字。</p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 5.2e3; <span class="comment">// 5200</span></span><br><span class="line">@<span class="keyword">debug</span> 6e-2; <span class="comment">// 0.06</span></span><br></pre></td></tr></table></figure>
@@ -297,6 +297,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/06/08/sass文档-数据类型-string/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          sass文档-数据类型-string
+        
+      </div>
+    </a>
   
   
     <a href="/2020/06/03/sass文档-At-Rules-css/" id="article-nav-older" class="article-nav-link-wrap">
@@ -444,11 +453,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -472,15 +481,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
