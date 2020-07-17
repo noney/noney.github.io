@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>理解css margin | 三人行必有我师</title>
+  <title>word-break、word-wrap、white-space | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面margin是盒模型中的外边框。 margin与元素的尺寸 可视尺寸 clientWidth：content + padding + border  占据尺寸 outerWidth：content + padding + border + margin  对于可视尺寸影响的条件：没有设置宽高的普通block元素，并且只会影响水平方向的尺">
-<meta name="keywords" content="日积月累,CSS">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面总结word-break、word-wrap、white-space用法。 1234567&amp;lt;div class=&quot;box&quot;&amp;gt;  Hi&amp;amp;nbsp;&amp;amp;nbsp;,  This   is a incomprehensibilities long word.  &amp;lt;/br&amp;gt;  你好&amp;amp;nbsp;&amp;am">
+<meta name="keywords" content="日积月累,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解css margin">
-<meta property="og:url" content="//noney.github.io/2020/03/03/理解css-margin/index.html">
+<meta property="og:title" content="word-break、word-wrap、white-space">
+<meta property="og:url" content="//noney.github.io/2020/07/17/word-break、word-wrap、white-space/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面margin是盒模型中的外边框。 margin与元素的尺寸 可视尺寸 clientWidth：content + padding + border  占据尺寸 outerWidth：content + padding + border + margin  对于可视尺寸影响的条件：没有设置宽高的普通block元素，并且只会影响水平方向的尺">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面总结word-break、word-wrap、white-space用法。 1234567&amp;lt;div class=&quot;box&quot;&amp;gt;  Hi&amp;amp;nbsp;&amp;amp;nbsp;,  This   is a incomprehensibilities long word.  &amp;lt;/br&amp;gt;  你好&amp;amp;nbsp;&amp;am">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-14T06:30:18.770Z">
+<meta property="og:updated_time" content="2020-07-17T07:00:20.641Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="理解css margin">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面margin是盒模型中的外边框。 margin与元素的尺寸 可视尺寸 clientWidth：content + padding + border  占据尺寸 outerWidth：content + padding + border + margin  对于可视尺寸影响的条件：没有设置宽高的普通block元素，并且只会影响水平方向的尺">
+<meta name="twitter:title" content="word-break、word-wrap、white-space">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面总结word-break、word-wrap、white-space用法。 1234567&amp;lt;div class=&quot;box&quot;&amp;gt;  Hi&amp;amp;nbsp;&amp;amp;nbsp;,  This   is a incomprehensibilities long word.  &amp;lt;/br&amp;gt;  你好&amp;amp;nbsp;&amp;am">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-理解css-margin" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-word-break、word-wrap、white-space" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      理解css margin
+      word-break、word-wrap、white-space
     </h1>
   
 
         
-        <a href="/2020/03/03/理解css-margin/" class="archive-article-date">
-  	<time datetime="2020-03-03T09:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-03</time>
+        <a href="/2020/07/17/word-break、word-wrap、white-space/" class="archive-article-date">
+  	<time datetime="2020-07-17T02:48:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
 </a>
         
       </header>
@@ -189,214 +189,149 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>margin是盒模型中的外边框。</p>
-<h4 id="margin与元素的尺寸"><a href="#margin与元素的尺寸" class="headerlink" title="margin与元素的尺寸"></a>margin与元素的尺寸</h4><ul>
-<li><p>可视尺寸 clientWidth：content + padding + border</p>
-</li>
-<li><p>占据尺寸 outerWidth：content + padding + border + margin</p>
-</li>
-<li><p>对于可视尺寸影响的条件：没有设置宽高的普通block元素<em>，并且只会影响</em>水平方向的尺寸</p>
-</li>
-</ul>
-<p><em>一侧定宽自适应布局</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">"150"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>总结word-break、word-wrap、white-space用法。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">  Hi&amp;nbsp;&amp;nbsp;,</span><br><span class="line">  This   is a incomprehensibilities long word.</span><br><span class="line">  <span class="tag">&lt;/<span class="name">br</span>&gt;</span></span><br><span class="line">  你好&amp;nbsp;&amp;nbsp;，</span><br><span class="line">  这   是一个不可思议的长单词</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">150px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们根据上面<code>html</code>的显示可以得出如下总结：</p>
 <ul>
-<li>对于占据尺寸影响的条件： block/inline元素均适用、无论<em>是否设置宽高</em>、无论水平还是垂直方向均适用</li>
+<li><code>&amp;nbsp;和&lt;/br&gt;</code>都正常发挥作用</li>
+<li>连续的<code>空格</code>会被缩减成<code>一个</code></li>
+<li><code>换行符</code>无效</li>
+<li><code>空格</code>会触发换行</li>
+<li><code>长英文</code>会超出边界</li>
+<li><code>长中文</code>会自动换行</li>
 </ul>
-<p><em>滚动窗口上下留白</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来，中国的等待秋去冬来。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: scroll;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="margin与百分比"><a href="#margin与百分比" class="headerlink" title="margin与百分比"></a>margin与百分比</h4><table>
-<thead>
-<tr>
-<th>元素定位方式</th>
-<th>计算方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>普通元素百分比</td>
-<td>父元素容器宽度</td>
-</tr>
-<tr>
-<td>绝对定位元素百分比</td>
-<td>第一个定位属性的祖先元素</td>
-</tr>
-</tbody>
-</table>
-<p><em>2:1矩形</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mar"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">250px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: olive;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.mar</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="margin重叠"><a href="#margin重叠" class="headerlink" title="margin重叠"></a>margin重叠</h4><p><em>重叠特性</em></p>
-<ul>
-<li>重叠只会发生在block元素（不包括float和absolute元素）。</li>
-<li>不考虑writing-mode，只发生在垂直方向。</li>
-</ul>
-<p><em>重叠情境</em></p>
-<ul>
-<li>相邻的兄弟元素</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>父级和第一个/最后一个元素</li>
-</ul>
+<p><strong><em>注意：</em></strong><code>默认自动换行（非手动回车换行）</code>，当<code>宽度</code>不足时，由<code>空格</code>触发，<code>连续中文</code>会<code>换行</code>，<code>长英文</code>不会<code>换行</code></p>
+<h2 id="white-space"><a href="#white-space" class="headerlink" title="white-space"></a>white-space</h2><p><code>white-space</code>用来控制<code>空白字符</code>的显示，同时也能控制<code>自动换行</code></p>
 <table>
 <thead>
 <tr>
-<th>margin-top重叠条件</th>
-<th>margin-bottom重叠条件</th>
+<th>属性值</th>
+<th>换行符（手动回车）</th>
+<th>空格</th>
+<th>默认自动换行</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>父元素非块状格式化上下文元素（BFC）</td>
-<td>同左</td>
+<td>normal</td>
+<td>无效</td>
+<td>缩减成一个</td>
+<td>有效</td>
 </tr>
 <tr>
-<td>父元素没有border-top设置</td>
-<td>同左</td>
+<td>nowrap</td>
+<td>无效</td>
+<td>缩减成一个</td>
+<td>无效</td>
 </tr>
 <tr>
-<td>父元素没有padding-top设置</td>
-<td>同左</td>
+<td>pre</td>
+<td>有效</td>
+<td>有效</td>
+<td>无效</td>
 </tr>
 <tr>
-<td>父元素和子元素之间没有inline元素分隔</td>
-<td>同左</td>
+<td>pre-wrap</td>
+<td>有效</td>
+<td>有效</td>
+<td>有效</td>
 </tr>
 <tr>
-<td>-</td>
-<td>父元素没有height、min-height、max-height限制</td>
+<td>pre-line</td>
+<td>有效</td>
+<td>无效</td>
+<td>有效</td>
 </tr>
 </tbody>
 </table>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span> <span class="attr">style</span>=<span class="string">"margin-top: 80px;"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 等同于 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span> <span class="attr">style</span>=<span class="string">"margin-top: 80px;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 等同于 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span> <span class="attr">style</span>=<span class="string">"margin-top: 80px;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span> <span class="attr">style</span>=<span class="string">"margin-top: 80px;"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f0f3f9</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">80px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>空的block元素</li>
-</ul>
+<h4 id="word-break"><a href="#word-break" class="headerlink" title="word-break"></a>word-break</h4><p><code>word-break</code>用来控制单词如何拆分</p>
 <table>
 <thead>
 <tr>
-<th>触发条件</th>
+<th>属性值</th>
+<th>表现</th>
+<th>备注</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>没有border设置</td>
+<td>normal</td>
+<td>默认值</td>
+<td>默认自动换行（中文拆，英文不拆）</td>
 </tr>
 <tr>
-<td>没有padding设置</td>
+<td>keep-all</td>
+<td>不拆分</td>
+<td>都不拆</td>
 </tr>
 <tr>
-<td>里面没有inline元素</td>
-</tr>
-<tr>
-<td>没有height、min-height设置</td>
+<td>break-all</td>
+<td>拆分</td>
+<td>都拆（慎用，英文会被拆开）</td>
 </tr>
 </tbody>
 </table>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#f0f3f9</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>计算规则</em></p>
-<ul>
-<li>正正取大值</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.b</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>正负值相加</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.b</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>负负最负值</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"a"</span>&gt;</span>a<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"b"</span>&gt;</span>b<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.a</span> &#123;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.b</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="margin-auto"><a href="#margin-auto" class="headerlink" title="margin auto"></a>margin auto</h4><p><strong>用于分配剩余空间，前提条件是元素没有设置宽度时候，它会自动充满容器，设置宽度以后，就会出现剩余空间。</strong></p>
-<p><em>一侧定值，一侧auto，auto就是剩余空间的大小</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>两侧均为auto，则平分剩余空间</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>图片为何不居中，图片即使不设置宽度的时候，它也不会充满容器，所以它不会产生剩余空间，我们所要设置图片display: block它才会满足auto条件</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">width</span>=<span class="string">"300"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>垂直为何不居中，在不设置高度的情况下，它不会充满容器，也就不会产生剩余空间，不能满足auto分配剩余空间的条件</em></p>
-<p><em>absolute + margin实现垂直居中，当元素定位为absolute时，并且设置方向值全为0时，就会触发在不设置宽高时充满容 器条件，此时我们再设置宽高，就会产生剩余空间，此时已满足auto的条件</em></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"father"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span>son<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.father</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.son</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="margin负值定位"><a href="#margin负值定位" class="headerlink" title="margin负值定位"></a>margin负值定位</h4><p><em>负值两端对齐</em></p>
-<p>如果容器没有设置宽度，margin正直可以使宽度变小，负值可以使宽度变大，float元素除外。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>abc<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>abc<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>abc<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.list</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">800px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.list</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin-right</span>: -<span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.list</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">background-color</span>: blue;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">25px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>两栏等高布局</em></p>
-<p>如果容器没有设置高度，margin正直可以使高度变大，负值可以使高度变小。</p>
-<p>利用margin可以改变元素占据空间特性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-green"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"child-orange"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">resize</span>: vertical;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child-green</span>, <span class="selector-class">.child-orange</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: -<span class="number">600px</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">600px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child-green</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.child-orange</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: orange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>两栏自适应布局</em></p>
-<p>利用元素占据空间随margin移动的特性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">p</span>&gt;</span>中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国，中华人民共和国<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">alt</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#000</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">div</span>, <span class="selector-class">.box</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">div</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><em>总结</em></p>
+<p>与<code>white-space</code>同时使用的情况</p>
 <table>
 <thead>
 <tr>
-<th></th>
-<th>不设宽</th>
-<th>定宽</th>
-<th>不设高</th>
-<th>定高</th>
+<th>属性</th>
+<th>normal</th>
+<th>nowrap</th>
+<th>pre</th>
+<th>pre-wrap</th>
+<th>pre-line</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>正常block元素</td>
-<td>增加宽度</td>
-<td>宽度不变</td>
-<td>top负值，本身上移；bottom负值，下面元素上移</td>
-<td>占据空间变小</td>
+<td>keep-all</td>
+<td>有效</td>
+<td>有效</td>
+<td>有效</td>
+<td>有效</td>
+<td>有效</td>
 </tr>
 <tr>
-<td>浮动元素</td>
-<td>位置移动</td>
-<td>位置移动</td>
-<td>top负值，本身上移；bottom负值，下面元素上移至浮动底部</td>
-<td>同左</td>
+<td>break-all</td>
+<td>有效</td>
+<td>无效</td>
+<td>无效</td>
+<td>有效</td>
+<td>有效</td>
 </tr>
 </tbody>
 </table>
-<h4 id="margin失效解析"><a href="#margin失效解析" class="headerlink" title="margin失效解析"></a>margin失效解析</h4><ul>
-<li>inline元素垂直方向无效（非替换元素）</li>
-<li>重叠</li>
-<li>display: table-cell时margin无效（非替换元素）</li>
-<li>position: absolute元素非定位方位（指没有设置方向值的方向）的margin无效（因为脱离文档流，所以不会影响其它元素，只是看起来无效）</li>
-<li>鞭长莫及时无效，浮动时，margin值是相对于容器的，而不是兄弟元素</li>
-<li>内联元素不会跑到容器外部，大于容器的margin负值无效</li>
-</ul>
-<h4 id="margin-start-amp-margin-end"><a href="#margin-start-amp-margin-end" class="headerlink" title="margin-start &amp; margin-end"></a>margin-start &amp; margin-end</h4><ul>
-<li>当文档流变化时，margin-start会根据变化设置不同margin开始的位置</li>
-<li>当文档流变化时，margin-end会根据变化设置不同margin结束的位置</li>
-</ul>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.imooc.com/learn/680" target="_blank" rel="noopener">CSS深入理解之margin</a></p>
+<p><strong><em>注意：</em></strong><code>有效/无效</code>是针对<code>word-break</code>属性来说的</p>
+<h4 id="word-wrap"><a href="#word-wrap" class="headerlink" title="word-wrap"></a>word-wrap</h4><p><code>wrord-wrap</code>也是用来控制单词拆分，<code>css3</code>中已经被重名字为<code>overflow-wrap</code>，现在它被作为<code>别名</code></p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>表现</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ormal</td>
+<td>默认值</td>
+<td>默认自动换行（中文拆，英文不拆）</td>
+</tr>
+<tr>
+<td>break-word</td>
+<td>拆分</td>
+<td>都拆（当一个单词一行放不下时才会拆分，<code>break-all</code>的不同是只要到边界就拆）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p><code>单行</code>超出部分用点显示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  white-space: nowrap;  // 不换行</span><br><span class="line">  text-overflow: ellipsis; // 点点点</span><br><span class="line">  overflow: hidden; // 超出部分隐藏</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>多行</code>超出部分用点显示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden; <span class="comment">/*隐藏超出部分*/</span></span><br><span class="line">  <span class="attribute">display</span>: -webkit-box; <span class="comment">/* 必须结合的属性，将对象作为弹性伸缩盒子模型显示 */</span></span><br><span class="line">  <span class="attribute">-webkit-line-clamp</span>: <span class="number">2</span>; <span class="comment">/* 用来限制在一个块元素显示的文本的行数，它需要组合其他的WebKit属性 */</span></span><br><span class="line">  <span class="attribute">line-clamp</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">-webkit-box-orient</span>: vertical; <span class="comment">/* 必须结合的属性，设置或检索伸缩盒对象的子元素的排列方式 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://blog.csdn.net/liguanjie8/article/details/83068731" target="_blank" rel="noopener">css超出部分省略号</a><br><a href="https://www.cnblogs.com/dfyg-xiaoxiao/p/9640422.html" target="_blank" rel="noopener">彻底搞懂word-break、word-wrap、white-space</a></p>
 
       
 
@@ -414,7 +349,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -470,7 +405,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/03/03/理解css-margin/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/17/word-break、word-wrap、white-space/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -484,18 +419,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/03/05/理解css-z-index/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          理解css z-index
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/03/理解css-padding/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">理解css padding</div>
+    <a href="/2020/07/10/es6系列-Async/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">es6系列-Async</div>
       <i class="icon-circle-right"></i>
     </a>
   
