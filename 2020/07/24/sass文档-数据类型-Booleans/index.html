@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>理解css border | 三人行必有我师</title>
+  <title>sass文档-数据类型-Booleans | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面border表示边框。它包含三个属性border-width、border-style、border-color分别表示宽度、样式和颜色，我们通常是用它的简写形式border:1px solid red。 border-width 不支持百分比border-width属性是不支持百分比的。我们平时应用的时候不会让它随设备或者元素的大小而">
-<meta name="keywords" content="日积月累,CSS">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass使用true、false来表示布尔值。等式、关系操作符、一些内置函数的的返回值，都是布尔值。 123456@use &quot;sass:map&quot;;@debug 1 == 2; // false@debug 2 &amp;lt; 3; // true@debug map.has-key((), width); //false">
+<meta name="keywords" content="日积月累,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="理解css border">
-<meta property="og:url" content="//noney.github.io/2020/03/02/理解css-border/index.html">
+<meta property="og:title" content="sass文档-数据类型-Booleans">
+<meta property="og:url" content="//noney.github.io/2020/07/24/sass文档-数据类型-Booleans/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面border表示边框。它包含三个属性border-width、border-style、border-color分别表示宽度、样式和颜色，我们通常是用它的简写形式border:1px solid red。 border-width 不支持百分比border-width属性是不支持百分比的。我们平时应用的时候不会让它随设备或者元素的大小而">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass使用true、false来表示布尔值。等式、关系操作符、一些内置函数的的返回值，都是布尔值。 123456@use &quot;sass:map&quot;;@debug 1 == 2; // false@debug 2 &amp;lt; 3; // true@debug map.has-key((), width); //false">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-02T05:58:14.566Z">
+<meta property="og:updated_time" content="2020-07-24T09:40:35.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="理解css border">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面border表示边框。它包含三个属性border-width、border-style、border-color分别表示宽度、样式和颜色，我们通常是用它的简写形式border:1px solid red。 border-width 不支持百分比border-width属性是不支持百分比的。我们平时应用的时候不会让它随设备或者元素的大小而">
+<meta name="twitter:title" content="sass文档-数据类型-Booleans">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass使用true、false来表示布尔值。等式、关系操作符、一些内置函数的的返回值，都是布尔值。 123456@use &quot;sass:map&quot;;@debug 1 == 2; // false@debug 2 &amp;lt; 3; // true@debug map.has-key((), width); //false">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-理解css-border" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sass文档-数据类型-Booleans" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      理解css border
+      sass文档-数据类型-Booleans
     </h1>
   
 
         
-        <a href="/2020/03/02/理解css-border/" class="archive-article-date">
-  	<time datetime="2020-03-02T06:17:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+        <a href="/2020/07/24/sass文档-数据类型-Booleans/" class="archive-article-date">
+  	<time datetime="2020-07-24T09:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
 </a>
         
       </header>
@@ -189,73 +189,17 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><strong>border</strong>表示边框。它包含三个属性<code>border-width、border-style、border-color</code>分别表示宽度、样式和颜色，我们通常是用它的简写形式<code>border:1px solid red</code>。</p>
-<h4 id="border-width-不支持百分比"><a href="#border-width-不支持百分比" class="headerlink" title="border-width 不支持百分比"></a>border-width 不支持百分比</h4><p><strong>border-width</strong>属性是不支持百分比的。我们平时应用的时候不会让它随设备或者元素的大小而改变，它只是表达一个固定的宽度，所以不支持百分比也是根据它的作用和语义而决定的。</p>
-<p>它支持一些关键字，<code>thin（1px）、medium（3px）、thick（5px）</code>等（IE7除外），它的默认宽度是<strong>3px</strong>，因为像<code>border-style:dobule</code>这类样式是需要<strong>3px</strong>才能有效果。</p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>使用<code>true、false</code>来表示布尔值。等式、关系操作符、一些内置函数的的返回值，都是布尔值。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:map"</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> 1 == 2; <span class="comment">// false</span></span><br><span class="line">@<span class="keyword">debug</span> 2 &lt; 3; <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> map.has-key((), width); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="border-style-类型"><a href="#border-style-类型" class="headerlink" title="border-style 类型"></a>border-style 类型</h4><p>dashed 虚线，有兼容性问题，区别如下：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>IE</th>
-<th>Chrome/FireFox</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>实色区域宽高比</td>
-<td>2:1</td>
-<td>3:1</td>
-</tr>
-<tr>
-<td>间隔区域宽高比</td>
-<td>2:1</td>
-<td>1:1</td>
-</tr>
-</tbody>
-</table>
-<p>dotted 点线，有兼容性问题，区别如下：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>IE</th>
-<th>Chrome/FireFox</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>实色区域宽高比</td>
-<td>圆形</td>
-<td>正方形</td>
-</tr>
-</tbody>
-</table>
-<p>我们可以利用这个特性，在IE7、8上面实现圆角</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>fdkfkdskf<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"warp"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>aaa<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bor"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>fdkfkdskf<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.warp</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.warp</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.bor</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">69px</span> dotted blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>double 双实线，兼容性非常好，根据它的等分原则，我们可以用它来实现三道杠的图形效果。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"double"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.double</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">60px</span> double;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">20px</span> solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="border-color与color"><a href="#border-color与color" class="headerlink" title="border-color与color"></a>border-color与color</h4><p>border-color的默认颜色就是color，当我们没有指定边框颜色的时候，它会使用color属性的值作为颜色值。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"add"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.add</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#999</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">25px</span> <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.add</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">10px</span> solid;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">25px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-class">.add</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">10px</span> solid;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">25px</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: -<span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.add</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="border与background定位"><a href="#border与background定位" class="headerlink" title="border与background定位"></a>border与background定位</h4><p>定位不会计算border区域。</p>
-<h4 id="border与三角等图形的构建"><a href="#border与三角等图形的构建" class="headerlink" title="border与三角等图形的构建"></a>border与三角等图形的构建</h4><p>利用solid实现三角。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"triangle"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.triangle</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">20px</span> solid red;</span><br><span class="line">    <span class="attribute">border-color</span>: red transparent transparent transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>模拟圆角</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"###"</span> <span class="attr">class</span>=<span class="string">"circle"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>点我啊点我啊点<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.circle</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">39px</span>;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.circle</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.circle</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">3px</span> solid;</span><br><span class="line">  <span class="attribute">border-color</span>: transparent transparent blue transparent;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.circle</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">3px</span> solid;</span><br><span class="line">  <span class="attribute">border-color</span>: blue transparent transparent transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="border与透明边框"><a href="#border与透明边框" class="headerlink" title="border与透明边框"></a>border与透明边框</h4><p>增加点击区域</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">id</span>=<span class="string">"check"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">"checkbox"</span> <span class="attr">for</span>=<span class="string">"check"</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.checkbox</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid transparent;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">1px</span>, inset <span class="number">1px</span> <span class="number">0</span>, inset -<span class="number">1px</span> <span class="number">0</span>, inset <span class="number">0</span> -<span class="number">1px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">background-clip</span>: content-box;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#d0d0d5</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="border在布局中的应用"><a href="#border在布局中的应用" class="headerlink" title="border在布局中的应用"></a>border在布局中的应用</h4><p>实现两栏等高布局</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span>&gt;</span>导航1<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"module1"</span>&gt;</span>模块1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">300px</span> solid <span class="number">#222</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">300px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clear</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>缺点：不支持百分比。</p>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.imooc.com/learn/755" target="_blank" rel="noopener">CSS深入理解之border</a></p>
+<p>布尔值运算</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> true and true; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> true and false; <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> true or false; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> false or false; <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> not true; <span class="comment">// false</span></span><br><span class="line">@<span class="keyword">debug</span> not false; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="使用Boolean"><a href="#使用Boolean" class="headerlink" title="使用Boolean"></a>使用Boolean</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> res(<span class="variable">$isBorder</span>: false) &#123;</span><br><span class="line">  @<span class="keyword">if</span> <span class="variable">$isBorder</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">  @<span class="keyword">include</span> res();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boo-true</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  @<span class="keyword">include</span> res(true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.boo</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.boo-true</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>if()</code>函数，第一个参数为真，返回第二个函数，参数为假，返回第三个函数，相当于其它语言的三元运算符</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> if(true, 10px, 20px); <span class="comment">// 10px</span></span><br><span class="line">@<span class="keyword">debug</span> if(false, 10px, 20px); <span class="comment">// 20px</span></span><br></pre></td></tr></table></figure>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p><code>sass</code>中，除了<code>false、null</code>运算结果为<code>false</code>，其它都为<code>true</code></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/values/booleans" target="_blank" rel="noopener">Booleans</a></p>
 
       
 
@@ -273,7 +217,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -329,7 +273,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/03/02/理解css-border/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/24/sass文档-数据类型-Booleans/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -343,18 +287,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/03/03/理解css-padding/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          理解css padding
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/16/元素偏移量/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">元素偏移量</div>
+    <a href="/2020/07/24/sass文档-数据类型-maps/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-数据类型-maps</div>
       <i class="icon-circle-right"></i>
     </a>
   
