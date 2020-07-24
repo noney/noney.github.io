@@ -165,6 +165,89 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sass文档-数据类型-function" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/24/sass文档-数据类型-function/">sass文档-数据类型-function</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/24/sass文档-数据类型-function/" class="archive-article-date">
+  	<time datetime="2020-07-24T10:08:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>通过<code>meta.get-function()</code>函数，可以将函数当作一个值传入另一个函数，此时在另一个函数内可以使用<code>meta.call()</code>函数来调用它</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:list"</span>;</span><br><span class="line">@use <span class="string">"sass:meta"</span>;</span><br><span class="line">@use <span class="string">"sass:string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/// Return a copy of $list with all elements for which $condition returns `true`</span></span><br><span class="line"><span class="comment">/// removed.</span></span><br><span class="line">@function remove-where(<span class="variable">$list</span>, <span class="variable">$condition</span>) &#123;</span><br><span class="line">  <span class="variable">$new-list</span>: ();</span><br><span class="line">  <span class="variable">$separator</span>: list.separator(<span class="variable">$list</span>);</span><br><span class="line">  @<span class="keyword">each</span> <span class="variable">$element</span> in <span class="variable">$list</span> &#123;</span><br><span class="line">    @<span class="keyword">if</span> not meta.call(<span class="variable">$condition</span>, <span class="variable">$element</span>) &#123;</span><br><span class="line">      <span class="variable">$new-list</span>: list.append(<span class="variable">$new-list</span>, <span class="variable">$element</span>, <span class="variable">$separator</span>: <span class="variable">$separator</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  @return <span class="variable">$new-list</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$fonts</span>: Tahoma, Geneva, <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif;</span><br><span class="line"></span><br><span class="line"><span class="attribute">content</span> &#123;</span><br><span class="line">  @function contains-helvetica(<span class="variable">$string</span>) &#123;</span><br><span class="line">    @return string.index(<span class="variable">$string</span>, <span class="string">"Helvetica"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="attribute">font-family</span>: remove-where(<span class="variable">$fonts</span>, meta.get-function(<span class="string">"contains-helvetica"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-function/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-function/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sass文档-数据类型-null" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -779,98 +862,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-es6系列-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/09/es6系列-Promise/">es6系列-Promise</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/09/es6系列-Promise/" class="archive-article-date">
-  	<time datetime="2020-07-09T02:42:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>Promise是一种异步解决方案。它是一个构造函数，提供统一的<code>API</code>，它包含三种状态分别是<code>pending（进行中）、fulfilled（已成功）、rejected（已失败）（下面用成功、失败来代码这两种状态）</code>，它包含以下特点：</p>
-<ul>
-<li>状态不受外界影响。只有异步操作能决定它的状态</li>
-<li>状态改变之后，就不会再变。此时执行回调，就会立即得到结果（事件的特点是，你错过它，再去监听，就不会得到结果）</li>
-</ul>
-<p>它的缺点：</p>
-<ul>
-<li>无法取消。一旦执行，就无法取消</li>
-<li>如果没有回调函数，<code>Promise</code>抛出的错误，不会冒泡到外部（浏览器会输出错误，并不会中止程序的执行）</li>
-<li>无法知道中间状态。</li>
-</ul>
-        
-          <a class="article-more-a" href="/2020/07/09/es6系列-Promise/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/09/es6系列-Promise/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -964,14 +955,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
@@ -989,6 +972,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

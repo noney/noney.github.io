@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Tag: 日积月累 | 三人行必有我师</title>
+  <title>sass文档-数据类型-function | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/tags/日积月累/page/4/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面通过meta.get-function()函数，可以将函数当作一个值传入另一个函数，此时在另一个函数内可以使用meta.call()函数来调用它 12345678910111213141516171819202122232425@use &quot;sass:list&quot;;@use &quot;sass:meta&quot;;@use &quot;sass:string&quot;;//">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass文档-数据类型-function">
+<meta property="og:url" content="//noney.github.io/2020/07/24/sass文档-数据类型-function/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面通过meta.get-function()函数，可以将函数当作一个值传入另一个函数，此时在另一个函数内可以使用meta.call()函数来调用它 12345678910111213141516171819202122232425@use &quot;sass:list&quot;;@use &quot;sass:meta&quot;;@use &quot;sass:string&quot;;//">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-24T10:39:36.003Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="sass文档-数据类型-function">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面通过meta.get-function()函数，可以将函数当作一个值传入另一个函数，此时在另一个函数内可以使用meta.call()函数来调用它 12345678910111213141516171819202122232425@use &quot;sass:list&quot;;@use &quot;sass:meta&quot;;@use &quot;sass:string&quot;;//">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,36 +167,41 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-sass文档-数据类型-function" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sass文档-数据类型-function
+    </h1>
+  
+
+        
+        <a href="/2020/07/24/sass文档-数据类型-function/" class="archive-article-date">
+  	<time datetime="2020-07-24T10:08:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>通过<code>meta.get-function()</code>函数，可以将函数当作一个值传入另一个函数，此时在另一个函数内可以使用<code>meta.call()</code>函数来调用它</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:list"</span>;</span><br><span class="line">@use <span class="string">"sass:meta"</span>;</span><br><span class="line">@use <span class="string">"sass:string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/// Return a copy of $list with all elements for which $condition returns `true`</span></span><br><span class="line"><span class="comment">/// removed.</span></span><br><span class="line">@function remove-where(<span class="variable">$list</span>, <span class="variable">$condition</span>) &#123;</span><br><span class="line">  <span class="variable">$new-list</span>: ();</span><br><span class="line">  <span class="variable">$separator</span>: list.separator(<span class="variable">$list</span>);</span><br><span class="line">  @<span class="keyword">each</span> <span class="variable">$element</span> in <span class="variable">$list</span> &#123;</span><br><span class="line">    @<span class="keyword">if</span> not meta.call(<span class="variable">$condition</span>, <span class="variable">$element</span>) &#123;</span><br><span class="line">      <span class="variable">$new-list</span>: list.append(<span class="variable">$new-list</span>, <span class="variable">$element</span>, <span class="variable">$separator</span>: <span class="variable">$separator</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  @return <span class="variable">$new-list</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$fonts</span>: Tahoma, Geneva, <span class="string">"Helvetica Neue"</span>, Helvetica, Arial, sans-serif;</span><br><span class="line"></span><br><span class="line"><span class="attribute">content</span> &#123;</span><br><span class="line">  @function contains-helvetica(<span class="variable">$string</span>) &#123;</span><br><span class="line">    @return string.index(<span class="variable">$string</span>, <span class="string">"Helvetica"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="attribute">font-family</span>: remove-where(<span class="variable">$fonts</span>, meta.get-function(<span class="string">"contains-helvetica"</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">content</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Tahoma, Geneva, Arial, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/values/functions" target="_blank" rel="noopener">Functions</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/20/sass文档-变量/" class="archive-article-date">
-  	<time datetime="2020-05-20T02:33:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/20/sass文档-变量/">sass文档-变量</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -208,316 +217,103 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/24/sass文档-数据类型-function/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/sass文档-样式规则/" class="archive-article-date">
-  	<time datetime="2020-05-19T08:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/24/sass文档-数据类型-null/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-数据类型-null</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/sass文档-样式规则/">sass文档-样式规则</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/18/sass命令行/" class="archive-article-date">
-  	<time datetime="2020-05-18T07:23:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/18/sass命令行/">sass命令行</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/12/移动端适配-概念理解-PC/" class="archive-article-date">
-  	<time datetime="2020-05-12T08:09:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/12/移动端适配-概念理解-PC/">移动端适配-概念理解-PC</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">浏览器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/11/移动端适配-概念理解/" class="archive-article-date">
-  	<time datetime="2020-05-11T07:03:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/11/移动端适配-概念理解/">移动端适配-概念理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">移动端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/28/理解css-vertical-align/" class="archive-article-date">
-  	<time datetime="2020-04-28T02:31:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/28/理解css-vertical-align/">理解css-vertical-align</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/27/理解css-line-height/" class="archive-article-date">
-  	<time datetime="2020-04-27T02:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/27/理解css-line-height/">理解css-line-height</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/17/理解css-overflow/" class="archive-article-date">
-  	<time datetime="2020-03-17T06:44:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/17/理解css-overflow/">理解css overflow</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/日积月累/page/3/">&laquo; Prev</a><a class="page-number" href="/tags/日积月累/">1</a><a class="page-number" href="/tags/日积月累/page/2/">2</a><a class="page-number" href="/tags/日积月累/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/tags/日积月累/page/5/">5</a><a class="page-number" href="/tags/日积月累/page/6/">6</a><a class="extend next" rel="next" href="/tags/日积月累/page/5/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -541,9 +337,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
