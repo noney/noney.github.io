@@ -165,6 +165,89 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sass文档-数据类型-lists" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/24/sass文档-数据类型-lists/">sass文档-数据类型-lists</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/24/sass文档-数据类型-lists/" class="archive-article-date">
+  	<time datetime="2020-07-24T06:26:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>中使用<code>逗号或者空格</code>来分列表项（必须一致，不能混用），列表项可以使用<code>()、[]</code>包裹，也可以不用包裹，列表项为空时，使用<code>()、[]</code>表示</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sizes0</span>: <span class="number">0</span>, <span class="number">0</span>;</span><br><span class="line"><span class="variable">$sizes1</span>: <span class="number">1px</span> <span class="number">1px</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$sizes2</span>: ();</span><br><span class="line"><span class="variable">$sizes3</span>: (<span class="number">3px</span> <span class="number">3px</span>);</span><br><span class="line"><span class="variable">$sizes4</span>: (<span class="number">4px</span>, <span class="number">4px</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$sizes5</span>: [];</span><br><span class="line"><span class="variable">$sizes6</span>: [<span class="number">6px</span>, <span class="number">6px</span>];</span><br><span class="line"><span class="variable">$sizes7</span>: [<span class="number">7px</span> <span class="number">7px</span>];</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-lists/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-lists/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-flex语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -560,7 +643,11 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>内置了对<code>color</code>的支持</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> <span class="number">#f2ece4</span>; <span class="comment">// #f2ece4</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="number">#b37399aa</span>; <span class="comment">// rgba(179, 115, 153, 67%)</span></span><br><span class="line">@<span class="keyword">debug</span> midnightblue; <span class="comment">// #191970</span></span><br><span class="line">@<span class="keyword">debug</span> rgb(<span class="number">204</span>, 102, 153); <span class="comment">// #c69</span></span><br><span class="line">@<span class="keyword">debug</span> rgba(<span class="number">107</span>, 113, 127, 0.8); <span class="comment">// rgba(107, 113, 127, 0.8)</span></span><br><span class="line">@<span class="keyword">debug</span> hsl(<span class="number">228</span>, 7%, 86%); <span class="comment">// #dadbdf</span></span><br><span class="line">@<span class="keyword">debug</span> hsla(<span class="number">20</span>, 20%, 85%, 0.7); <span class="comment">// rgb(225, 215, 210, 0.7)</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/06/09/sass文档-数据类型-colors/#more">more >></a>
+        
       
 
       
@@ -789,89 +876,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-sass文档-At-Rules-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/03/sass文档-At-Rules-css/">sass文档-At-Rules-css</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/03/sass文档-At-Rules-css/" class="archive-article-date">
-  	<time datetime="2020-06-03T07:25:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>支持所有<code>CSS at-rule</code>规则。为了兼容未来的原生规则和向前兼容，<code>sass</code>提供了几乎覆盖所有的<code>CSS at-rule</code>规则，<code>CSS at-rule</code>写法<code>@&lt;name&gt; &lt;value&gt;, @&lt;name&gt; { ... }, or @&lt;name&gt; &lt;value&gt; { ... }</code>，名称必须是一个<code>标识符</code>，值可以是任何东西。名称和值都可以是<code>插值表达式</code></p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">namespace</span> svg url(http://www.w3.org/<span class="number">2000</span>/svg);</span><br><span class="line"></span><br><span class="line">@font-face &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Open Sans"</span>;</span><br><span class="line">    src: url(<span class="string">"/fonts/OpenSans-Regular-webfont.woff2"</span>) format(<span class="string">"woff2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@counter-style thumbs &#123;</span><br><span class="line">    system: cyclic;</span><br><span class="line">    symbols: <span class="string">"\1F44D"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/06/03/sass文档-At-Rules-css/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/03/sass文档-At-Rules-css/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -973,19 +977,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1017,15 +1021,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
