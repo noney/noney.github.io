@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Archives: 2019 | 三人行必有我师</title>
+  <title>sass文档-操作符-等号 | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/archives/2019/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass使用==来判断两个值是否相等，使用!=来判断两个值是否不等。如果两个值相同并且类型一样，才会被认为是相等，所以不同的类型会有不同的结果  Number类型值相同，并且单位相同，或者它们的单位转换结果值相同  1234@debug 1px == 1px; // true 值&amp;amp;单位相同@debug 1px != 1em; /">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass文档-操作符-等号">
+<meta property="og:url" content="//noney.github.io/2020/07/27/sass文档-操作符-等号/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass使用==来判断两个值是否相等，使用!=来判断两个值是否不等。如果两个值相同并且类型一样，才会被认为是相等，所以不同的类型会有不同的结果  Number类型值相同，并且单位相同，或者它们的单位转换结果值相同  1234@debug 1px == 1px; // true 值&amp;amp;单位相同@debug 1px != 1em; /">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-27T07:28:13.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="sass文档-操作符-等号">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass使用==来判断两个值是否相等，使用!=来判断两个值是否不等。如果两个值相同并且类型一样，才会被认为是相等，所以不同的类型会有不同的结果  Number类型值相同，并且单位相同，或者它们的单位转换结果值相同  1234@debug 1px == 1px; // true 值&amp;amp;单位相同@debug 1px != 1em; /">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,288 +167,67 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-sass文档-操作符-等号" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      sass文档-操作符-等号
+    </h1>
+  
+
+        
+        <a href="/2020/07/27/sass文档-操作符-等号/" class="archive-article-date">
+  	<time datetime="2020-07-27T07:08:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>使用<code>==</code>来判断两个值是否相等，使用<code>!=</code>来判断两个值是否不等。如果两个<code>值相同</code>并且<code>类型一样</code>，才会被认为是<code>相等</code>，所以不同的类型会有不同的结果</p>
+<ul>
+<li><code>Number</code>类型<code>值相同</code>，并且<code>单位相同</code>，或者它们的单位转换结果<code>值相同</code></li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 1px == 1px; <span class="comment">// true 值&amp;单位相同</span></span><br><span class="line">@<span class="keyword">debug</span> 1px != 1em; <span class="comment">// true 值相同，单位不同</span></span><br><span class="line">@<span class="keyword">debug</span> 1 != 1px; <span class="comment">// true 值相同，单位不同</span></span><br><span class="line">@<span class="keyword">debug</span> 96px == 1in; <span class="comment">// true 单位转换后，值相同</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li><code>String</code>类型，只要<code>值相同</code>，即使一个有引号，一个没引号，也相等</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> <span class="string">"Helvetica"</span> == Helvetica; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="string">"Helvetica"</span> != <span class="string">"Arial"</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>Color</code>类型，颜色值相同就相等</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> hsl(<span class="number">34</span>, 35%, 92.1%) == <span class="number">#f2ece4</span>; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> rgba(<span class="number">179</span>, 115, 153, 0.5) != rgba(<span class="number">179</span>, 115, 153, 0.8); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>list</code>类型，如果列表的内容相等，则列表相等。用<code>逗号</code>分隔的列表<code>不等于</code>用<code>空格</code>分隔的列表，用<code>括号</code>括起来的列表<code>不等于</code>不用<code>括号</code>括起来的列表。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> (<span class="number">5px</span> 7px 10px) == (<span class="number">5px</span> 7px 10px); <span class="comment">// true 内容相等</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">5px</span> 7px 10px) != (<span class="number">10px</span> 14px 20px); <span class="comment">// true 内容不相等</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">5px</span> 7px 10px) != (<span class="number">5px</span>, 7px, 10px); <span class="comment">// true `空格`分隔不等于`逗号`分隔</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">5px</span> 7px 10px) != [<span class="number">5px</span> 7px 10px]; <span class="comment">// true `括号`括起来不等于`中括号`括起来</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>map</code>类型，值和键都相等，则相等</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$theme</span>: (<span class="string">"venus"</span>: <span class="number">#998099</span>, <span class="string">"nebula"</span>: <span class="number">#d2e1dd</span>);</span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$theme</span> == (<span class="string">"venus"</span>: <span class="number">#998099</span>, <span class="string">"nebula"</span>: <span class="number">#d2e1dd</span>); <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$theme</span> != (<span class="string">"venus"</span>: <span class="number">#998099</span>, <span class="string">"iron"</span>: <span class="number">#dadbdf</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>true</code>、<code>false</code>和<code>null</code>只等于它们自己。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> true == true; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> true != false; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> null != false; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>Function</code>类型，函数等于相同的函数。函数通过引用进行比较，因此，即使两个函数具有相同的名称和定义，但如果它们没有在相同的地方定义，也会被认为是不同的。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> get-function(<span class="string">"rgba"</span>) == get-function(<span class="string">"rgba"</span>); <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> get-function(<span class="string">"rgba"</span>) != get-function(<span class="string">"hsla"</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/operators/equality" target="_blank" rel="noopener">Equality Operators</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/26/Zepto源码分析之元素实例方法-五/" class="archive-article-date">
-  	<time datetime="2019-12-26T06:26:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/26/Zepto源码分析之元素实例方法-五/">Zepto源码分析之元素实例方法(五)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/25/Zepto源码分析之元素实例方法-四/" class="archive-article-date">
-  	<time datetime="2019-12-25T02:46:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/25/Zepto源码分析之元素实例方法-四/">Zepto源码分析之元素实例方法(四)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/24/Zepto源码分析之元素实例方法-三/" class="archive-article-date">
-  	<time datetime="2019-12-24T06:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/24/Zepto源码分析之元素实例方法-三/">Zepto源码分析之元素实例方法(三)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/19/Zepto源码分析之元素实例方法-二/" class="archive-article-date">
-  	<time datetime="2019-12-19T06:55:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/19/Zepto源码分析之元素实例方法-二/">Zepto源码分析之元素实例方法(二)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/19/Zepto源码分析之元素实例方法-一/" class="archive-article-date">
-  	<time datetime="2019-12-19T06:24:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/19/Zepto源码分析之元素实例方法-一/">Zepto源码分析之元素实例方法(一)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/16/Zepto源码分析之-挂载的方法/" class="archive-article-date">
-  	<time datetime="2019-12-16T06:14:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/16/Zepto源码分析之-挂载的方法/">Zepto源码分析之$挂载的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/13/AnyProxy抓包工具/" class="archive-article-date">
-  	<time datetime="2019-12-13T06:22:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/13/AnyProxy抓包工具/">AnyProxy抓包工具</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -454,327 +237,110 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/27/sass文档-操作符-等号/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/06/Zepto源码分析之内部方法/" class="archive-article-date">
-  	<time datetime="2019-12-06T09:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/24/sass文档-数据类型-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-数据类型-function</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/06/Zepto源码分析之内部方法/">Zepto源码分析之内部方法</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/05/Zepto源码分析之Zepto对象/" class="archive-article-date">
-  	<time datetime="2019-12-05T07:28:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/05/Zepto源码分析之Zepto对象/">Zepto源码分析之Zepto对象</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/03/Zepto源码分析之结构/" class="archive-article-date">
-  	<time datetime="2019-12-03T06:40:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/03/Zepto源码分析之结构/">Zepto源码分析之结构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/19/nvm使用/" class="archive-article-date">
-  	<time datetime="2019-11-19T06:04:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/19/nvm使用/">nvm使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/exports和module-exports的区别/" class="archive-article-date">
-  	<time datetime="2019-11-14T08:10:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/14/exports和module-exports的区别/">exports和module.exports的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/23/ESLint配置/" class="archive-article-date">
-  	<time datetime="2019-10-23T07:42:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/23/ESLint配置/">ESLint配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ESLint</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/用MarkDown写博客/" class="archive-article-date">
-  	<time datetime="2019-10-22T06:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/用MarkDown写博客/">用MarkDown写博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MarkDown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -797,8 +363,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
