@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>sass文档-操作符-关系 | 三人行必有我师</title>
+  <title>sass文档-操作符-字符串 | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass关系操作符包括&amp;gt;、&amp;lt;、&amp;gt;=、&amp;lt;=。关系运算符确定数字之间是大是小。它们会在兼容的单位之间自动转换。 1234@debug 100 &amp;gt; 50; // true@debug 10px &amp;lt; 17px; // true@debug 96px &amp;gt;= 1in; // true@debug 1000m">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass提供下面几种生成字符串的操作符  &amp;lt;expression&amp;gt; + &amp;lt;expression&amp;gt;返回一个包含两个表达式值的字符串。如果任意一个值是用引号括起来的字符串，结果也会用引号括起来;否则，返回一个不带引号的字符串。  12@debug &quot;Helvetica&quot; + &quot; Neue&quot;; // &quot;Helvetic">
 <meta name="keywords" content="日积月累,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sass文档-操作符-关系">
-<meta property="og:url" content="//noney.github.io/2020/07/27/sass文档-操作符-关系/index.html">
+<meta property="og:title" content="sass文档-操作符-字符串">
+<meta property="og:url" content="//noney.github.io/2020/07/28/sass文档-操作符-字符串/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass关系操作符包括&amp;gt;、&amp;lt;、&amp;gt;=、&amp;lt;=。关系运算符确定数字之间是大是小。它们会在兼容的单位之间自动转换。 1234@debug 100 &amp;gt; 50; // true@debug 10px &amp;lt; 17px; // true@debug 96px &amp;gt;= 1in; // true@debug 1000m">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass提供下面几种生成字符串的操作符  &amp;lt;expression&amp;gt; + &amp;lt;expression&amp;gt;返回一个包含两个表达式值的字符串。如果任意一个值是用引号括起来的字符串，结果也会用引号括起来;否则，返回一个不带引号的字符串。  12@debug &quot;Helvetica&quot; + &quot; Neue&quot;; // &quot;Helvetic">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-28T07:11:28.798Z">
+<meta property="og:updated_time" content="2020-07-28T07:50:32.146Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass文档-操作符-关系">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass关系操作符包括&amp;gt;、&amp;lt;、&amp;gt;=、&amp;lt;=。关系运算符确定数字之间是大是小。它们会在兼容的单位之间自动转换。 1234@debug 100 &amp;gt; 50; // true@debug 10px &amp;lt; 17px; // true@debug 96px &amp;gt;= 1in; // true@debug 1000m">
+<meta name="twitter:title" content="sass文档-操作符-字符串">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass提供下面几种生成字符串的操作符  &amp;lt;expression&amp;gt; + &amp;lt;expression&amp;gt;返回一个包含两个表达式值的字符串。如果任意一个值是用引号括起来的字符串，结果也会用引号括起来;否则，返回一个不带引号的字符串。  12@debug &quot;Helvetica&quot; + &quot; Neue&quot;; // &quot;Helvetic">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass文档-操作符-关系" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-sass文档-操作符-字符串" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      sass文档-操作符-关系
+      sass文档-操作符-字符串
     </h1>
   
 
         
-        <a href="/2020/07/27/sass文档-操作符-关系/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:30:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
+        <a href="/2020/07/28/sass文档-操作符-字符串/" class="archive-article-date">
+  	<time datetime="2020-07-28T07:13:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
 </a>
         
       </header>
@@ -189,17 +189,32 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>关系操作符包括<code>&gt;、&lt;、&gt;=、&lt;=</code>。关系运算符确定<code>数字</code>之间是大是小。它们会在<code>兼容的单位</code>之间自动转换。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100 &gt; 50; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> 10px &lt; 17px; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> 96px &gt;= 1in; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> 1000ms &lt;= 1s; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>提供下面几种生成<code>字符串</code>的操作符</p>
 <ul>
-<li>无单位数可以与任何数比较。它们会自动转换成那个数字的单位。</li>
+<li><code>&lt;expression&gt; + &lt;expression&gt;</code>返回一个包含两个表达式值的字符串。如果任意一个值是用引号括起来的字符串，结果也会用引号括起来;否则，返回一个不带引号的字符串。</li>
 </ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100 &gt; 50px; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> 10px &lt; 17; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> <span class="string">"Helvetica"</span> + <span class="string">" Neue"</span>; <span class="comment">// "Helvetica Neue"</span></span><br><span class="line">@<span class="keyword">debug</span> sans- + serif; <span class="comment">// sans-serif</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&lt;expression&gt; / &lt;expression&gt;</code>返回一个不带引号的字符串，该字符串包含两个表达式的值，以/分隔。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10px / 10px; <span class="comment">//  10px/10px</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&lt;expression&gt; - &lt;expression&gt;</code>返回一个不带引号的字符串，该字符串包含两个表达式的值，以-分隔。这是一个遗留操作符，通常应该使用插值。</li>
+</ul>
 <a id="more"></a>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> sans - serif; <span class="comment">// sans-serif</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>使用插值来创建字符串，而不是依赖于这些操作符，通常会更加清晰。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$num</span>: <span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> #&#123;<span class="variable">$num</span>&#125; + 10; <span class="comment">// 10px10</span></span><br></pre></td></tr></table></figure>
+<h4 id="一元操作符"><a href="#一元操作符" class="headerlink" title="一元操作符"></a>一元操作符</h4><p>由于历史原因，<code>sass</code>还支持<code>-、/</code>作为一元操作符使用</p>
 <ul>
-<li>不能比较单位不兼容的数字。</li>
+<li><code>/&lt;expression&gt;</code>返回一个不带引号的字符串，以<code>/</code>开头，后跟表达式的值</li>
 </ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100px &gt; 10s;</span><br><span class="line"><span class="comment">//     ^^^^^^^^^^^</span></span><br><span class="line"><span class="comment">// Error: Incompatible units px and s.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> / 15px; <span class="comment">// /15px</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-&lt;expression&gt;</code>返回一个不带引号的字符串，以<code>-</code>开头，后跟表达式的值</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> - moz; <span class="comment">// -moz</span></span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/operators/string" target="_blank" rel="noopener">String Operators</a></p>
 
       
 
@@ -273,7 +288,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/27/sass文档-操作符-关系/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/28/sass文档-操作符-字符串/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -287,18 +302,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/07/27/sass文档-操作符-数值/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sass文档-操作符-数值
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/27/sass文档-操作符-等号/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass文档-操作符-等号</div>
+    <a href="/2020/07/27/sass文档-操作符-数值/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-操作符-数值</div>
       <i class="icon-circle-right"></i>
     </a>
   
