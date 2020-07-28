@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Archives: 2020/7 | 三人行必有我师</title>
+  <title>sass文档-操作符-数值 | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/archives/2020/07/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass数值运算符包括+、-、*、/、%。支持数字的标准数学运算符集。它们会在兼容的单元之间自动转换。 12345@debug 10s + 15s; // 25s@debug 1in - 10px; // 0.8958333333in@debug 5px * 3px; // 15px*px@debug (12px/4px); // 3@">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass文档-操作符-数值">
+<meta property="og:url" content="//noney.github.io/2020/07/27/sass文档-操作符-数值/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass数值运算符包括+、-、*、/、%。支持数字的标准数学运算符集。它们会在兼容的单元之间自动转换。 12345@debug 10s + 15s; // 25s@debug 1in - 10px; // 0.8958333333in@debug 5px * 3px; // 15px*px@debug (12px/4px); // 3@">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-28T07:11:32.189Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="sass文档-操作符-数值">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面sass数值运算符包括+、-、*、/、%。支持数字的标准数学运算符集。它们会在兼容的单元之间自动转换。 12345@debug 10s + 15s; // 25s@debug 1in - 10px; // 0.8958333333in@debug 5px * 3px; // 15px*px@debug (12px/4px); // 3@">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,36 +167,101 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-sass文档-操作符-数值" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      sass文档-操作符-数值
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/27/sass文档-操作符-数值/" class="archive-article-date">
+
+        
+        <a href="/2020/07/27/sass文档-操作符-数值/" class="archive-article-date">
   	<time datetime="2020-07-27T07:37:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/27/sass文档-操作符-数值/">sass文档-操作符-数值</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>数值运算符包括<code>+、-、*、/、%</code>。支持数字的标准数学运算符集。它们会在兼容的单元之间自动转换。</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10s + 15s; <span class="comment">// 25s</span></span><br><span class="line">@<span class="keyword">debug</span> 1in - 10px; <span class="comment">// 0.8958333333in</span></span><br><span class="line">@<span class="keyword">debug</span> 5px * 3px; <span class="comment">// 15px*px</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">12px</span>/<span class="number">4px</span>); <span class="comment">// 3</span></span><br><span class="line">@<span class="keyword">debug</span> 1in % 9px; <span class="comment">// 0.0625in</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>无单位数，可以与任何单位数进行计算</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100px + 50; <span class="comment">// 150px</span></span><br><span class="line">@<span class="keyword">debug</span> 4s * 10; <span class="comment">// 40s</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<ul>
+<li><code>+、-、%</code>不以用于不兼容的单位计算</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10s + 20px; <span class="comment">// Error: Incompatible units px and s.</span></span><br><span class="line">@<span class="keyword">debug</span> 10s - 20px; <span class="comment">// Error: Incompatible units px and s.</span></span><br><span class="line">@<span class="keyword">debug</span> 10s % 20px; <span class="comment">// Error: Incompatible units px and s.</span></span><br><span class="line">@<span class="keyword">debug</span> 10s / 20px; <span class="comment">// 10s/20px</span></span><br><span class="line">@<span class="keyword">debug</span> 10s * 20px; <span class="comment">// 200s*px</span></span><br></pre></td></tr></table></figure>
+<h4 id="一元操作符"><a href="#一元操作符" class="headerlink" title="一元操作符"></a>一元操作符</h4><ul>
+<li><code>+&lt;expression&gt;</code>返回表达式的值而不改变它。</li>
+<li><code>-&lt;expression&gt;</code>返回表达式值并取反。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> +(<span class="number">5s</span> + 7s); <span class="comment">// 12s</span></span><br><span class="line">@<span class="keyword">debug</span> -(<span class="number">50px</span> + 30px); <span class="comment">// -80px</span></span><br><span class="line">@<span class="keyword">debug</span> -(<span class="number">10px</span> - 15px); <span class="comment">// 5px</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong> <code>-</code>作为一元操作符，也能作为减法去用，安全用法如下</p>
+<ul>
+<li>作为减法时，操作符两边都加<code>空格</code></li>
+<li>作为一元操作符时，操作符左边加<code>空格</code></li>
+<li>空格分隔的列表时，用<code>括号</code>括起来</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 2 - 1;  <span class="comment">// 1 两边加空格</span></span><br><span class="line">@<span class="keyword">debug</span> 1 -2 3; <span class="comment">// 1 -2 3 前面加空格</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$number</span>: <span class="number">2</span>;</span><br><span class="line">@<span class="keyword">debug</span> 1 -<span class="variable">$number</span> 3; <span class="comment">// -1 3</span></span><br><span class="line">@<span class="keyword">debug</span> 1 (-<span class="variable">$number</span>) 3; <span class="comment">// 1 -2 3 括号括起来</span></span><br></pre></td></tr></table></figure>
+<h4 id="斜杠分隔值"><a href="#斜杠分隔值" class="headerlink" title="斜杠分隔值"></a>斜杠分隔值</h4><p><code>css</code>属性值支持使用<code>/</code>分隔，所以我们需要把它和<code>sass</code>的运算符<code>/</code>做区分。默认<code>sass</code>是以<code>css斜线</code>分隔的形式输出结果，除非满足以下条件之一</p>
+<ul>
+<li>任何表达式都是除了字面数以外的任何东西。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$num</span>: <span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$num</span> / 10px; <span class="comment">// 1</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$num</span> / <span class="variable">$num</span>;  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>结果存储在变量中或由函数返回。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$result</span>: <span class="number">15px</span> / <span class="number">30px</span>;</span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$result</span>; <span class="comment">// 0.5</span></span><br><span class="line"></span><br><span class="line">@function fifteen-divided-by-thirty() &#123;</span><br><span class="line">  @return 15px / 30px;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">debug</span> fifteen-divided-by-thirty(); <span class="comment">// 0.5</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>操作被圆括号包围，除非圆括号位于包含操作的列表之外。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> (<span class="number">15px</span>/<span class="number">30px</span>); <span class="comment">// 0.5</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">10px</span> + 5px) / 30px; <span class="comment">// 0.5</span></span><br><span class="line">@<span class="keyword">debug</span> (bold 15px/<span class="number">30px</span> sans-serif); <span class="comment">// bold 15px/30px sans-serif</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>结果被用作另一个操作的一部分(除了/)。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 15px/<span class="number">30px</span> + 1; <span class="comment">// 1.5</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>如果强制将<code>/</code>作为分隔符使用，可以将其写为<code>#{&lt;expression&gt;} / #{&lt;expression&gt;}</code></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$num</span>: <span class="number">10px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$num</span> / 10px; <span class="comment">// 1</span></span><br><span class="line">@debug #&#123;$num&#125; / 10px; // 10px/10px</span><br><span class="line">@debug #&#123;$num&#125; / #&#123;10px&#125;; // 10px/10px</span><br></pre></td></tr></table></figure>
+<h4 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h4><ul>
+<li>两个数相乘时，它们的单位也相乘</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10px * 10px; <span class="comment">// 100px*px</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>两个数相除时，<code>分子</code>是第一个数的单位，<code>分母</code>是第二个数的单位（分子、分母单位可以有多个）</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> (<span class="number">10px</span> / 10em); <span class="comment">// 1px/em</span></span><br><span class="line">@<span class="keyword">debug</span> 5px * 30deg / 2s / 24em; <span class="comment">// 3.125px*deg/s*em</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong><code>sass</code>会在兼容的单位间进行转换，如果单位不兼容，会报错</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @debug 1in - 6px; // Error: Incompatible units s and in.</span></span><br><span class="line"><span class="comment">// @debug 1in - 1s; // Error: Incompatible units s and in.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// @debug 1in + 6px; // Error: Incompatible units s and in.</span></span><br><span class="line"><span class="comment">// @debug 1in + 1s; // Error: Incompatible units s and in.</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> 1in * 6px; <span class="comment">// 6in*px</span></span><br><span class="line">@<span class="keyword">debug</span> 1in * 1s; <span class="comment">// 1in*s</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">1in</span> / 6px); <span class="comment">// 16</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">1in</span> / 1s); <span class="comment">// 1in/s</span></span><br></pre></td></tr></table></figure>
+<p>计算时，单位的变化</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10px + 19px; <span class="comment">// 29px 单位会保留</span></span><br><span class="line">@<span class="keyword">debug</span> 19px - 10px; <span class="comment">// 9px 单位会保留</span></span><br><span class="line">@<span class="keyword">debug</span> 20px * 10px; <span class="comment">// 200px*px 单位会相乘</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="number">20px</span> / 10px); <span class="comment">// 2 单位会相除被抵消</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$transition-speed</span>: <span class="number">1s</span>/<span class="number">50px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> move(<span class="variable">$left-start</span>, <span class="variable">$left-stop</span>) &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="variable">$left-start</span>;</span><br><span class="line">  <span class="attribute">transition</span>: left (<span class="variable">$left-stop</span> - <span class="variable">$left-start</span>) * <span class="variable">$transition-speed</span>;</span><br><span class="line"></span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="variable">$left-stop</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.slider</span> &#123;</span><br><span class="line">  @<span class="keyword">include</span> move(<span class="number">10px</span>, 120px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.slider</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">transition</span>: left <span class="number">2.2s</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.slider</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">120px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意</em></strong></p>
+<ul>
+<li>正确使用单位，避免使用<code>#{$num}px</code>这样的插值，它并不会创建一个带单位的数字，它创建的更像是一个无引号的字符串</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$num1</span>: <span class="number">19px</span>;</span><br><span class="line"><span class="variable">$num</span>: <span class="number">19</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> #&#123;<span class="variable">$num</span>&#125;px + 10; <span class="comment">// 19px10，这种形式创建的是一个无引号的字符串，并不是我们想要的结果</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$num</span> * 1px + 10; <span class="comment">// 29px 如果变量没有单位，可以乘以1px，让它带上单位</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$num1</span> + 10; <span class="comment">// 29px</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>sass</code>中<code>百分比</code>单位和<code>小数</code>不能默认转换，因为在<code>css</code>中，这两个单位代表不同的东西，如果需要转换，我们可以使用<code>$percentage / 100%</code>返回小数，<code>$decimal * 100%</code>返回百分比，我们还可以全用<code>math.percentage()</code>函数，返回百分比 </li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:math"</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$num</span>: .<span class="number">5</span>;</span><br><span class="line"><span class="variable">$num1</span>: <span class="number">50%</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> math.percentage(<span class="variable">$num</span>); <span class="comment">// 50%</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="variable">$num</span> * 100%; <span class="comment">// 50%</span></span><br><span class="line">@<span class="keyword">debug</span> (<span class="variable">$num1</span> / 100%); <span class="comment">// 0.5</span></span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/operators/numeric" target="_blank" rel="noopener">Numeric Operators</a></p>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -208,481 +277,104 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/27/sass文档-操作符-数值/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/27/sass文档-操作符-关系/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:30:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/27/sass文档-操作符-关系/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sass文档-操作符-关系</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/27/sass文档-操作符-关系/">sass文档-操作符-关系</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/27/sass文档-操作符-等号/" class="archive-article-date">
-  	<time datetime="2020-07-27T07:08:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/27/sass文档-操作符-等号/">sass文档-操作符-等号</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/24/sass文档-数据类型-function/" class="archive-article-date">
-  	<time datetime="2020-07-24T10:08:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/sass文档-数据类型-function/">sass文档-数据类型-function</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/24/sass文档-数据类型-null/" class="archive-article-date">
-  	<time datetime="2020-07-24T09:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/sass文档-数据类型-null/">sass文档-数据类型-null</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/24/sass文档-数据类型-Booleans/" class="archive-article-date">
-  	<time datetime="2020-07-24T09:20:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/sass文档-数据类型-Booleans/">sass文档-数据类型-Booleans</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/24/sass文档-数据类型-maps/" class="archive-article-date">
-  	<time datetime="2020-07-24T08:26:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/sass文档-数据类型-maps/">sass文档-数据类型-maps</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/24/sass文档-数据类型-lists/" class="archive-article-date">
-  	<time datetime="2020-07-24T06:26:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/24/sass文档-数据类型-lists/">sass文档-数据类型-lists</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/21/flex语法/" class="archive-article-date">
-  	<time datetime="2020-07-21T06:13:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/21/flex语法/">flex语法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/17/word-break、word-wrap、white-space/" class="archive-article-date">
-  	<time datetime="2020-07-17T02:48:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/17/word-break、word-wrap、white-space/">word-break、word-wrap、white-space</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/10/es6系列-Async/" class="archive-article-date">
-  	<time datetime="2020-07-10T10:07:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/10/es6系列-Async/">es6系列-Async</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/09/es6系列-Promise/" class="archive-article-date">
-  	<time datetime="2020-07-09T02:42:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/es6系列-Promise/">es6系列-Promise</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -705,8 +397,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
