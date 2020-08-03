@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用table元素可以创建一个表格。它由多个tr、th、td组成，它还包括caption、col、colgroup、thead、tfoot 以及tbody 元素 table元素   属性 值 描述 备注     align left、center、right 默认table自己占一行，align属性可以达到float效果，使其它元素围绕">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-29T04:39:11.371Z">
+<meta property="og:updated_time" content="2020-08-03T10:16:36.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="html元素-table">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用table元素可以创建一个表格。它由多个tr、th、td组成，它还包括caption、col、colgroup、thead、tfoot 以及tbody 元素 table元素   属性 值 描述 备注     align left、center、right 默认table自己占一行，align属性可以达到float效果，使其它元素围绕">
@@ -260,6 +260,11 @@ var _hmt = _hmt || [];
 <p><strong><em>align 例子</em></strong></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>Month<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>Savings<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>January<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>$100<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>align 属性可以使文本围绕在表格周围。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>在 HTML 4.01 中，不赞成使用 body 元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持 body 元素的 align 属性<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><strong><em>总结：</em></strong> 大多数属性都不建议使用或者建议使用<code>css</code>样式设置，我们需要关注的是<code>cellpadding、cellspacing</code>这两个属性</p>
+<p><code>table</code>特性：</p>
+<ul>
+<li>包裹性</li>
+<li>不设置宽度，不会超过<code>父容器</code>的宽度</li>
+</ul>
 <h4 id="caption元素"><a href="#caption元素" class="headerlink" title="caption元素"></a>caption元素</h4><p><code>caption</code> 元素定义表格标题</p>
 <table>
 <thead>
@@ -325,6 +330,12 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <p><strong><em>总结：</em></strong>大多数属性兼容性都很差，我们需要关注的是<code>align、valign</code>这两个属性</p>
+<p><code>tr</code>特性</p>
+<ul>
+<li>包裹性</li>
+<li><code>margin</code>无效</li>
+<li><code>width</code>无效，它的宽度由<code>td</code>或<code>table</code>决定</li>
+</ul>
 <h4 id="td-amp-th元素"><a href="#td-amp-th元素" class="headerlink" title="td&amp;th元素"></a>td&amp;th元素</h4><p><code>td</code>元素定义表格中的标准单元格。内部文本<code>正常大小、左对齐</code>显示</p>
 <p><code>th</code>元素定义表格中的表头单元格。内部文本<code>居中、加粗</code>显示</p>
 <p>除了以上区别，其它方面几乎没有任何区别，它们有着<code>同样的属性</code></p>
@@ -425,6 +436,82 @@ var _hmt = _hmt || [];
 </tbody>
 </table>
 <p><strong><em>总结：</em></strong>大多数属性兼容性都很差，我们需要关注的是<code>align、valign、colspan、rowspan</code>这四个属性</p>
+<p><code>td</code>特性</p>
+<ul>
+<li>包裹性</li>
+<li><code>margin</code>无效</li>
+<li>高度相等</li>
+<li>宽度等分（fixed）</li>
+</ul>
+<h4 id="table-amp-tr-amp-td总结"><a href="#table-amp-tr-amp-td总结" class="headerlink" title="table&amp;tr&amp;td总结"></a>table&amp;tr&amp;td总结</h4><table>
+<thead>
+<tr>
+<th>table宽度</th>
+<th>单元格宽度</th>
+<th>table-layout</th>
+<th>单元格表现</th>
+<th>table表现</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不设置</td>
+<td>不设置</td>
+<td>auto/fixed</td>
+<td>内容宽度</td>
+<td>所有单元格宽度之和（内容宽度）</td>
+<td>不会超出<code>table父容器</code>宽度</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>不设置</td>
+<td>auto</td>
+<td>内容宽度</td>
+<td>设置的<code>table</code>宽度</td>
+<td>内容多时，没有空白，单元格变高</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>不设置</td>
+<td>fixed</td>
+<td>宽度均分</td>
+<td>设置的<code>table</code>宽度</td>
+<td></td>
+</tr>
+<tr>
+<td>设置</td>
+<td>设置</td>
+<td>auto</td>
+<td>内容宽度+空白</td>
+<td>设置的<code>table</code>宽度</td>
+<td>宽度均分</td>
+</tr>
+<tr>
+<td>设置</td>
+<td>设置</td>
+<td>fixed</td>
+<td>table大，宽度均分；单元格大，单元格设置的宽度</td>
+<td>table大，设置的<code>table</code>宽度；单元格大，所有单元格宽度之和</td>
+<td></td>
+</tr>
+<tr>
+<td>不设置</td>
+<td>设置</td>
+<td>auto/fixed</td>
+<td>设置的单元格宽度</td>
+<td>所有单元格宽度之和</td>
+<td>单元格相等</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>结论：</em></strong></p>
+<ul>
+<li><code>fixed</code>时，单元格宽度相等（除了都不设置宽度），所有<code>单元格</code>宽度之和与<code>table</code>宽度比较，取大者。<code>table</code>宽度大时，<code>单元格</code>均分；反之<code>table</code>的宽度为所有<code>单元格</code>宽度之和（此规则均以<code>css</code>设置的宽度为准）</li>
+<li><code>auto</code>时，单元格宽度等于<code>内容宽度+剩余空间</code>（除了最后一条），如果内容过多，<code>剩余空间</code>将不存在，并且单元格增加高度（此规则均以<code>内容</code>的宽度为准）</li>
+<li>都不设置宽度时，<code>table</code>内容不会超出父容器</li>
+</ul>
+<h4 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h4><p><code>vertical-align</code>属性可以用来设置元素的垂直对齐方式。它也能应用于<code>td、th</code>元素</p>
 <h4 id="合并边框"><a href="#合并边框" class="headerlink" title="合并边框"></a>合并边框</h4><p>当我们给<code>table、td</code>添加边框时，就会出现双层边框情况，此时我们需要使用<code>border-collapse</code>属性合并边框</p>
 <ul>
 <li>separate 默认值，边框被分开</li>
@@ -435,13 +522,13 @@ var _hmt = _hmt || [];
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">td</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="表格布局算法"><a href="#表格布局算法" class="headerlink" title="表格布局算法"></a>表格布局算法</h4><p>表格布局算法使用<code>css table-layout</code>属性</p>
 <ul>
-<li>automatic 默认值，列宽度由单元格<code>内容</code>设定（<code>max-width、min-width</code>有效）</li>
+<li>auto 默认值，列宽度由单元格<code>内容</code>设定（<code>max-width、min-width</code>有效）</li>
 <li>fixed 列宽由表格宽度和列宽度设定（所有<code>td</code>宽度之和与<code>table</code>宽度两者取最大值，<code>max-width、min-width</code>无效）</li>
 <li>inherit 从父元素继成<code>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;</code></li>
 </ul>
 <h4 id="实例-滚动条"><a href="#实例-滚动条" class="headerlink" title="实例-滚动条"></a>实例-滚动条</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tbox"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>one<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>two<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>three<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>four<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>five<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.tbox</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">overflow-x</span>: scroll;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tbox</span> <span class="selector-tag">table</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">  <span class="attribute">table-layout</span>: fixed;</span><br><span class="line">  width: 100%; // 不设置此宽度，table宽度由td决定，当所有宽度之和大于table时，td设置宽度无效，宽度平分table父级宽度</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tbox</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tbox</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> <span class="selector-tag">td</span>, <span class="selector-class">.tbox</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.w3school.com.cn/cssref/pr_tab_border-collapse.asp" target="_blank" rel="noopener">border-collapse</a><br><a href="https://www.w3school.com.cn/cssref/pr_tab_table-layout.asp" target="_blank" rel="noopener">table-layout</a><br><a href="https://www.w3school.com.cn/tags/tag_table.asp" target="_blank" rel="noopener">HTML table 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_tr.asp" target="_blank" rel="noopener">HTML tr 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_td.asp" target="_blank" rel="noopener">HTML td 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_th.asp" target="_blank" rel="noopener">HTML th 标签</a><br><a href="https://www.cnblogs.com/peterYong/p/10761757.html" target="_blank" rel="noopener">【CSS】Table样式</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.w3school.com.cn/cssref/pr_tab_border-collapse.asp" target="_blank" rel="noopener">border-collapse</a><br><a href="https://www.w3school.com.cn/cssref/pr_tab_table-layout.asp" target="_blank" rel="noopener">table-layout</a><br><a href="https://www.w3school.com.cn/tags/tag_table.asp" target="_blank" rel="noopener">HTML table 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_tr.asp" target="_blank" rel="noopener">HTML tr 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_td.asp" target="_blank" rel="noopener">HTML td 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_th.asp" target="_blank" rel="noopener">HTML th 标签</a><br><a href="https://www.cnblogs.com/peterYong/p/10761757.html" target="_blank" rel="noopener">【CSS】Table样式</a><br><a href="https://www.jianshu.com/p/52b0c2a7ea29" target="_blank" rel="noopener">display: table-cell知识点总结</a></p>
 
       
 
@@ -528,6 +615,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/08/03/css-display-table-cell/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          css display table-cell
+        
+      </div>
+    </a>
   
   
     <a href="/2020/07/28/sass文档-操作符-布尔值/" id="article-nav-older" class="article-nav-link-wrap">
@@ -651,14 +747,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
               </li>
              
@@ -667,23 +755,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -695,6 +775,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
              
@@ -703,11 +799,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
