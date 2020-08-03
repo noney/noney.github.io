@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css2.1表格模型中，为了使其能正常工作，如果table/inline-table、table-row、table-cell没有同时出现，浏览器会默认将其补全，在元素的周围生成匿名元素。 12345678&amp;lt;div class=&quot;cell&quot;&amp;gt;我是一个单元格&amp;lt;/div&amp;gt;&amp;lt;!-- 等价于 --&amp;gt;&amp;lt;d">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-03T10:22:23.557Z">
+<meta property="og:updated_time" content="2020-08-03T10:25:38.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css display table-cell">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css2.1表格模型中，为了使其能正常工作，如果table/inline-table、table-row、table-cell没有同时出现，浏览器会默认将其补全，在元素的周围生成匿名元素。 12345678&amp;lt;div class=&quot;cell&quot;&amp;gt;我是一个单元格&amp;lt;/div&amp;gt;&amp;lt;!-- 等价于 --&amp;gt;&amp;lt;d">
@@ -220,7 +220,7 @@ var _hmt = _hmt || [];
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">"table"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>我是一个Td<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td我是一个Td<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">td</span>&gt;</span>我是一个Td<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.table</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">500px</span>;</span><br><span class="line">	<span class="attribute">table-layout</span>: fixed;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">td</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong><em>解析：</em></strong>利用<code>fixed</code>时，<code>table-cell</code>宽度均分特性</p>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.jianshu.com/p/52b0c2a7ea29" target="_blank" rel="noopener">display: table-cell知识点总结</a><br><a href="[http://0kv30q.coding-pages.com/2020/07/28/html%E5%85%83%E7%B4%A0-table/](http://0kv30q.coding-pages.com/2020/07/28/html元素-table/">html元素-table</a>)</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.jianshu.com/p/52b0c2a7ea29" target="_blank" rel="noopener">display: table-cell知识点总结</a><br><a href="http://0kv30q.coding-pages.com/2020/07/28/html元素-table/" target="_blank" rel="noopener">html元素-table</a></p>
 
       
 
@@ -430,38 +430,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">读源码</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Zepto</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
@@ -470,7 +438,39 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">读源码</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Zepto</a>
               </li>
              
               <li class="article-tag-list-item">
