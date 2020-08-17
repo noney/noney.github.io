@@ -165,6 +165,90 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Zepto源码分析之内部方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/06/Zepto源码分析之内部方法/">Zepto源码分析之内部方法</a>
+    </h1>
+  
+
+        
+        <a href="/2019/12/06/Zepto源码分析之内部方法/" class="archive-article-date">
+  	<time datetime="2019-12-06T09:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>这篇来分析一下内部定义使用的方法。这些方法有些也会同时挂载到函数$上面，对外暴露。</p>
+<h4 id="源码版本"><a href="#源码版本" class="headerlink" title="源码版本"></a>源码版本</h4><p>解读的版本为<em>1.2.0</em></p>
+<h4 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> class2type = &#123;&#125;,</span><br><span class="line">  toString = class2type.toString,</span><br><span class="line">  <span class="comment">// 是否为数组</span></span><br><span class="line">  isArray = <span class="keyword">Array</span>.isArray ||</span><br><span class="line">  <span class="function"><span class="keyword">function</span><span class="params">(object)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> object <span class="keyword">instanceof</span> <span class="keyword">Array</span></span><br><span class="line">  &#125;;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [type 返回类型字符串]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;[all]&#125; obj [待检测参数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;[type]&#125;     [类型字符串]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">type</span><span class="params">(obj)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> obj == <span class="keyword">null</span> ? String(obj) :</span><br><span class="line">    class2type[toString.call(obj)] || <span class="string">"object"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [isFunction 是否函数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;[all]&#125;  value [待检测参数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;Boolean&#125;       [description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFunction</span><span class="params">(value)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> type(value) == <span class="string">"function"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [isWindow 是否window]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;[all]&#125;  value [待检测参数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;Boolean&#125;     [description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isWindow</span><span class="params">(obj)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> obj != <span class="keyword">null</span> &amp;&amp; obj == obj.window</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [isWindow 是否document]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;[all]&#125;  value [待检测参数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;Boolean&#125;     [description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isDocument</span><span class="params">(obj)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> obj != <span class="keyword">null</span> &amp;&amp; obj.nodeType == obj.DOCUMENT_NODE</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [isWindow 是否对象]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;[all]&#125;  value [待检测参数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;Boolean&#125;     [description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isObject</span><span class="params">(obj)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> type(obj) == <span class="string">"object"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/12/06/Zepto源码分析之内部方法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">读源码</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Zepto</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/12/06/Zepto源码分析之内部方法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Zepto源码分析之Zepto对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -764,90 +848,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-使用hexo搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/04/使用hexo搭建博客/">使用hexo搭建博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/04/使用hexo搭建博客/" class="archive-article-date">
-  	<time datetime="2017-09-04T08:11:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>搭建个人博客非常有必要，我们可以用它来记录一些解决过的难题，古语有 ‘好记性不如烂笔头子’，记录的过程中我们可以加深印象，如果回头使用的时候忘了还可以做一个参考，还有一个用处就是我们可以用它来分享一些我们自己的跳过的坑，可以让其它人少走一些弯路。</p>
-<p>现在想到搭建一个属于自己的博客非常简单和方便，也有相应的框架可选，比如，jekyll、hexo、wordpress等。前两个都是免费的，如果你想要的是功能庞大全面并且是个土豪，那wordpress是个不错的选择。如果你只是想记录和分享一些生活或者技术点滴，那前两个足够用了，关健是免费, 并且它们都不需要数据库。那这两个我们怎么选呢，其实我都使用过，jekyll基于Ruby, 如果你想在Win下面去配置的话，简单就是噩梦，然后在github上面配置jekyll也是各种蒙，一套下来减肥是肯定的了。相对jekyll来说，hexo无论是配置还是生成速度来说都完胜。hexo基于Nodejs， Nodejs在win上面配置相当简单，下面我们就来看看如果使用hexo搭建属于自己的博客，开始吧，小伙伴们。（下面我们以Mac为例，因为我很久没使用win了，用了Mac再也不想换回Win了^-^）。</p>
-<h4 id="首先我们先安装hexo，有三种方式"><a href="#首先我们先安装hexo，有三种方式" class="headerlink" title="首先我们先安装hexo，有三种方式"></a>首先我们先安装hexo，有三种方式</h4><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//brew 是Mac下包管理器</span></span><br><span class="line">brew insatll hexo-<span class="keyword">cli</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//npm 是Nodejs包管理器，hexo基于Nodejs</span></span><br><span class="line">npm insatll hexo-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//yarn 是facebook开源的一款Nodejs包管理器，它解决了一些npm的问题，推荐使用它替换npm</span></span><br><span class="line">yarn <span class="keyword">global</span> add hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/09/04/使用hexo搭建博客/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">搭建博客</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/04/使用hexo搭建博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
@@ -941,22 +941,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
               </li>
              
@@ -965,11 +949,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -985,11 +981,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">DOM</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1001,15 +1005,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1018,6 +1014,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
             
             <div class="clearfix"></div>
