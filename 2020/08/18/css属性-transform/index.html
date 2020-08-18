@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>sass文档-样式规则 | 三人行必有我师</title>
+  <title>css属性 transform | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面样式规则 嵌套 嵌套 避免重复写相同的选择器  1234567891011.nav &amp;#123;    ul &amp;#123;        margin: 0;    &amp;#125;    li &amp;#123;        list-style-type: none;    &amp;#125;    a &amp;#123;        text-de">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面css3中提供了transform属性对元素应用2D 或 3D 转换。它可以使元素旋转、缩放、移动或倾斜 浏览器支持 IE &amp;gt;=10 transform、9 -ms-transform、&amp;lt;9 不支持 Chrome、Safari 添加-webkit-前缀 Firefox transform Opera transform（只支">
 <meta name="keywords" content="日积月累,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sass文档-样式规则">
-<meta property="og:url" content="//noney.github.io/2020/05/19/sass文档-样式规则/index.html">
+<meta property="og:title" content="css属性 transform">
+<meta property="og:url" content="//noney.github.io/2020/08/18/css属性-transform/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面样式规则 嵌套 嵌套 避免重复写相同的选择器  1234567891011.nav &amp;#123;    ul &amp;#123;        margin: 0;    &amp;#125;    li &amp;#123;        list-style-type: none;    &amp;#125;    a &amp;#123;        text-de">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css3中提供了transform属性对元素应用2D 或 3D 转换。它可以使元素旋转、缩放、移动或倾斜 浏览器支持 IE &amp;gt;=10 transform、9 -ms-transform、&amp;lt;9 不支持 Chrome、Safari 添加-webkit-前缀 Firefox transform Opera transform（只支">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-25T07:09:52.915Z">
+<meta property="og:updated_time" content="2020-08-18T06:37:41.621Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass文档-样式规则">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面样式规则 嵌套 嵌套 避免重复写相同的选择器  1234567891011.nav &amp;#123;    ul &amp;#123;        margin: 0;    &amp;#125;    li &amp;#123;        list-style-type: none;    &amp;#125;    a &amp;#123;        text-de">
+<meta name="twitter:title" content="css属性 transform">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css3中提供了transform属性对元素应用2D 或 3D 转换。它可以使元素旋转、缩放、移动或倾斜 浏览器支持 IE &amp;gt;=10 transform、9 -ms-transform、&amp;lt;9 不支持 Chrome、Safari 添加-webkit-前缀 Firefox transform Opera transform（只支">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass文档-样式规则" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-css属性-transform" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      sass文档-样式规则
+      css属性 transform
     </h1>
   
 
         
-        <a href="/2020/05/19/sass文档-样式规则/" class="archive-article-date">
-  	<time datetime="2020-05-19T08:29:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
+        <a href="/2020/08/18/css属性-transform/" class="archive-article-date">
+  	<time datetime="2020-08-18T02:43:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
 </a>
         
       </header>
@@ -189,87 +189,184 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>样式规则</p>
-<h4 id="嵌套"><a href="#嵌套" class="headerlink" title="嵌套"></a>嵌套</h4><ul>
-<li>嵌套 避免重复写相同的选择器</li>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>css3</code>中提供了<code>transform</code>属性对元素应用2D 或 3D 转换。它可以使元素旋转、缩放、移动或倾斜</p>
+<h4 id="浏览器支持"><a href="#浏览器支持" class="headerlink" title="浏览器支持"></a>浏览器支持</h4><ul>
+<li>IE <code>&gt;=10 transform、9 -ms-transform、&lt;9 不支持</code></li>
+<li>Chrome、Safari 添加<code>-webkit-</code>前缀</li>
+<li>Firefox <code>transform</code></li>
+<li>Opera <code>transform</code>（只支持 2D 转换）</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">    ul &#123;</span><br><span class="line">        <span class="selector-tag">margin</span>: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">li</span> &#123;</span><br><span class="line">        <span class="attribute">list-style-type</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">a</span> &#123;</span><br><span class="line">        <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">list-style-type</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h4><ul>
+<li>none 默认值，不进行转换</li>
+<li>matrix 矩阵，实现复杂的转换，<a href="https://www.html.cn/tool/css3Preview/Transform-Matrix.html" target="_blank" rel="noopener">工具</a></li>
+<li>matrix3d 矩阵3D转换</li>
+<li>translate 位移</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>translateX</td>
+<td>x轴位移</td>
+<td>支持<code>px</code>和<code>百分比</code>值，<code>百分比</code>值为元素本身宽度</td>
+</tr>
+<tr>
+<td>translateY</td>
+<td>y轴位移</td>
+<td>支持<code>px</code>和<code>百分比</code>值，<code>百分比</code>值为元素本身高度</td>
+</tr>
+<tr>
+<td>translateZ</td>
+<td>z轴位移</td>
+<td>只支持<code>px</code>值，必须在父元素上设置perspective（视距）</td>
+</tr>
+<tr>
+<td>translate</td>
+<td>x、y轴位移</td>
+<td>省略第二个参数，y轴位移为0</td>
+</tr>
+<tr>
+<td>Translate3d</td>
+<td>x、y、z轴位移</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>注意：</em></strong>正数时表示正向移动，负数为反向移动</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"translate"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">perspective</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.translate</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translate3d</span>(20px, 10px, 30px)</span><br><span class="line">  -ms-transform: <span class="built_in">translate3d</span>(20px, 10px, 30px)</span><br><span class="line">  -webkit-transform: <span class="built_in">translate3d</span>(20px, 10px, 30px)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>选择器列表 复杂的选择器都会单独嵌套，一一拆分</li>
+<li>scale 缩放</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.info</span>, <span class="selector-class">.warning</span> &#123;</span><br><span class="line">    ul, p &#123;</span><br><span class="line">        <span class="selector-tag">margin</span>: 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.info</span> <span class="selector-tag">ul</span>, <span class="selector-class">.info</span> <span class="selector-tag">p</span>, <span class="selector-class">.warning</span> <span class="selector-tag">ul</span>, <span class="selector-class">.warning</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scaleX</td>
+<td>x轴缩放</td>
+<td>只支持<code>数值</code></td>
+</tr>
+<tr>
+<td>scaleY</td>
+<td>y轴缩放</td>
+<td>只支持<code>数值</code></td>
+</tr>
+<tr>
+<td>scaleZ</td>
+<td>z轴缩放</td>
+<td>只支持<code>数值</code></td>
+</tr>
+<tr>
+<td>scale</td>
+<td>x、y轴缩放</td>
+<td>省略第二个参数，y轴缩放为1（不缩放）</td>
+</tr>
+<tr>
+<td>scale3d</td>
+<td>x、y、z轴缩放</td>
+<td>只支持<code>数值</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>注意：</em></strong>数值<code>大于1放大</code>，<code>小于1缩小</code>，<code>等于1不缩放</code>，<code>负值是翻转</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"translate"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.translate</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">scale3d</span>(-0.5, 0.5, 1);</span><br><span class="line">  <span class="attribute">-ms-transform</span>: <span class="built_in">scale3d</span>(-0.5, 0.5, 1);</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">scale3d</span>(-0.5, 0.5, 1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>与子选择器组合 可放在外部选择器末尾、内部选择器开头、两者之间</li>
+<li>rotate 旋转</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &gt; &#123;</span><br><span class="line">    li &#123;</span><br><span class="line">        <span class="selector-tag">list-style-type</span>: <span class="selector-tag">none</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h2</span> &#123;</span><br><span class="line">    + p &#123;</span><br><span class="line">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    ~ &#123;</span><br><span class="line">        <span class="selector-tag">span</span> &#123;</span><br><span class="line">            <span class="attribute">opacity</span>: .<span class="number">8</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">list-style-type</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h2</span> + <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> ~ <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: .<span class="number">8</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rotateX</td>
+<td>x轴旋转</td>
+<td>旋转角度</td>
+</tr>
+<tr>
+<td>rotateY</td>
+<td>y轴旋转</td>
+<td>旋转角度</td>
+</tr>
+<tr>
+<td>rotateZ</td>
+<td>z轴旋转</td>
+<td>旋转角度</td>
+</tr>
+<tr>
+<td>rotate</td>
+<td>z轴旋转</td>
+<td>旋转角度</td>
+</tr>
+<tr>
+<td>rotate3d</td>
+<td>x、y、z轴旋转</td>
+<td>前三个参数取值为-1（反向旋转）、0（不旋转）、1（正向旋转），第四个参数为旋转角度</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>注意：</em></strong>旋转角度，单位为 <code>deg</code>，正数时表示<code>顺时针旋转</code>，为负数时表示<code>逆时针旋转</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rotate"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rotate1"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rotate2"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rotate3"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.rotate</span>, <span class="selector-class">.rotate1</span>, <span class="selector-class">.rotate2</span>, <span class="selector-class">.rotate3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(20deg);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.rotate1</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotateX</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.rotate2</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotateY</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.rotate3</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotateZ</span>(1, 1, 1, 20deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>属性充当继承前缀</li>
+<li>skew 倾斜</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.info-page</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: auto &#123;</span><br><span class="line">        bottom: <span class="number">10px</span>;</span><br><span class="line">        <span class="attribute">top</span>: <span class="number">2px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.info-page</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">2px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h4><ul>
-<li>选择器包括插值表达式</li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> define-emoji($name, $glyph) &#123;</span><br><span class="line">    span.emoji-#&#123;$name&#125; &#123;</span><br><span class="line">        <span class="selector-tag">font-family</span>: <span class="selector-tag">IconFont</span>;</span><br><span class="line">        <span class="selector-tag">font-variant</span>: <span class="selector-tag">normal</span>;</span><br><span class="line">        <span class="selector-tag">font-weight</span>: <span class="selector-tag">normal</span>;</span><br><span class="line">        content: $glyph;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">        </span><br><span class="line">@<span class="keyword">include</span> define-emoji(<span class="string">"women-holding-hands"</span>, <span class="string">"👭"</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">charset</span> <span class="string">"UTF-8"</span>;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.emoji-women-holding-hands</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: IconFont;</span><br><span class="line">    <span class="attribute">font-variant</span>: normal;</span><br><span class="line">    <span class="attribute">font-weight</span>: normal;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"👭"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skewX</td>
+<td>x轴倾斜</td>
+<td>倾斜角度</td>
+</tr>
+<tr>
+<td>skewY</td>
+<td>y轴倾斜</td>
+<td>倾斜角度</td>
+</tr>
+<tr>
+<td>skew</td>
+<td>x、y轴倾斜</td>
+<td>省略第二个参数，y轴角度倾斜为0</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>注意：</em></strong>倾斜角度，单位为 <code>deg</code>，正数时表示<code>顺时针倾斜</code>，为负数时表示<code>逆时针倾斜</code></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"skew"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"skew1"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"skew2"</span>&gt;</span>我是一个好人啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.skew</span>, <span class="selector-class">.skew1</span>, <span class="selector-class">.skew2</span>, <span class="selector-class">.skew3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: pink;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">skew</span>(20deg);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.skew1</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">skewX</span>(20deg);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.skew2</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">skewY</span>(20deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="视距"><a href="#视距" class="headerlink" title="视距"></a>视距</h4><p><code>perspective</code>表示观察者（也就是电脑前面的你）距离图像的距离，是绘制<code>3D</code>效果必不可少的属性，它有两种使用方式</p>
 <ul>
-<li>属性的名称可以包括插值表达式</li>
+<li>直接加在<code>transform</code>属性中</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> prefix($property, $value, $prefixes) &#123;</span><br><span class="line">    @<span class="keyword">each</span> $prefix in $prefixes &#123;</span><br><span class="line">        -#&#123;$prefix&#125;-#&#123;$property&#125;: $value;</span><br><span class="line">    &#125;</span><br><span class="line">    #&#123;$property&#125;: $value;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.gray</span> &#123;</span><br><span class="line">    @include prefix(filter, grayscale(50%), moz webkit);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.gray</span> &#123;</span><br><span class="line">    <span class="attribute">-moz-filter</span>: <span class="built_in">grayscale</span>(50%);</span><br><span class="line">    <span class="attribute">-webkit-filter</span>: <span class="built_in">grayscale</span>(50%);</span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="隐藏属性"><a href="#隐藏属性" class="headerlink" title="隐藏属性"></a>隐藏属性</h4><ul>
-<li>当条件为空或<code>null</code>时，<code>sass</code>不会将该声明编译成<code>css</code></li>
-</ul>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$rounded-corners: false;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="built_in">if</span>($rounded-corners, 5px, null);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h4><ul>
-<li>原样传递给<code>css</code></li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary</span>: <span class="number">#81899b</span>;</span><br><span class="line">--consumed-by-js: <span class="variable">$primary</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--consumed-by-js: $primary;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.rotate</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">perspective</span>(100px);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>插值表达式，这是唯一将动态值注入自定义属性的方法</li>
+<li>加在转换元素的父元素上</li>
 </ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary</span>: <span class="number">#81899b</span>;</span><br><span class="line"><span class="variable">$accent</span>: <span class="number">#302e24</span>;</span><br><span class="line"><span class="variable">$warn</span>: <span class="number">#dfa612</span>;</span><br><span class="line"></span><br><span class="line">:root &#123;</span><br><span class="line">    --primary: #&#123;<span class="variable">$primary</span>&#125;;</span><br><span class="line">    --accent: #&#123;<span class="variable">$accent</span>&#125;;</span><br><span class="line">    --warn: #&#123;<span class="variable">$warn</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attribute">--primary</span>: <span class="number">#81899b</span>;</span><br><span class="line">    <span class="attribute">--accent</span>: <span class="number">#302e24</span>;</span><br><span class="line">    <span class="attribute">--warn</span>: <span class="number">#dfa612</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>插值会过滤掉变量的引号，可以使用<code>meta.inspect</code>方法避免</li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:meta"</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font-family-sans-serif</span>: -apple-system, BlinkMacSystemFont, <span class="string">"Segoe UI"</span>, Roboto;</span><br><span class="line"><span class="variable">$font-family-monospace</span>: SFMono-Regular, Menlo, Monaco, Consolas;</span><br><span class="line"></span><br><span class="line">:root &#123;</span><br><span class="line">    --<span class="attribute">font-family</span>-sans-serif: #&#123;meta.inspect(<span class="variable">$font-family-sans-serif</span>)&#125;;</span><br><span class="line">    --<span class="attribute">font-family</span>-monospace: #&#123;meta.inspect(<span class="variable">$font-family-monospace</span>)&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">    <span class="attribute">--font-family-sans-serif</span>: -apple-system, BlinkMacSystemFont, <span class="string">"Segoe UI"</span>, Roboto;</span><br><span class="line">    <span class="attribute">--font-family-monospace</span>: SFMono-Regular, Menlo, Monaco, Consolas;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="引用父选择器"><a href="#引用父选择器" class="headerlink" title="引用父选择器"></a>引用父选择器</h4><p><code>sass</code>用<code>&amp;</code>引用父选择器，编译的时候用父选择器<code>替换&amp;</code></p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.con</span> &#123;</span><br><span class="line">    &amp;:after &#123;</span><br><span class="line">        <span class="attribute">content</span>: <span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">    .warp &amp; &#123;</span><br><span class="line">        margin: <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    :not(&amp;) &#123;</span><br><span class="line">        <span class="attribute">opacity</span>: <span class="number">0.8</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.con</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.warp</span> <span class="selector-class">.con</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-pseudo">:not(.con)</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0.8</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>添加前缀</li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.add</span> &#123;</span><br><span class="line">    &amp;__warn &#123;</span><br><span class="line">        <span class="attribute">color</span>: yellow;</span><br><span class="line">    &#125;</span><br><span class="line">    &amp;__pass &#123;</span><br><span class="line">        <span class="attribute">color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.add__warn</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: yellow;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.add_pass</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>sassScript</li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">aside</span>:hover,</span><br><span class="line"><span class="selector-class">.sidebar</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    parent-selector: &amp;;</span><br><span class="line">    <span class="comment">// =&gt; ((unquote(".main") unquote("aside:hover")),</span></span><br><span class="line">    <span class="comment">//     (unquote(".sidebar") unquote("p")))</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span> <span class="selector-tag">aside</span><span class="selector-pseudo">:hover</span>,</span><br><span class="line"><span class="selector-class">.sidebar</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">parent-selector</span>: .main aside:hover, .sidebar p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> app-background(<span class="variable">$color</span>) &#123;</span><br><span class="line">    #&#123;if(&amp;, '&amp;.app-background', '.app-background')&#125; &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="variable">$color</span>;</span><br><span class="line">        <span class="attribute">color</span>: rgba(<span class="number">#fff</span>, <span class="number">0.75</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">include</span> app-background(<span class="number">#036</span>);</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> app-background(<span class="number">#c6538c</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.app-background</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#036</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgba</span>(255, 255, 255, 0.75);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.sidebar</span><span class="selector-class">.app-background</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#c6538c</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgba</span>(255, 255, 255, 0.75);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>高级嵌套</li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:selector"</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> unify-parent(<span class="variable">$child</span>) &#123;</span><br><span class="line">    @at-root #&#123;selector<span class="selector-class">.unify</span>(&amp;, <span class="variable">$child</span>)&#125; &#123;</span><br><span class="line">        @<span class="keyword">content</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-class">.field</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> unify-parent(<span class="string">"input"</span>) &#123;</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">include</span> unify-parent(<span class="string">"select"</span>) &#123;</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">input</span><span class="selector-class">.field</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-tag">select</span><span class="selector-class">.field</span> &#123;</span><br><span class="line">    <span class="comment">/* ... */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="占位符选择器"><a href="#占位符选择器" class="headerlink" title="占位符选择器"></a>占位符选择器</h4><p><code>%</code>表示点位符选择器，它很像类选择器，它不包含在<code>css</code>输出中</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SCSS SYNTAX</span><br><span class="line"><span class="selector-class">.alert</span>:hover, %<span class="selector-tag">strong</span>-alert &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">%<span class="selector-tag">strong</span>-alert:hover &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.alert</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>用于扩展，没有副作用，如果没有被扩展，也不会扰乱<code>css</code></li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">%toolbelt &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> rgba(<span class="number">#000</span>, .<span class="number">12</span>) solid;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">16px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line"></span><br><span class="line">    &amp;:hover &#123; <span class="attribute">border</span>: <span class="number">2px</span> rgba(<span class="number">#000</span>, .<span class="number">5</span>) solid; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.action-buttons</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %toolbelt;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4285f4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.reset-buttons</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> %toolbelt;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#cddc39</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.action-buttons</span>, <span class="selector-class">.reset-buttons</span> &#123;</span><br><span class="line">    <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">1px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.12) solid;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">16px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.action-buttons</span><span class="selector-pseudo">:hover</span>, <span class="selector-class">.reset-buttons</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">2px</span> <span class="built_in">rgba</span>(0, 0, 0, 0.5) solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.action-buttons</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#4285f4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.reset-buttons</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#cddc39</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/style-rules" target="_blank" rel="noopener">Style Rules</a></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">perspective</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.rotate</span> &#123;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate3d</span>(-1, 0, 1, 30deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.jianshu.com/p/f943e2014c39" target="_blank" rel="noopener">特效属性「Transform」+ 矩阵 matrix</a><br><a href="https://www.w3school.com.cn/cssref/pr_transform.asp" target="_blank" rel="noopener">CSS3 transform 属性</a></p>
 
       
 
@@ -343,7 +440,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/05/19/sass文档-样式规则/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/08/18/css属性-transform/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -357,18 +454,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/05/20/sass文档-变量/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sass文档-变量
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/18/sass命令行/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass命令行</div>
+    <a href="/2020/08/17/BFC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">BFC</div>
       <i class="icon-circle-right"></i>
     </a>
   
