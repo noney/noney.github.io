@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Tag: 日积月累 | 三人行必有我师</title>
+  <title>css动画 | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/tags/日积月累/page/7/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面css动画主要涉及到两个css属性，分别是transition、animation transitiontransition中文的意思是过渡，在这里是指css的属性状态的变化，不是即时完成，是在设置时间内过渡完成    IE Chrome Firefox Opera Safari     &amp;gt;IE10 transition &amp;lt;">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css动画">
+<meta property="og:url" content="//noney.github.io/2020/08/19/css动画/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css动画主要涉及到两个css属性，分别是transition、animation transitiontransition中文的意思是过渡，在这里是指css的属性状态的变化，不是即时完成，是在设置时间内过渡完成    IE Chrome Firefox Opera Safari     &amp;gt;IE10 transition &amp;lt;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-19T09:45:40.627Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="css动画">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css动画主要涉及到两个css属性，分别是transition、animation transitiontransition中文的意思是过渡，在这里是指css的属性状态的变化，不是即时完成，是在设置时间内过渡完成    IE Chrome Firefox Opera Safari     &amp;gt;IE10 transition &amp;lt;">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,36 +167,230 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-css动画" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css动画
+    </h1>
+  
+
+        
+        <a href="/2020/08/19/css动画/" class="archive-article-date">
+  	<time datetime="2020-08-19T06:03:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-19</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>css</code>动画主要涉及到两个<code>css</code>属性，分别是<code>transition、animation</code></p>
+<h4 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h4><p><code>transition</code>中文的意思是过渡，在这里是指<code>css</code>的属性状态的变化，不是即时完成，是在设置时间内过渡完成</p>
+<table>
+<thead>
+<tr>
+<th>IE</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Opera</th>
+<th>Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;IE10</code> transition <code>&lt;=IE9</code>不支持</td>
+<td>transition</td>
+<td>transition</td>
+<td>transition</td>
+<td>-webkit-transition</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"transition"</span>&gt;</span>lalala<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>transition-duration 过渡时间，过渡效果在指定时间内完成</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.transition</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2s</span>; <span class="comment">/* 过渡时间 */</span></span><br><span class="line">  <span class="attribute">-moz-transition</span>: <span class="number">2s</span>; <span class="comment">/* Firefox 4 */</span></span><br><span class="line">  <span class="attribute">-webkit-transition</span>: <span class="number">2s</span>; <span class="comment">/* Safari 和 Chrome */</span></span><br><span class="line">  <span class="attribute">-o-transition</span>: <span class="number">2s</span>; <span class="comment">/* Opera */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.transition</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: green;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>transition-property 过渡属性，指定<code>css</code>过渡属性（可以同时指定多个过渡属性，使用<code>,</code>隔开）</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.transition</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2s</span> height; <span class="comment">/* 只有属性`height`过渡，也可以写成`height 2s` */</span></span><br><span class="line">  <span class="attribute">-moz-transition</span>: <span class="number">2s</span> height; <span class="comment">/* Firefox 4 */</span></span><br><span class="line">  <span class="attribute">-webkit-transition</span>: <span class="number">2s</span> height; <span class="comment">/* Safari 和 Chrome */</span></span><br><span class="line">  <span class="attribute">-o-transition</span>: <span class="number">2s</span> height; <span class="comment">/* Opera */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.transition</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: green;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>transition-delay 延迟，设置过渡效果何时开始（指定了动画发生的顺序，完成复杂动画）</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.transition</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2s</span> height, width <span class="number">2s</span> <span class="number">3s</span>; <span class="comment">/* 先使用`2s`完成`height`过渡，之后延迟`3s`，再使用`2s`完成`width`过渡 */</span></span><br><span class="line">  <span class="attribute">-moz-transition</span>: <span class="number">2s</span> height, width <span class="number">2s</span> <span class="number">3s</span>; <span class="comment">/* Firefox 4 */</span></span><br><span class="line">  <span class="attribute">-webkit-transition</span>: <span class="number">2s</span> height, width <span class="number">2s</span> <span class="number">3s</span>; <span class="comment">/* Safari 和 Chrome */</span></span><br><span class="line">  <span class="attribute">-o-transition</span>: <span class="number">2s</span> height, width <span class="number">2s</span> <span class="number">3s</span>; <span class="comment">/* Opera */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.transition</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: green;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>transition-timing-function 速度曲线，状态变化速度</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>linear</th>
+<th>ease-in</th>
+<th>ease-out</th>
+<th>cubic-bezier</th>
+<th>ease-in-out</th>
+<th>ease（默认值）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>匀速</td>
+<td>加速</td>
+<td>减速</td>
+<td>通过函数自定义，可以能过<a href="https://cubic-bezier.com/" target="_blank" rel="noopener">工具</a>定制</td>
+<td>慢速开始和结束</td>
+<td>逐渐放慢</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.transition</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2s</span> height <span class="built_in">cubic-bezier</span>(.17,.67,.67,.68); <span class="comment">/* 通过函数定制 */</span></span><br><span class="line">  <span class="attribute">-moz-transition</span>: <span class="number">2s</span> height <span class="built_in">cubic-bezier</span>(.17,.67,.67,.68); <span class="comment">/* Firefox 4 */</span></span><br><span class="line">  <span class="attribute">-webkit-transition</span>: <span class="number">2s</span> height <span class="built_in">cubic-bezier</span>(.17,.67,.67,.68); <span class="comment">/* Safari 和 Chrome */</span></span><br><span class="line">  <span class="attribute">-o-transition</span>: <span class="number">2s</span> height <span class="built_in">cubic-bezier</span>(.17,.67,.67,.68); <span class="comment">/* Opera */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.transition</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: green;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong></p>
+<ul>
+<li><p>不是所有的<code>CSS</code>属性都支持<code>transition</code>，完整的列表查看<a href="http://oli.jp/2010/css-animatable-properties/" target="_blank" rel="noopener">这里</a>，以及具体的<a href="http://leaverou.github.io/animatable/" target="_blank" rel="noopener">效果</a></p>
+</li>
+<li><p><code>transition</code>需要知道<code>css</code>属性的<code>开始和结束</code>状态，才能计算出结束状态</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.transition</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">2s</span> height <span class="comment">/* 过渡效果 */</span></span><br><span class="line">  -moz-transition: <span class="number">2s</span> height <span class="comment">/* Firefox 4 */</span></span><br><span class="line">  -webkit-transition: <span class="number">2s</span> height <span class="comment">/* Safari 和 Chrome */</span></span><br><span class="line">  -o-transition: <span class="number">2s</span> height <span class="comment">/* Opera */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.transition</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: auto; <span class="comment">/* 无法计算中间状态，不会有过渡效果 */</span></span><br><span class="line">  <span class="attribute">background-color</span>: green;  </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*类似的情况还有，display: none到block，background: url(foo.jpg)到url(bar.jpg)等*/</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>总结：</em></strong></p>
+<p><code>优点</code>是简单易用</p>
+<p><code>局限性</code>，有以下几种</p>
+<ul>
+<li>需要事件触发，无法应用在页面加载时</li>
+<li>一次性，不能<code>自动</code>重复触发</li>
+<li>只有开始和结束状态，不能定义中间状态</li>
+<li>一条规则只能对应一个属性，不能涉及多个属性</li>
+</ul>
+<h4 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h4><p>上面我们总结了<code>transition</code>的一些局限性，<code>animation</code>可以解决上面的问题，实现更加复杂的动画</p>
+<table>
+<thead>
+<tr>
+<th>IE</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Opera</th>
+<th>Safari</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;IE10</code> animation <code>&lt;=IE9</code>不支持</td>
+<td>-webkit-animation</td>
+<td>animation</td>
+<td>animation</td>
+<td>-webkit-animation</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"animation"</span>&gt;</span>lalala<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>animation-name 动画名字，需要绑定到选择器的 <code>keyframes</code>的名字</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>animation-duration 动画时间，动画在指定时间完成（默认值为0，不会产生动画效果）</p>
+</li>
+<li><p>animation-time-function 速度曲线，状态变化速度（属性值同<code>transition</code>）</p>
+</li>
+<li>animation-delay 延迟，设置动画效果何时开始（同<code>transition</code>）</li>
+<li>animation-iteration-count 动画播放次数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>number</th>
+<th>infinite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>播放<code>number</code>次</td>
+<td>无限次播放</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span> <span class="number">2</span>; <span class="comment">/*播放两次*/</span></span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>animation-direction 轮流反向播放，奇数次<code>正向播放</code>，偶数次<code>反向播放</code>（播放次数必须<code>大于1</code>）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ormal</th>
+<th>alternate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>默认值，正常播放</td>
+<td>轮流反向播放</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span> <span class="number">2</span> alternate;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span> <span class="number">2</span> alternate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>animation-fill-mode 动画播放完成，停留的位置</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>none</th>
+<th>forwards</th>
+<th>backwards</th>
+<th>both</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>默认值，回到动画没开始时的状态</td>
+<td>停留在播放完状态</td>
+<td>动画回到第一帧的状态</td>
+<td>根据animation-direction（见后）轮流应用forwards和backwards规则</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span> <span class="number">2</span> forwards;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span> <span class="number">2</span> forwards;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>animation-play-state 设置动画播放和暂停</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>paused</th>
+<th>running</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>暂停</td>
+<td>播放</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">animation-play-state</span>: paused; <span class="comment">/* 动画停在第一侦 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.animation</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">animation-play-state</span>: running; <span class="comment">/* 动画播放 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>setps 动画播放完成需要的步数（默认是平滑完成），<a href="https://dabblet.com/gist/1745856" target="_blank" rel="noopener">例子</a></p>
+</li>
+<li><p>keyframes 定义动画的过程状态</p>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue&#125; <span class="comment">/* 等同于`from` */</span></span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red&#125; <span class="comment">/* 等同于`to` */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*如果省略某个状态，浏览器会自动推算中间状态*/</span></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html" target="_blank" rel="noopener">CSS动画简介</a><br><a href="https://www.w3school.com.cn/cssref/pr_animation-play-state.asp" target="_blank" rel="noopener">CSS3 animation-play-state 属性</a><br><a href="https://www.w3school.com.cn/cssref/pr_animation-fill-mode.asp" target="_blank" rel="noopener">CSS3 animation-fill-mode 属性</a><br><a href="https://www.w3school.com.cn/cssref/pr_animation.asp" target="_blank" rel="noopener">CSS3 animation 属性</a><br><a href="https://www.w3school.com.cn/cssref/pr_transition.asp" target="_blank" rel="noopener">CSS3 transition 属性</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/02/理解css-border/" class="archive-article-date">
-  	<time datetime="2020-03-02T06:17:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/02/理解css-border/">理解css border</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,298 +400,109 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/16/元素偏移量/" class="archive-article-date">
-  	<time datetime="2020-01-16T02:17:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/16/元素偏移量/">元素偏移量</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/13/AnyProxy抓包工具/" class="archive-article-date">
-  	<time datetime="2019-12-13T06:22:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/13/AnyProxy抓包工具/">AnyProxy抓包工具</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/08/19/css动画/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/19/nvm使用/" class="archive-article-date">
-  	<time datetime="2019-11-19T06:04:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/18/css属性-transform/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css属性 transform</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/19/nvm使用/">nvm使用</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/exports和module-exports的区别/" class="archive-article-date">
-  	<time datetime="2019-11-14T08:10:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/14/exports和module-exports的区别/">exports和module.exports的区别</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/23/ESLint配置/" class="archive-article-date">
-  	<time datetime="2019-10-23T07:42:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/23/ESLint配置/">ESLint配置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ESLint</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/用MarkDown写博客/" class="archive-article-date">
-  	<time datetime="2019-10-22T06:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/用MarkDown写博客/">用MarkDown写博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MarkDown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/日积月累/page/6/">&laquo; Prev</a><a class="page-number" href="/tags/日积月累/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/日积月累/page/5/">5</a><a class="page-number" href="/tags/日积月累/page/6/">6</a><span class="page-number current">7</span>
-    </nav>
   
 
 
@@ -517,9 +526,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
