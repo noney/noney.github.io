@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css动画主要涉及到两个css属性，分别是transition、animation transitiontransition中文的意思是过渡，在这里是指css的属性状态的变化，不是即时完成，是在设置时间内过渡完成    IE Chrome Firefox Opera Safari     &amp;gt;IE10 transition &amp;lt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-19T09:45:40.627Z">
+<meta property="og:updated_time" content="2020-08-19T09:47:27.555Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css动画">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面css动画主要涉及到两个css属性，分别是transition、animation transitiontransition中文的意思是过渡，在这里是指css的属性状态的变化，不是即时完成，是在设置时间内过渡完成    IE Chrome Firefox Opera Safari     &amp;gt;IE10 transition &amp;lt;">
@@ -295,10 +295,8 @@ var _hmt = _hmt || [];
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>animation-duration 动画时间，动画在指定时间完成（默认值为0，不会产生动画效果）</p>
-</li>
-<li><p>animation-time-function 速度曲线，状态变化速度（属性值同<code>transition</code>）</p>
-</li>
+<li>animation-duration 动画时间，动画在指定时间完成（默认值为0，不会产生动画效果）</li>
+<li>animation-time-function 速度曲线，状态变化速度（属性值同<code>transition</code>）</li>
 <li>animation-delay 延迟，设置动画效果何时开始（同<code>transition</code>）</li>
 <li>animation-iteration-count 动画播放次数</li>
 </ul>
@@ -376,10 +374,8 @@ var _hmt = _hmt || [];
 </table>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.animation</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid purple;</span><br><span class="line">  <span class="attribute">animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">-webkit-animation</span>: colorChange <span class="number">1s</span>;</span><br><span class="line">  <span class="attribute">animation-play-state</span>: paused; <span class="comment">/* 动画停在第一侦 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.animation</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">animation-play-state</span>: running; <span class="comment">/* 动画播放 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue;&#125;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green;&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>setps 动画播放完成需要的步数（默认是平滑完成），<a href="https://dabblet.com/gist/1745856" target="_blank" rel="noopener">例子</a></p>
-</li>
-<li><p>keyframes 定义动画的过程状态</p>
-</li>
+<li>setps 动画播放完成需要的步数（默认是平滑完成），<a href="https://dabblet.com/gist/1745856" target="_blank" rel="noopener">例子</a></li>
+<li>keyframes 定义动画的过程状态</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  0% &#123;<span class="attribute">background-color</span>: blue&#125; <span class="comment">/* 等同于`from` */</span></span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green&#125;</span><br><span class="line">  100% &#123;<span class="attribute">background-color</span>: red&#125; <span class="comment">/* 等同于`to` */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*如果省略某个状态，浏览器会自动推算中间状态*/</span></span><br><span class="line">@<span class="keyword">keyframes</span> colorChange &#123;</span><br><span class="line">  50% &#123;<span class="attribute">background-color</span>: green&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html" target="_blank" rel="noopener">CSS动画简介</a><br><a href="https://www.w3school.com.cn/cssref/pr_animation-play-state.asp" target="_blank" rel="noopener">CSS3 animation-play-state 属性</a><br><a href="https://www.w3school.com.cn/cssref/pr_animation-fill-mode.asp" target="_blank" rel="noopener">CSS3 animation-fill-mode 属性</a><br><a href="https://www.w3school.com.cn/cssref/pr_animation.asp" target="_blank" rel="noopener">CSS3 animation 属性</a><br><a href="https://www.w3school.com.cn/cssref/pr_transition.asp" target="_blank" rel="noopener">CSS3 transition 属性</a></p>
@@ -644,11 +640,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">移动端</a>
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
