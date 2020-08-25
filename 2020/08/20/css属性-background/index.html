@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>三人行必有我师</title>
+  <title>css属性-background | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/page/9/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面background用于给元素设置一个或多个（IE8+）背景 属性 background-color 设置元素的背景颜色，颜色会填充元素的内容、内边距、边框区域（边框透明时，显示背景色）  1&amp;lt;div class=&quot;bgc&quot;&amp;gt;这是一个背景啊&amp;lt;/div&amp;gt; 123456.bgc &amp;#123;  background-">
+<meta name="keywords" content="日积月累,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css属性-background">
+<meta property="og:url" content="//noney.github.io/2020/08/20/css属性-background/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面background用于给元素设置一个或多个（IE8+）背景 属性 background-color 设置元素的背景颜色，颜色会填充元素的内容、内边距、边框区域（边框透明时，显示背景色）  1&amp;lt;div class=&quot;bgc&quot;&amp;gt;这是一个背景啊&amp;lt;/div&amp;gt; 123456.bgc &amp;#123;  background-">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-08-25T07:00:29.496Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="css属性-background">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面background用于给元素设置一个或多个（IE8+）背景 属性 background-color 设置元素的背景颜色，颜色会填充元素的内容、内边距、边框区域（边框透明时，显示背景色）  1&amp;lt;div class=&quot;bgc&quot;&amp;gt;这是一个背景啊&amp;lt;/div&amp;gt; 123456.bgc &amp;#123;  background-">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,22 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-ESLint配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-css属性-background" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/23/ESLint配置/">ESLint配置</a>
+    <h1 class="article-title" itemprop="name">
+      css属性-background
     </h1>
   
 
         
-        <a href="/2019/10/23/ESLint配置/" class="archive-article-date">
-  	<time datetime="2019-10-23T07:42:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-23</time>
+        <a href="/2020/08/20/css属性-background/" class="archive-article-date">
+  	<time datetime="2020-08-20T11:12:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-20</time>
 </a>
         
       </header>
@@ -187,185 +189,336 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>随着用户体验越来越重要，前端代码量也越来越大。这样就会带来很多问题，其中代码质量就是我们需要关注的问题之一，这么多的代码我们不可能一行一行的去review，我们需要有一个代码检测工具来帮我们完成这项工作。前端代码包括HTML、CSS、Javascript都会有相应的代码检测工具，今天主要是介绍一个Javascript的代码检测工具<a href="https://eslint.bootcss.com/," title="ESLint" target="_blank" rel="noopener">ESLint</a>。</p>
-<p>ESLint最初是由<a href="http://nczonline.net," title="Nicholas C. Zakas" target="_blank" rel="noopener">Nicholas C. Zakas</a> 于2013年6月创建的开源项目。它的目标是提供一个插件化的javascript代码检测工具。同时它也是可配置的，下面我们就来看一下如何能快速的写一个<a href="https://eslint.bootcss.com/," title="ESLint" target="_blank" rel="noopener">ESLint</a>配置。</p>
-<h3 id="配置方式"><a href="#配置方式" class="headerlink" title="配置方式"></a>配置方式</h3><p>ESLint支持两种配置方式</p>
-<p>1.Configuration Comments 在代码文件中使用Javascript注释的方式进行配置。<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* eslint-disable */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">alert</span>(<span class="string">'foo'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* eslint-enable */</span></span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/10/23/ESLint配置/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ESLint</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/23/ESLint配置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-用MarkDown写博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/22/用MarkDown写博客/">用MarkDown写博客</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/22/用MarkDown写博客/" class="archive-article-date">
-  	<time datetime="2019-10-22T06:35:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>MarkDown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。通过MarkDown简单的标记可以快速的写博客，不会像html一样标签套标签，修改起来也不容易。它也兼容HTML，可以通过一些方法直接把它转换成HTML，目前各大博客站和编辑器都支持MarkDown。   </p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>1.标题使用”<strong>#</strong>“表示，1~6个#对应html的H1~H6，标题前面添加即可<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#      这是一级标题</span><br><span class="line">##     这是二级标题</span><br><span class="line">###    这是三级标题</span><br><span class="line">####   这是四级标题</span><br><span class="line">#####  这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2019/10/22/用MarkDown写博客/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MarkDown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/22/用MarkDown写博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Jmeter-Performance-Test-Chapter-one" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/08/Jmeter-Performance-Test-Chapter-one/">性能测试小记（一）</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/08/Jmeter-Performance-Test-Chapter-one/" class="archive-article-date">
-  	<time datetime="2017-09-08T08:38:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/wanghantong/" title="wanghantong" target="_blank" rel="noopener">Dragon Wang</a></strong></p>
-<h3 id="1-sampler"><a href="#1-sampler" class="headerlink" title="1.sampler"></a>1.sampler</h3><p>性能测试中，向服务器发送请求、记录响应信息、响应时间的最小单元。</p>
-<h3 id="2-逻辑控制器"><a href="#2-逻辑控制器" class="headerlink" title="2.逻辑控制器"></a>2.逻辑控制器</h3><p><strong>[作用范围]: 只作用在线程组上</strong></p>
-<ul>
-<li><p>真正的控制逻辑：<br>控制sampler节点发送请求的逻辑顺序，比如：<code>if，switch，Loop，Random</code>  </p>
-</li>
-<li><p>业务的逻辑控制：<br>控制业务组合，组织和控制sampler节点：比如：<code>transaction，Throughput</code></p>
-</li>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>background</code>用于给元素设置一个或多个（IE8+）背景</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><ul>
+<li>background-color 设置元素的背景颜色，颜色会填充元素的内容、内边距、边框区域（边框透明时，显示背景色）</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/09/08/Jmeter-Performance-Test-Chapter-one/#more">more >></a>
-        
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgc"</span>&gt;</span>这是一个背景啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgc</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>颜色名称</th>
+<th>十六进制值</th>
+<th>rgb/rgba</th>
+<th>透明（默认值）</th>
+<th>inherit（IE8+）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>red</td>
+<td>#ff0000</td>
+<td>rgb(255,0,0) / rgb(255,0,0,.5)</td>
+<td>transparent</td>
+<td>继成的值</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- .iner元素的属性之所有是绿色，并不是因为继成，而是因为它的默认背景为`transparent`，透明被填充了 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgc"</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"iner"</span>&gt;</span>这是一个背景啊<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgc</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">10px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>background-position 设置背景图片的起始位置</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgp"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgp</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">700px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'./test.jpg'</span>) no-repeat;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">background-position</span>: center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>值</th>
+<th>默认值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关键词</td>
+<td><code>top left</code>，<code>top center</code>，<code>top right</code>，<code>center left</code>，<code>center center</code>，<code>center right</code>，<code>bottom left</code>，<code>bottom center</code>，<code>bottom right</code></td>
+<td><code>%0 %0</code></td>
+<td>background-position: Y轴 X轴</td>
+<td>如果只有一个值，另一个值为<code>center</code></td>
+</tr>
+<tr>
+<td>百分比</td>
+<td>x% y%</td>
+<td>0% 0%</td>
+<td>background-position: X轴 Y轴</td>
+<td>如果只有一个值，另一个值为<code>50%</code></td>
+</tr>
+<tr>
+<td>位置</td>
+<td>xpos ypos</td>
+<td>0% 0%</td>
+<td>background-position: X轴 Y轴</td>
+<td>如果只有一个值，另一个值为<code>50%</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>总结：</em></strong>百分比和位置值可以混合使用</p>
+<p><strong><em>注意：</em></strong>您需要把<code>background-attachment</code>属性设置为<code>fixed</code>，才能保证该属性在<code>Firefox</code>和<code>Opera</code>中正常工作。</p>
+<ul>
+<li>background-size 设置背景图片的尺寸</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IE</th>
+<th>Firefox</th>
+<th>Chrome</th>
+<th>Safari</th>
+<th>Opera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9+</td>
+<td>4+</td>
+<td>15+</td>
+<td>7+</td>
+<td>10.5+</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgz"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgz</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">700px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'./test.jpg'</span>) no-repeat;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长度值</td>
+<td>10% 10%</td>
+<td>auto（图片本身宽高）</td>
+</tr>
+<tr>
+<td>百分比</td>
+<td>x% y%</td>
+<td>百分比值根据元素宽度计算</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>cover</td>
+<td>取元素<code>宽高</code>中的最<code>大</code>值，自适应图片，铺满元素，超过部分<code>被截取</code></td>
+</tr>
+<tr>
+<td>contain</td>
+<td>contain</td>
+<td>取元素<code>宽高</code>中的最<code>小</code>值，自适应图片</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>默认值</td>
+<td>只有一个值时，另一个值为auto</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>background-repeat 设置背景图片是否和如何重复</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgr"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgr</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">700px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'./test.jpg'</span>) repeat-x;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repeat</td>
+<td>水平及垂直方向重复（默认值）</td>
+</tr>
+<tr>
+<td>repeat-x</td>
+<td>水平方向重复</td>
+</tr>
+<tr>
+<td>repeat-y</td>
+<td>垂直方向重复</td>
+</tr>
+<tr>
+<td>no-repeat</td>
+<td>水平及垂直方向不重复</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>继成值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>background-origin 设置背景图片<code>左上角</code>起点</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IE</th>
+<th>Firefox</th>
+<th>Chrome</th>
+<th>Safari</th>
+<th>Opera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9+</td>
+<td>4+</td>
+<td>15+</td>
+<td>7+</td>
+<td>10.5+</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgr"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgr</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">700px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'./test.jpg'</span>) no-repeat;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">background-origin</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padding-box</td>
+<td>起点为<code>padding</code>左边缘（默认值）</td>
+</tr>
+<tr>
+<td>border-box</td>
+<td>起点为<code>border</code>左边缘</td>
+</tr>
+<tr>
+<td>content-box</td>
+<td>起点为内容左边缘</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>继成值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>backgrond-clip 设置背景（不止是图片，包括颜色）<code>左上角</code>起点，多余部分将被裁剪</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>IE</th>
+<th>Firefox</th>
+<th>Chrome</th>
+<th>Safari</th>
+<th>Opera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9+</td>
+<td>4+</td>
+<td>15+</td>
+<td>7+</td>
+<td>10.5+</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgr"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgr</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">700px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'./test.jpg'</span>) no-repeat;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">background-clip</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>padding-box</td>
+<td>起点为<code>padding</code>左边缘</td>
+</tr>
+<tr>
+<td>border-box</td>
+<td>起点为<code>border</code>左边缘（默认值）</td>
+</tr>
+<tr>
+<td>content-box</td>
+<td>起点为内容左边缘</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>继成值</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>background-attachment 设置背景图像是否跟随元素滚动</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgr"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"part"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bgr</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">url</span>(<span class="string">'./test.jpg'</span>) no-repeat;</span><br><span class="line">  <span class="attribute">background-color</span>: blue;</span><br><span class="line">  <span class="attribute">background-origin</span>: border-box;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.part</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scroll</td>
+<td>跟随滚动（默认值）</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>背景固定</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>继成值</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>注意：</em></strong>设置<code>background-attchment: fixed</code>时，<code>background-origin</code>属性的值为<code>border-box</code></p>
+<ul>
+<li>background-image 设置背景图片</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>None</td>
+<td>不设置元素背景（默认值）</td>
+</tr>
+<tr>
+<td>url(URL)</td>
+<td>指向图像路径</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>继成值</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>总结：</em></strong></p>
+<ul>
+<li><code>background-color</code>起点为<code>border-box</code></li>
+<li><code>background-image</code>起点为<code>padding-box</code></li>
+<li><code>backgroud-size</code>必须出现在<code>backgroud-position</code>之后，<code>backgroud-size</code>的两个属性值用<code>/</code>连接</li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.cnblogs.com/xuanku/p/css_attr.html" target="_blank" rel="noopener">css属性分类介绍</a></p>
+<p><a href="https://www.w3school.com.cn/cssref/pr_background.asp" target="_blank" rel="noopener">CSS background 属性</a></p>
+
       
 
       
@@ -378,11 +531,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Jmeter</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">性能测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -391,16 +544,75 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/08/Jmeter-Performance-Test-Chapter-one/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/08/20/css属性-background/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/19/css动画/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css动画</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -420,181 +632,12 @@ var _hmt = _hmt || [];
 
 
 
-
-  
-    <article id="post-使用hexo搭建博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/04/使用hexo搭建博客/">使用hexo搭建博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/04/使用hexo搭建博客/" class="archive-article-date">
-  	<time datetime="2017-09-04T08:11:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>搭建个人博客非常有必要，我们可以用它来记录一些解决过的难题，古语有 ‘好记性不如烂笔头子’，记录的过程中我们可以加深印象，如果回头使用的时候忘了还可以做一个参考，还有一个用处就是我们可以用它来分享一些我们自己的跳过的坑，可以让其它人少走一些弯路。</p>
-<p>现在想到搭建一个属于自己的博客非常简单和方便，也有相应的框架可选，比如，jekyll、hexo、wordpress等。前两个都是免费的，如果你想要的是功能庞大全面并且是个土豪，那wordpress是个不错的选择。如果你只是想记录和分享一些生活或者技术点滴，那前两个足够用了，关健是免费, 并且它们都不需要数据库。那这两个我们怎么选呢，其实我都使用过，jekyll基于Ruby, 如果你想在Win下面去配置的话，简单就是噩梦，然后在github上面配置jekyll也是各种蒙，一套下来减肥是肯定的了。相对jekyll来说，hexo无论是配置还是生成速度来说都完胜。hexo基于Nodejs， Nodejs在win上面配置相当简单，下面我们就来看看如果使用hexo搭建属于自己的博客，开始吧，小伙伴们。（下面我们以Mac为例，因为我很久没使用win了，用了Mac再也不想换回Win了^-^）。</p>
-<h4 id="首先我们先安装hexo，有三种方式"><a href="#首先我们先安装hexo，有三种方式" class="headerlink" title="首先我们先安装hexo，有三种方式"></a>首先我们先安装hexo，有三种方式</h4><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//brew 是Mac下包管理器</span></span><br><span class="line">brew insatll hexo-<span class="keyword">cli</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//npm 是Nodejs包管理器，hexo基于Nodejs</span></span><br><span class="line">npm insatll hexo-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//yarn 是facebook开源的一款Nodejs包管理器，它解决了一些npm的问题，推荐使用它替换npm</span></span><br><span class="line">yarn <span class="keyword">global</span> add hexo-<span class="keyword">cli</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/09/04/使用hexo搭建博客/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">搭建博客</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/04/使用hexo搭建博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-webpack终极优化之dll篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/01/webpack终极优化之dll篇/">webpack终极优化之dll篇</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/01/webpack终极优化之dll篇/" class="archive-article-date">
-  	<time datetime="2017-09-01T03:40:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。</p>
-<p>当我们用到这些库或框架的时候，我们用webpack打包的时候往往不需要把它们和逻辑代码打到一起，因为第三方库我们不需要去对它进行经常更新，需逻辑代码是我们需要经常更新的，而且如果每次我们修改逻辑代码的时候都要打包第三方库或框架，还会拖慢打包构建速度，做了一些无用功，所以接下来就和大家一起讨论一下如何单独打包第三方库或框架，我们的主角要登场了，那就是dll。</p>
-<h4 id="使用CommonsChunkPlugin"><a href="#使用CommonsChunkPlugin" class="headerlink" title="使用CommonsChunkPlugin"></a>使用CommonsChunkPlugin</h4><p>webpack官方建议使用CommonsChunkPlugin插件去处理第三方库或框架，它的作用是可以把第三方库或框架放在entry的vendor里面单独打包下面是部分代码完整代码请查看[bingoo]工具</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">entry</span>: &#123;</span><br><span class="line">        <span class="attribute">vendors</span>: [<span class="string">'vue'</span>, <span class="string">'vuex'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">            <span class="attribute">name</span>: [<span class="string">'vendors'</span>],</span><br><span class="line">            <span class="attribute">filename</span>: <span class="string">'vendors.js'</span>,</span><br><span class="line">            <span class="attribute">minChunks</span>: <span class="number">2</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端工具</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -617,8 +660,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
