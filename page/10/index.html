@@ -165,6 +165,95 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-nvm使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/19/nvm使用/">nvm使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/19/nvm使用/" class="archive-article-date">
+  	<time datetime="2019-11-19T06:04:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>当我们在机器上面存在多个Node应用程序的时候，并且应用程序依赖不同Node版本的时候，我们就需要管理多版本共存的情况。<br><strong>nvm</strong>就是管理Node版本的工具之一，下面来看看我们如何应用它。</p>
+<h4 id="nvm安装"><a href="#nvm安装" class="headerlink" title="nvm安装"></a>nvm安装</h4><p>首先运行安装脚本。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ curl -<span class="keyword">o</span>- http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/nvm-<span class="keyword">sh</span>/nvm/v0.<span class="number">35.1</span>/install.<span class="keyword">sh</span> | bash</span><br><span class="line">或者</span><br><span class="line">$ wget -qO- http<span class="variable">s:</span>//raw.githubusercontent.<span class="keyword">com</span>/nvm-<span class="keyword">sh</span>/nvm/v0.<span class="number">35.1</span>/install.<span class="keyword">sh</span> | bash</span><br></pre></td></tr></table></figure></p>
+<p>运行上面命令，它会下载脚本并运行它。脚本会克隆NVM库到<strong>~/.nvm</strong>目录，并且会将下面代码添加到你的配置文件中(~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc)。<br><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=<span class="string">"$([ -z "</span>$&#123;XDG_CONFIG_HOME-&#125;<span class="string">" ] &amp;&amp; printf %s "</span>$&#123;HOME&#125;/.nvm<span class="string">" || printf %s "</span>$&#123;XDG_CONFIG_HOME&#125;/nvm<span class="string">")"</span></span><br><span class="line">[ -<span class="keyword">s</span> <span class="string">"$NVM_DIR/nvm.sh"</span> ] &amp;&amp; \. <span class="string">"$NVM_DIR/nvm.sh"</span> <span class="comment"># This loads nvm</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>注意：如果存在环境变量$XDG_CONFIG_HOME，它将把nvm文件放在那里，更多安装方式请参考<a href="https://github.com/nvm-sh/nvm#installation-and-update" target="_blank" rel="noopener">nvm安装</a></strong><br>运行<code>nvm --version</code>，如果得到版本号，就证明已经安装成功了。<br>
+        
+          <a class="article-more-a" href="/2019/11/19/nvm使用/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Node.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/19/nvm使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-exports和module-exports的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
