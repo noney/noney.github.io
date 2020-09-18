@@ -165,6 +165,93 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-前端二进制操作之FileReader对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/08/前端二进制操作之FileReader对象/">前端二进制操作之FileReader对象</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/08/前端二进制操作之FileReader对象/" class="archive-article-date">
+  	<time datetime="2020-09-08T06:22:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>FileReader</code>是一个构造函数，用来读取本地文件（或原始数据缓冲区）。使用<code>File</code>或<code>Blog</code>指定要读取的文件或内容</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">onchange</span>=<span class="string">"change(event)"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">""</span> <span class="attr">alt</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">"VidwImg"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>读取<code>File</code>对象</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> file = event.target.files[<span class="number">0</span>],</span><br><span class="line">    fr = <span class="keyword">new</span> FileReader(),</span><br><span class="line">    vi = <span class="built_in">document</span>.querySelector(<span class="string">'#VidwImg'</span>);</span><br><span class="line">  fr.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`读取完成`</span>, fr.result);</span><br><span class="line">    vi.src = fr.result;</span><br><span class="line">  &#125;</span><br><span class="line">  fr.readAsDataURL(event.target.files[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/09/08/前端二进制操作之FileReader对象/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二进制</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/08/前端二进制操作之FileReader对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-前端二进制操作之File对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -815,154 +902,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-html元素-table" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/28/html元素-table/">html元素-table</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/28/html元素-table/" class="archive-article-date">
-  	<time datetime="2020-07-28T09:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>使用<code>table</code>元素可以创建一个表格。它由多个<code>tr、th、td</code>组成，它还包括<code>caption、col、colgroup、thead、tfoot</code> 以及<code>tbody</code> 元素</p>
-<h4 id="table元素"><a href="#table元素" class="headerlink" title="table元素"></a>table元素</h4><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>align</td>
-<td>left、center、right</td>
-<td>默认<code>table</code>自己占一行，<code>align</code>属性可以达到<code>float</code>效果，使其它元素围绕显示</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>bgcolor</td>
-<td>rgb(x,x,x)、#xxxxxx、colorname</td>
-<td>表格背景颜色</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>border</td>
-<td>pixels</td>
-<td>规定表格边框的宽度。</td>
-<td></td>
-</tr>
-<tr>
-<td>cellpadding</td>
-<td>pixels 、%</td>
-<td>单元格内边距</td>
-<td></td>
-</tr>
-<tr>
-<td>cellspacing</td>
-<td>pixels 、%</td>
-<td>单元格外边距</td>
-<td></td>
-</tr>
-<tr>
-<td>frame</td>
-<td>void、above、below、hsides、lhs、rhs、vsides、box、border</td>
-<td>规定外侧边框的哪个部分是可见的</td>
-<td><del>不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>rules</td>
-<td>none、groups、rows、cols、all</td>
-<td>规定内侧边框的哪个部分是可见的</td>
-<td><del>不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>summary</td>
-<td>text</td>
-<td>表格摘要，针对屏幕阅读器</td>
-<td>不显示在浏览器里</td>
-</tr>
-<tr>
-<td>width</td>
-<td>pixels 、%</td>
-<td>表格宽度</td>
-<td>默认自身宽度，最好使用<code>css</code>定宽</td>
-</tr>
-</tbody>
-</table>
-        
-          <a class="article-more-a" href="/2020/07/28/html元素-table/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/28/html元素-table/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1056,6 +995,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
@@ -1072,19 +1019,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
