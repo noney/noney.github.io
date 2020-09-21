@@ -6,20 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>sass文档-At-Rules-@use | 三人行必有我师</title>
+  <title>三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面@use规则从其他Sass样式表加载mixin、函数和变量，并将来自多个样式表的CSS组合在一起。@use加载的样式表称为“模块”。Sass还提供了内置的模块，这些模块都是有用的功。 @use &amp;quot;&amp;lt;url&amp;gt;&amp;quot;加载模块，无论加载多少次，在编译输出的css中只会包含一次。 注意： @use规则必须位于除@fo">
-<meta name="keywords" content="日积月累,css">
-<meta property="og:type" content="article">
-<meta property="og:title" content="sass文档-At-Rules-@use">
-<meta property="og:url" content="//noney.github.io/2020/05/21/sass文档-At-Rules-use/index.html">
+  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="三人行必有我师">
+<meta property="og:url" content="//noney.github.io/page/11/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@use规则从其他Sass样式表加载mixin、函数和变量，并将来自多个样式表的CSS组合在一起。@use加载的样式表称为“模块”。Sass还提供了内置的模块，这些模块都是有用的功。 @use &amp;quot;&amp;lt;url&amp;gt;&amp;quot;加载模块，无论加载多少次，在编译输出的css中只会包含一次。 注意： @use规则必须位于除@fo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-05-25T07:14:04.460Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sass文档-At-Rules-@use">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面@use规则从其他Sass样式表加载mixin、函数和变量，并将来自多个样式表的CSS组合在一起。@use加载的样式表称为“模块”。Sass还提供了内置的模块，这些模块都是有用的功。 @use &amp;quot;&amp;lt;url&amp;gt;&amp;quot;加载模块，无论加载多少次，在编译输出的css中只会包含一次。 注意： @use规则必须位于除@fo">
+<meta name="twitter:title" content="三人行必有我师">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +163,22 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sass文档-At-Rules-use" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-webpack终极优化之dll篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      sass文档-At-Rules-@use
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/01/webpack终极优化之dll篇/">webpack终极优化之dll篇</a>
     </h1>
   
 
         
-        <a href="/2020/05/21/sass文档-At-Rules-use/" class="archive-article-date">
-  	<time datetime="2020-05-21T09:53:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
+        <a href="/2017/09/01/webpack终极优化之dll篇/" class="archive-article-date">
+  	<time datetime="2017-09-01T03:40:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
 </a>
         
       </header>
@@ -189,55 +187,13 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@use</code>规则从其他<code>Sass</code>样式表加载<code>mixin、函数和变量</code>，并将来自多个样式表的<code>CSS</code>组合在一起。<code>@use</code>加载的样式表称为<code>“模块”</code>。<code>Sass</code>还提供了内置的模块，这些模块都是有用的功。</p>
-<p><code>@use &quot;&lt;url&gt;&quot;</code>加载模块，无论加载多少次，在编译输出的<code>css</code>中只会包含一次。</p>
-<p><strong><em>注意：</em></strong> <code>@use</code>规则必须位于除<code>@forward</code>之外的任何规则之前，包括样式规则。但是，您可以在使用<code>@use</code>规则之前<code>声明变量</code>。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foundation/_code.scss</span></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foundation/_lists.scss</span></span><br><span class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line"></span><br><span class="line">    &amp; &amp; &#123;</span><br><span class="line">        <span class="attribute">padding</span>: &#123;</span><br><span class="line">            bottom: <span class="number">0</span>;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'foundation/code'</span>;</span><br><span class="line">@use <span class="string">'foundation/lists'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="加载模块"><a href="#加载模块" class="headerlink" title="加载模块"></a>加载模块</h4><p>默认情况下，<code>url</code>的最后部分作为模块的<code>命名空间</code>，可以通过它访问模块的<code>变量、mixin、函数</code>。通过<code>@use</code>加载的模块，<code>变量、mixin、函数</code>只在当前样式表可见。如果希望同时从多个文件加载成员，可以使用@forward规则将所有成员从一个共享文件中转发出去。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_corners.scss</span></span><br><span class="line"><span class="variable">$radius</span>: <span class="number">3px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> rounded &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">"src/corners"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> corners.rounded;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> + corners.<span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过<code>@use &quot;&lt;url&gt;&quot; as &lt;namespace&gt;</code>方式改变默认的命令空间</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_corners.scss</span></span><br><span class="line"><span class="variable">$radius</span>: <span class="number">3px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> rounded &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">"src/corners"</span> as c;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> c.rounded;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> + c.<span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过<code>@use &quot;&lt;url&gt;&quot; as *</code>来加载匿名空间，为了避免冲突，尽量少用这种方式</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_corners.scss</span></span><br><span class="line"><span class="variable">$radius</span>: <span class="number">3px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> rounded &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">"src/corners"</span> as *;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> rounded;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> + <span class="variable">$radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">8px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过<code>-或者_</code>来定义私有成员</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/_corners.scss</span></span><br><span class="line"><span class="variable">$-radius</span>: <span class="number">3px</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> rounded &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$-radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">"src/corners"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> corners.rounded;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 这里是错误的! $-radius 只能在 `_corners.scss`里面可见。</span></span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> + corners.<span class="variable">$-radius</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过<code>!default</code>定义可配置的变量，然后通过<code>@use &lt;url&gt; with (&lt;variable&gt;: &lt;value&gt;, &lt;variable&gt;: &lt;value&gt;)</code>来覆盖可配置变量</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _library.scss</span></span><br><span class="line"><span class="variable">$black</span>: <span class="number">#000</span> !default;</span><br><span class="line"><span class="variable">$border-radius</span>: <span class="number">0.25rem</span> !default;</span><br><span class="line"><span class="variable">$box-shadow</span>: <span class="number">0</span> <span class="number">0.5rem</span> <span class="number">1rem</span> rgba(<span class="variable">$black</span>, <span class="number">0.15</span>) !default;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="variable">$border-radius</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="variable">$box-shadow</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'library'</span> with (</span><br><span class="line">    <span class="variable">$black</span>: <span class="number">#222</span>,</span><br><span class="line">    <span class="variable">$border-radius</span>: 0.1rem</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0.1rem</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0.5rem</span> <span class="number">1rem</span> <span class="built_in">rgba</span>(34, 34, 34, 0.15);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>与<code>mixin</code>配合，如果想在模块加载后更新配置，这并不是一个很好的办法，考虑编写一个<code>mixin</code>来设置变量，并编写另一个<code>mixin</code>来注入您的样式。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _library.scss</span></span><br><span class="line"><span class="variable">$-black</span>: <span class="number">#000</span>;</span><br><span class="line"><span class="variable">$-border-radius</span>: <span class="number">0.25rem</span>;</span><br><span class="line"><span class="variable">$-box-shadow</span>: null;</span><br><span class="line"></span><br><span class="line"><span class="comment">/// If the user has configured `$-box-shadow`, returns their configured value.</span></span><br><span class="line"><span class="comment">/// Otherwise returns a value derived from `$-black`.</span></span><br><span class="line">@function -box-shadow() &#123;</span><br><span class="line">    @return <span class="variable">$-box-shadow</span> or (<span class="number">0</span> 0.5rem 1rem rgba(<span class="variable">$-black</span>, 0.15));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> configure(<span class="variable">$black</span>: null, <span class="variable">$border-radius</span>: null, <span class="variable">$box-shadow</span>: null) &#123;</span><br><span class="line">    @<span class="keyword">if</span> <span class="variable">$black</span> &#123;</span><br><span class="line">        <span class="variable">$-black</span>: <span class="variable">$black</span> !global;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">if</span> <span class="variable">$border-radius</span> &#123;</span><br><span class="line">        <span class="variable">$-border-radius</span>: <span class="variable">$border-radius</span> !global;</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">if</span> <span class="variable">$box-shadow</span> &#123;</span><br><span class="line">        <span class="variable">$-box-shadow</span>: <span class="variable">$box-shadow</span> !global;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">include</span> styles &#123;</span><br><span class="line">    <span class="selector-tag">code</span> &#123;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="variable">$border-radius</span>;</span><br><span class="line">        <span class="attribute">box-shadow</span>: <span class="variable">$box-shadow</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'library'</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">include</span> library.configure(</span><br><span class="line">    <span class="variable">$black</span>: <span class="number">#222</span>,</span><br><span class="line">    <span class="variable">$border-radius</span>: 0.1rem</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">@<span class="keyword">include</span> library.styles;</span><br></pre></td></tr></table></figure>
-<h4 id="查找模块"><a href="#查找模块" class="headerlink" title="查找模块"></a>查找模块</h4><p>在不写<code>扩展名</code>的情况下，它会默认查找<code>.scss、.sass、.css</code>文件。为了确保样式表在每个操作系统上都能工作，Sass根据URL而不是文件路径加载文件。这意味着您需要使用<code>/</code>，而不是<code>\</code>，即使在<code>Windows</code>上也是如此。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">'src/module/library'</span></span><br></pre></td></tr></table></figure>
-<p><code>sass</code>首先加相对于当前文件加载，如果找不到的情况下，才会使用<code>加载路径</code>。如<code>@use susy</code>，会加载<code>node_modules/susy/sass/susy.scss</code>。当我们想使用相对路径时，不需要使用<code>./</code>，<code>sass</code>默认会使用相对路径。</p>
-<p>当<code>scss</code>文件使用<code>_</code>开头时，会被认为是<code>partials</code>。<code>sass</code>只会当作模块加载，而不去编译它们。在我们导入<code>_</code>开头时的模块时，我们可以省略掉<code>_</code>。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foundation/_code.scss</span></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">'code'</span></span><br></pre></td></tr></table></figure>
-<p>当我们使用<code>@use</code>加载文件夹本身时，它会自动加载文件夹下的 <code>index.scss 或 index.sass</code>文件。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foundation/_code.scss</span></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foundation/_lists.scss</span></span><br><span class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line"></span><br><span class="line">    &amp; &amp; &#123;</span><br><span class="line">        <span class="attribute">padding</span>: &#123;</span><br><span class="line">            bottom: <span class="number">0</span>;</span><br><span class="line">            <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// foundation/_index.scss</span></span><br><span class="line">@use <span class="string">'code'</span>;</span><br><span class="line">@use <span class="string">'lists'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'foundation'</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">CSS</span> <span class="selector-tag">OUTPUT</span></span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span> <span class="selector-tag">ul</span>, <span class="selector-tag">ol</span> <span class="selector-tag">ol</span> &#123;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="加载css文件"><a href="#加载css文件" class="headerlink" title="加载css文件"></a>加载css文件</h4><p><code>@use</code>同样也可以加载普通的<code>css</code>文件</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// code.css</span><br><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// style.scss</span></span><br><span class="line">@use <span class="string">'code'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">25em</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意：</em></strong>作为模块加载的CSS文件不允许任何特殊的Sass特性，因此不能公开任何Sass变量、函数或混合。为了确保作者不会不小心在他们的CSS中写入Sass，所有不是有效CSS的Sass特性都会产生错误。否则，CSS将按原样呈现。它甚至可以扩展!</p>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://sass-lang.com/documentation/at-rules/use" target="_blank" rel="noopener">@use</a></p>
-
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。</p>
+<p>当我们用到这些库或框架的时候，我们用webpack打包的时候往往不需要把它们和逻辑代码打到一起，因为第三方库我们不需要去对它进行经常更新，需逻辑代码是我们需要经常更新的，而且如果每次我们修改逻辑代码的时候都要打包第三方库或框架，还会拖慢打包构建速度，做了一些无用功，所以接下来就和大家一起讨论一下如何单独打包第三方库或框架，我们的主角要登场了，那就是dll。</p>
+<h4 id="使用CommonsChunkPlugin"><a href="#使用CommonsChunkPlugin" class="headerlink" title="使用CommonsChunkPlugin"></a>使用CommonsChunkPlugin</h4><p>webpack官方建议使用CommonsChunkPlugin插件去处理第三方库或框架，它的作用是可以把第三方库或框架放在entry的vendor里面单独打包下面是部分代码完整代码请查看[bingoo]工具</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">entry</span>: &#123;</span><br><span class="line">        <span class="attribute">vendors</span>: [<span class="string">'vue'</span>, <span class="string">'vuex'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">            <span class="attribute">name</span>: [<span class="string">'vendors'</span>],</span><br><span class="line">            <span class="attribute">filename</span>: <span class="string">'vendors.js'</span>,</span><br><span class="line">            <span class="attribute">minChunks</span>: <span class="number">2</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/#more">more >></a>
+        
       
 
       
@@ -250,11 +206,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端工具</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -263,84 +219,16 @@ var _hmt = _hmt || [];
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/05/21/sass文档-At-Rules-use/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/05/25/sass文档-At-Rules-forward/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          sass文档-At-Rules-forward
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/05/21/sass文档-插值/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass文档-插值</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -360,12 +248,12 @@ var _hmt = _hmt || [];
 
 
 
-  
-  
-  
 
   
-
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span>
+    </nav>
   
 
 
@@ -388,8 +276,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
