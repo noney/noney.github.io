@@ -165,6 +165,118 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-http-Content-Type" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/10/http-Content-Type/">http Content-Type</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/10/http-Content-Type/" class="archive-article-date">
+  	<time datetime="2020-09-10T09:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>Content-Type</code>字面意思就是内容类型，也叫做<a href="http://www.baidu.com" target="_blank" rel="noopener">MIME</a>类型。在<code>HTTP</code>中，存在于<code>request和response</code>中</p>
+<h4 id="request"><a href="#request" class="headerlink" title="request"></a>request</h4><p>在<code>HTTP request</code>中，我们可以通过下面几种方式设置它</p>
+<ul>
+<li><code>xhr</code>对象的<code>setRequestHeader</code>方法，默认值<code>text/plain;charset=UTF-8</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/json"</span>); <span class="comment">// application/json 浏览器不进行任何处理</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>form</code>表单中设置<code>enctype</code>属性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>application/x-www-form-urlencoded（默认值）</td>
+<td>在发送前编码所有字符</td>
+</tr>
+<tr>
+<td>multipart/form-data</td>
+<td>不对字符编码</td>
+</tr>
+<tr>
+<td>text/plain</td>
+<td>空格转换为 “+” 加号，但不对特殊字符编码</td>
+</tr>
+</tbody>
+</table>
+        
+          <a class="article-more-a" href="/2020/09/10/http-Content-Type/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/10/http-Content-Type/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-MIME-type" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -813,116 +925,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-前端二进制操作之Blog对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/前端二进制操作之Blog对象/">前端二进制操作之Blog对象</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/08/前端二进制操作之Blog对象/" class="archive-article-date">
-  	<time datetime="2020-09-08T03:07:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>Blog</code>是一个构造函数，返回一个<code>不可变的、原始数据（二进制）</code>的类文件对象，我们可以使用<code>Blog</code>来操作二进制文件，如图片</p>
-<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> blob = <span class="keyword">new</span> Blog(array, options);</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>array 由<code>ArrayBuffer、ArrayBufferView、Blog、DOMString</code>等对象构成的数组（<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMString" target="_blank" rel="noopener">DOMString</a> 就是一个字符串对象，编码为<code>utf-8</code>）</p>
-</li>
-<li><p>options 是一个对象（可选填），它有两个属性</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>属性名</th>
-<th>作用</th>
-<th>默认值</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>array数组内容的MIME类型</td>
-<td>“”</td>
-</tr>
-<tr>
-<td>endings</td>
-<td><code>\n</code>结束符写入方式， <code>native</code> 更改为适合当前系统的换行符，<code>transparent</code>保持不变</td>
-<td>transparent</td>
-</tr>
-</tbody>
-</table>
-        
-          <a class="article-more-a" href="/2020/09/08/前端二进制操作之Blog对象/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二进制</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/前端二进制操作之Blog对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -1016,11 +1018,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1032,19 +1046,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1053,10 +1059,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Zepto</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
