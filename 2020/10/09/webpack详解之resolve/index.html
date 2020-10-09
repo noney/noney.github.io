@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>html元素-table | 三人行必有我师</title>
+  <title>webpack详解之resolve | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用table元素可以创建一个表格。它由多个tr、th、td组成，它还包括caption、col、colgroup、thead、tfoot 以及tbody 元素 table元素   属性 值 描述 备注     align left、center、right 默认table自己占一行，align属性可以达到float效果，使其它元素围绕">
-<meta name="keywords" content="日积月累,html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面resolve帮助webpack找到模块的绝对路径。模块可以来自应用程序或第三方库，当代码中使用require/import依赖模块时，webpack使用 enhanced-resolve 解析文件路径 解析规则 绝对路径 直接使用，不需要解析  12import &quot;/home/me/file&quot;;import &quot;C:\\Users\\m">
+<meta name="keywords" content="日积月累,webpack">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html元素-table">
-<meta property="og:url" content="//noney.github.io/2020/07/28/html元素-table/index.html">
+<meta property="og:title" content="webpack详解之resolve">
+<meta property="og:url" content="//noney.github.io/2020/10/09/webpack详解之resolve/index.html">
 <meta property="og:site_name" content="三人行必有我师">
-<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用table元素可以创建一个表格。它由多个tr、th、td组成，它还包括caption、col、colgroup、thead、tfoot 以及tbody 元素 table元素   属性 值 描述 备注     align left、center、right 默认table自己占一行，align属性可以达到float效果，使其它元素围绕">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面resolve帮助webpack找到模块的绝对路径。模块可以来自应用程序或第三方库，当代码中使用require/import依赖模块时，webpack使用 enhanced-resolve 解析文件路径 解析规则 绝对路径 直接使用，不需要解析  12import &quot;/home/me/file&quot;;import &quot;C:\\Users\\m">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-08-03T10:16:36.286Z">
+<meta property="og:updated_time" content="2020-10-09T10:04:12.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html元素-table">
-<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用table元素可以创建一个表格。它由多个tr、th、td组成，它还包括caption、col、colgroup、thead、tfoot 以及tbody 元素 table元素   属性 值 描述 备注     align left、center、right 默认table自己占一行，align属性可以达到float效果，使其它元素围绕">
+<meta name="twitter:title" content="webpack详解之resolve">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面resolve帮助webpack找到模块的绝对路径。模块可以来自应用程序或第三方库，当代码中使用require/import依赖模块时，webpack使用 enhanced-resolve 解析文件路径 解析规则 绝对路径 直接使用，不需要解析  12import &quot;/home/me/file&quot;;import &quot;C:\\Users\\m">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -167,20 +167,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-html元素-table" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-webpack详解之resolve" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      html元素-table
+      webpack详解之resolve
     </h1>
   
 
         
-        <a href="/2020/07/28/html元素-table/" class="archive-article-date">
-  	<time datetime="2020-07-28T09:31:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
+        <a href="/2020/10/09/webpack详解之resolve/" class="archive-article-date">
+  	<time datetime="2020-10-09T02:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-09</time>
 </a>
         
       </header>
@@ -189,346 +189,223 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>使用<code>table</code>元素可以创建一个表格。它由多个<code>tr、th、td</code>组成，它还包括<code>caption、col、colgroup、thead、tfoot</code> 以及<code>tbody</code> 元素</p>
-<h4 id="table元素"><a href="#table元素" class="headerlink" title="table元素"></a>table元素</h4><table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>align</td>
-<td>left、center、right</td>
-<td>默认<code>table</code>自己占一行，<code>align</code>属性可以达到<code>float</code>效果，使其它元素围绕显示</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>bgcolor</td>
-<td>rgb(x,x,x)、#xxxxxx、colorname</td>
-<td>表格背景颜色</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>border</td>
-<td>pixels</td>
-<td>规定表格边框的宽度。</td>
-<td></td>
-</tr>
-<tr>
-<td>cellpadding</td>
-<td>pixels 、%</td>
-<td>单元格内边距</td>
-<td></td>
-</tr>
-<tr>
-<td>cellspacing</td>
-<td>pixels 、%</td>
-<td>单元格外边距</td>
-<td></td>
-</tr>
-<tr>
-<td>frame</td>
-<td>void、above、below、hsides、lhs、rhs、vsides、box、border</td>
-<td>规定外侧边框的哪个部分是可见的</td>
-<td><del>不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>rules</td>
-<td>none、groups、rows、cols、all</td>
-<td>规定内侧边框的哪个部分是可见的</td>
-<td><del>不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>summary</td>
-<td>text</td>
-<td>表格摘要，针对屏幕阅读器</td>
-<td>不显示在浏览器里</td>
-</tr>
-<tr>
-<td>width</td>
-<td>pixels 、%</td>
-<td>表格宽度</td>
-<td>默认自身宽度，最好使用<code>css</code>定宽</td>
-</tr>
-</tbody>
-</table>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>resolve</code>帮助<code>webpack</code>找到模块的<code>绝对路径</code>。模块可以来自应用程序或第三方库，当代码中使用<code>require/import</code>依赖模块时，<code>webpack</code>使用 <a href="https://github.com/webpack/enhanced-resolve" target="_blank" rel="noopener">enhanced-resolve</a> 解析文件路径</p>
+<h4 id="解析规则"><a href="#解析规则" class="headerlink" title="解析规则"></a>解析规则</h4><ul>
+<li><code>绝对路径</code> 直接使用，不需要解析</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"/home/me/file"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"C:\\Users\\me\\file"</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>相对路径</code> 使用<code>require/import</code>引用依赖文件的<code>资源文件</code>所在目录做为<code>上下文目录</code>，根据相对路径，解析出绝对路径</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"../src/file1"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"./file2"</span>;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p><strong><em>align 例子</em></strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">align</span>=<span class="string">"right"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>Month<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">th</span>&gt;</span>Savings<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>January<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span>$100<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>align 属性可以使文本围绕在表格周围。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>在 HTML 4.01 中，不赞成使用 body 元素的 align 属性；在 XHTML 1.0 Strict DTD 中，不支持 body 元素的 align 属性<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong><em>总结：</em></strong> 大多数属性都不建议使用或者建议使用<code>css</code>样式设置，我们需要关注的是<code>cellpadding、cellspacing</code>这两个属性</p>
-<p><code>table</code>特性：</p>
 <ul>
-<li>包裹性</li>
-<li>不设置宽度，不会超过<code>父容器</code>的宽度</li>
+<li><code>模块路径</code> 在<code>resolve.module</code>指定的目录中搜索，也可以使用<code>resolve.alias</code>指定一个别名，用来替换初始模块路径，绝对路径解析成功后</li>
 </ul>
-<h4 id="caption元素"><a href="#caption元素" class="headerlink" title="caption元素"></a>caption元素</h4><p><code>caption</code> 元素定义表格标题</p>
+<blockquote>
+<ol>
+<li>路径指向一个文件</li>
+</ol>
+<ul>
+<li>文件带有扩展名，直接被打包</li>
+<li>文件不带扩展名，查找<code>resoluve.extensions</code>指定的扩展名文件，然后打包</li>
+</ul>
+<ol start="2">
+<li>路径指向一个文件夹，通过下列步骤查找文件</li>
+</ol>
+<ul>
+<li>文件夹中包含<code>package.json</code>文件，顺序查找<code>resolve.mainFields</code>中指定的字段，并根据<code>package.json</code>文件中该字段确定文件路径</li>
+<li>文件夹中没有<code>package.json</code>文件，或者该文件中<code>main</code>字段没有返回有效路径，则顺序查找<code>resolve.mainFiles</code>配置中指定的文件名</li>
+<li>通过<code>resoluve.extensions</code>解析文件扩展名</li>
+</ul>
+</blockquote>
+<p><strong><em>注意：</em></strong></p>
+<ul>
+<li><code>loader</code>解析也遵循上面文件解析规则，也可以根据<code>resolveLoader</code>配置指定单独的解析规则</li>
+<li>文件系统访问会被缓存，<code>观察者模块</code>只会从缓存中摘除修改过的文件；关闭观察者模式，在每次编译前都会清除缓存</li>
+</ul>
+<h4 id="解析配置"><a href="#解析配置" class="headerlink" title="解析配置"></a>解析配置</h4><p>使用<code>resolve</code>字段配置模块如何解析，属性值是一个<code>object</code></p>
+<ul>
+<li>alias <code>object</code> 定义目录别名，使依赖模块变得简单</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">  Utilities: path.resolve(__dirname, <span class="string">'src/utilities/'</span>),</span><br><span class="line">  Templates: path.resolve(__dirname, <span class="string">'src/templates/'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不使用别名</span></span><br><span class="line"><span class="keyword">import</span> Utility <span class="keyword">from</span> <span class="string">'../../utilities/utility'</span>;</span><br><span class="line"><span class="comment">// 使用别名</span></span><br><span class="line"><span class="keyword">import</span> Utility <span class="keyword">from</span> <span class="string">'Utilities/utility'</span>;</span><br></pre></td></tr></table></figure>
+<p>别名末尾添加<code>$</code>，表示精确匹配</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">  xyz$: path.resolve(__dirname, <span class="string">'path/to/file.js'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Test1 <span class="keyword">from</span> <span class="string">'xyz'</span>; <span class="comment">// 精确匹配，所以 path/to/file.js 被解析和导入</span></span><br><span class="line"><span class="keyword">import</span> Test2 <span class="keyword">from</span> <span class="string">'xyz/file.js'</span>; <span class="comment">// 非精确匹配，触发普通解析</span></span><br></pre></td></tr></table></figure>
+<p>其它情况</p>
 <table>
 <thead>
 <tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-<th>备注</th>
+<th>别名</th>
+<th>import “xyz”</th>
+<th>import “xyz/file.js”</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>align</td>
-<td>left、center、right</td>
-<td>规定标题对齐方式</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
+<td>{}</td>
+<td>/abc/node_modules/xyz/index.js</td>
+<td>/abc/node_modules/xyz/file.js</td>
+</tr>
+<tr>
+<td>{ xyz: “/abs/path/to/file.js” }</td>
+<td>/abs/path/to/file.js</td>
+<td>error</td>
+</tr>
+<tr>
+<td>{ xyz$: “/abs/path/to/file.js” }</td>
+<td>/abs/path/to/file.js</td>
+<td>/abc/node_modules/xyz/file.js</td>
+</tr>
+<tr>
+<td>{ xyz: “./dir/file.js” }</td>
+<td>/abc/dir/file.js</td>
+<td>error</td>
+</tr>
+<tr>
+<td>{ xyz$: “./dir/file.js” }</td>
+<td>/abc/dir/file.js</td>
+<td>/abc/node_modules/xyz/file.js</td>
+</tr>
+<tr>
+<td>{ xyz: “/some/dir” }</td>
+<td>/some/dir/index.js</td>
+<td>/some/dir/file.js</td>
+</tr>
+<tr>
+<td>{ xyz$: “/some/dir” }</td>
+<td>/some/dir/index.js</td>
+<td>/abc/node_modules/xyz/file.js</td>
+</tr>
+<tr>
+<td>{ xyz: “./dir” }</td>
+<td>/abc/dir/index.js</td>
+<td>/abc/dir/file.js</td>
+</tr>
+<tr>
+<td>{ xyz: “modu” }</td>
+<td>/abc/node_modules/modu/index.js</td>
+<td>/abc/node_modules/modu/file.js</td>
+</tr>
+<tr>
+<td>{ xyz$: “modu” }</td>
+<td>/abc/node_modules/modu/index.js</td>
+<td>/abc/node_modules/xyz/file.js888</td>
+</tr>
+<tr>
+<td>{ xyz: “modu/some/file.js” }</td>
+<td>/abc/node_modules/modu/some/file.js</td>
+<td>error</td>
+</tr>
+<tr>
+<td>{ xyz: “modu/dir” }</td>
+<td>/abc/node_modules/modu/dir/index.js</td>
+<td>/abc/node_modules/dir/file.js</td>
+</tr>
+<tr>
+<td>{ xyz: “xyz/dir” }</td>
+<td>/abc/node_modules/xyz/dir/index.js</td>
+<td>/abc/node_modules/xyz/dir/file.js</td>
+</tr>
+<tr>
+<td>{ xyz$: “xyz/dir” }</td>
+<td>/abc/node_modules/xyz/dir/index.js</td>
+<td>/abc/node_modules/xyz/file.js</td>
 </tr>
 </tbody>
 </table>
-<h4 id="col-amp-colgroup元素"><a href="#col-amp-colgroup元素" class="headerlink" title="col&amp;colgroup元素"></a>col&amp;colgroup元素</h4><p>兼容性不好，谨慎使用</p>
-<h4 id="thead-amp-tbody-amp-tfoot元素"><a href="#thead-amp-tbody-amp-tfoot元素" class="headerlink" title="thead&amp;tbody&amp;tfoot元素"></a>thead&amp;tbody&amp;tfoot元素</h4><p><code>thead、tbody、tfoot</code>三个元素仅得到所有主流浏览器的<code>部分</code>支持。如果要使用它们，三个元素必须同时使用</p>
-<h4 id="tr元素"><a href="#tr元素" class="headerlink" title="tr元素"></a>tr元素</h4><p><code>tr</code>元素定义表格中的行。它包含<code>td、th</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">值</th>
-<th style="text-align:left">描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">align</td>
-<td style="text-align:left">right、left、center、justify（IE 居中显示）、char（兼容差）</td>
-<td style="text-align:left">定义表格行的内容对齐方式。</td>
-<td>水平对齐</td>
-</tr>
-<tr>
-<td style="text-align:left">bgcolor</td>
-<td style="text-align:left">rgb(x,x,x)、#xxxxxx、colorname</td>
-<td style="text-align:left">规定表格行的背景颜色。</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td style="text-align:left">char</td>
-<td style="text-align:left">character</td>
-<td style="text-align:left">规定根据哪个字符来进行文本对齐。</td>
-<td><del>不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td style="text-align:left">char off</td>
-<td style="text-align:left">number</td>
-<td style="text-align:left">规定第一个对齐字符的偏移量。</td>
-<td><del>不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td style="text-align:left">valign</td>
-<td style="text-align:left">top、middle、bottom、baseline</td>
-<td style="text-align:left">规定表格行中内容的垂直对齐方式。</td>
-<td>垂直对齐</td>
-</tr>
-</tbody>
-</table>
-<p><strong><em>总结：</em></strong>大多数属性兼容性都很差，我们需要关注的是<code>align、valign</code>这两个属性</p>
-<p><code>tr</code>特性</p>
+<blockquote>
+<p><strong><em>注意：</em></strong></p>
+<ol>
+<li>如果在<code>package.json</code>中设置，<code>index.js</code>可以解析为其它文件</li>
+<li><code>/abc/node_modules</code>也可能在<code>/node_modules</code>中解析</li>
+<li><code>resolve.alias</code>会优化于其它模块解析</li>
+<li><del><a href="https://github.com/webpack-contrib/null-loader" target="_blank" rel="noopener"><code>null-loader</code></a></del>已经在<code>webpack 5</code>中弃用，使用<code>alias: { xyz$: false }</code>或<code>alias: {[path.resolve(__dirname, &#39;./path/to/module&#39;)]: false }</code>代替</li>
+<li><code>webpack 5</code>中支持<code>[string]</code></li>
+<li>别名值为<code>false</code>，<code>webpack</code>会忽略该模块<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [string]</span></span><br><span class="line">alias: &#123;</span><br><span class="line">  _: [path.resolve(__dirname, <span class="string">'src/utilities/'</span>), path.resolve(__dirname, <span class="string">'src/templates/'</span>)]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// false</span></span><br><span class="line">alias: &#123;</span><br><span class="line">  <span class="string">'ignored-module'</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">'./ignored-module'</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
 <ul>
-<li>包裹性</li>
-<li><code>margin</code>无效</li>
-<li><code>width</code>无效，它的宽度由<code>td</code>或<code>table</code>决定</li>
+<li>aliasFields <code>[string]: [&#39;browser&#39;]</code> 指定根据<code>package.json</code>中的哪个字段来解析，如<code>browser</code></li>
 </ul>
-<h4 id="td-amp-th元素"><a href="#td-amp-th元素" class="headerlink" title="td&amp;th元素"></a>td&amp;th元素</h4><p><code>td</code>元素定义表格中的标准单元格。内部文本<code>正常大小、左对齐</code>显示</p>
-<p><code>th</code>元素定义表格中的表头单元格。内部文本<code>居中、加粗</code>显示</p>
-<p>除了以上区别，其它方面几乎没有任何区别，它们有着<code>同样的属性</code></p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>bbr</td>
-<td>text</td>
-<td>单元格中内容的缩写，针对屏幕阅读器</td>
-<td>不显示在浏览器里</td>
-</tr>
-<tr>
-<td>align</td>
-<td>left、center、right、justify（IE居中显示）、char（兼容差）</td>
-<td>单元格内容的水平对齐方式</td>
-<td>水平对齐</td>
-</tr>
-<tr>
-<td>axis</td>
-<td>category_name</td>
-<td>单元格分类</td>
-<td><del>~~不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>bgcolor</td>
-<td>rgb(x,x,x)、#xxxxxx、colorname</td>
-<td>单元格背景颜色</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>char</td>
-<td>character</td>
-<td>规定根据哪个字符来进行内容的对齐</td>
-<td><del>~~不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>charoff</td>
-<td>number</td>
-<td>规定对齐字符的偏移量</td>
-<td><del>~~不赞成使用。兼容差</del></td>
-</tr>
-<tr>
-<td>colspan</td>
-<td>number</td>
-<td>可横跨的<code>列数</code></td>
-<td>没有浏览器支持 colspan=”0”（指示浏览器横跨到列组的最后一列）</td>
-</tr>
-<tr>
-<td>rowspan</td>
-<td>number</td>
-<td>可横跨的<code>行数</code></td>
-<td>没有浏览器支持 colspan=”0”（指示浏览器横跨到列组的最后一行）</td>
-</tr>
-<tr>
-<td>headers</td>
-<td>header_cells’_id</td>
-<td>相关的表头，针对屏幕阅读器</td>
-<td>不显示在浏览器里</td>
-</tr>
-<tr>
-<td>height</td>
-<td>pixels、%</td>
-<td>高度</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>owrap</td>
-<td>nowrap</td>
-<td>内容是否折行</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-<tr>
-<td>scope</td>
-<td>col、colgroup、row、rowgroup</td>
-<td>定义将表头数据与单元数据相关联的方法，针对屏幕阅读器</td>
-<td>不显示在浏览器里</td>
-</tr>
-<tr>
-<td>valign</td>
-<td>top、middle、bottom、baseline</td>
-<td>内容的垂直排列方式</td>
-<td>垂直对齐</td>
-</tr>
-<tr>
-<td>width</td>
-<td>pixels、%</td>
-<td>宽度</td>
-<td><del>不赞成使用。请使用样式取而代之。</del></td>
-</tr>
-</tbody>
-</table>
-<p><strong><em>总结：</em></strong>大多数属性兼容性都很差，我们需要关注的是<code>align、valign、colspan、rowspan</code>这四个属性</p>
-<p><code>td</code>特性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  aliasFields: [<span class="string">'browser'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>包裹性</li>
-<li><code>margin</code>无效</li>
-<li>高度相等</li>
-<li>宽度等分（fixed）</li>
+<li>cacheWidthContext <code>boolean</code> (大于等于 webpack 3.1.0) 如果启用了不安全缓存，请在缓存键(cache key)中引入 <code>request.context</code>。这个选项被 <a href="https://github.com/webpack/enhanced-resolve/" target="_blank" rel="noopener"><code>enhanced-resolve</code></a> 模块考虑在内。从 webpack 3.1.0 开始，在配置了 resolve 或 resolveLoader 插件时，解析缓存(resolve caching)中的上下文(context)会被忽略。这解决了性能衰退的问题。</li>
+<li>descriptionFiles <code>[string] = [&#39;package.json&#39;]</code> 用于描述的 JSON 文件</li>
+<li>enforceExtension <code>boolean = false</code> 是否允许模块不带扩展名，如果<code>true</code>，则必须带扩展名，如<code>require(&#39;./file.js&#39;)</code></li>
+<li><del>enforeModuleExtension</del> <code>boolean = false</code> webpack5已废弃该字段，告诉webpack是否需要为模块使用扩展</li>
+<li>extension <code>[string] = [&#39;.wasm&#39;, &#39;.mjs&#39;, &#39;.js&#39;, &#39;.json&#39;]</code>，当指定依赖模块不带扩展名时 ，使用该字段值顺序进行匹配</li>
 </ul>
-<h4 id="table-amp-tr-amp-td总结"><a href="#table-amp-tr-amp-td总结" class="headerlink" title="table&amp;tr&amp;td总结"></a>table&amp;tr&amp;td总结</h4><table>
-<thead>
-<tr>
-<th>table宽度</th>
-<th>单元格宽度</th>
-<th>table-layout</th>
-<th>单元格表现</th>
-<th>table表现</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>不设置</td>
-<td>不设置</td>
-<td>auto/fixed</td>
-<td>内容宽度</td>
-<td>所有单元格宽度之和（内容宽度）</td>
-<td>不会超出<code>table父容器</code>宽度</td>
-</tr>
-<tr>
-<td>设置</td>
-<td>不设置</td>
-<td>auto</td>
-<td>内容宽度</td>
-<td>设置的<code>table</code>宽度</td>
-<td>内容多时，没有空白，单元格变高</td>
-</tr>
-<tr>
-<td>设置</td>
-<td>不设置</td>
-<td>fixed</td>
-<td>宽度均分</td>
-<td>设置的<code>table</code>宽度</td>
-<td></td>
-</tr>
-<tr>
-<td>设置</td>
-<td>设置</td>
-<td>auto</td>
-<td>内容宽度+空白</td>
-<td>设置的<code>table</code>宽度</td>
-<td>宽度均分</td>
-</tr>
-<tr>
-<td>设置</td>
-<td>设置</td>
-<td>fixed</td>
-<td>table大，宽度均分；单元格大，单元格设置的宽度</td>
-<td>table大，设置的<code>table</code>宽度；单元格大，所有单元格宽度之和</td>
-<td></td>
-</tr>
-<tr>
-<td>不设置</td>
-<td>设置</td>
-<td>auto/fixed</td>
-<td>设置的单元格宽度</td>
-<td>所有单元格宽度之和</td>
-<td>单元格相等</td>
-</tr>
-</tbody>
-</table>
-<p><strong><em>结论：</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  extension: [<span class="string">'.wasm'</span>, <span class="string">'.mjs'</span>, <span class="string">'.js'</span>, <span class="string">'.json'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在../path/to/目录下，依次查找file.wasm、file.mjs、file.js、file.json，直到找到</span></span><br><span class="line"><span class="keyword">import</span> File <span class="keyword">from</span> <span class="string">'../path/to/file'</span>;</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>配置该字段，将覆盖默认值</p>
 <ul>
-<li><code>fixed</code>时，单元格宽度相等（除了都不设置宽度），所有<code>单元格</code>宽度之和与<code>table</code>宽度比较，取大者。<code>table</code>宽度大时，<code>单元格</code>均分；反之<code>table</code>的宽度为所有<code>单元格</code>宽度之和（此规则均以<code>css</code>设置的宽度为准）</li>
-<li><code>auto</code>时，单元格宽度等于<code>内容宽度+剩余空间</code>（除了最后一条），如果内容过多，<code>剩余空间</code>将不存在，并且单元格增加高度（此规则均以<code>内容</code>的宽度为准）</li>
-<li>都不设置宽度时，<code>table</code>内容不会超出父容器</li>
+<li>mainFileds <code>[string]</code> （<strong><em>依赖为目录时使用</em></strong>）当我们从<code>npm package</code>导入依赖时，<code>mainFileds</code>字段决定使用<code>package.json</code>包中哪个字段来查找该依赖，如果我们不指定，它的默认值由<code>webpack target</code>字段决定</li>
 </ul>
-<h4 id="vertical-align"><a href="#vertical-align" class="headerlink" title="vertical-align"></a>vertical-align</h4><p><code>vertical-align</code>属性可以用来设置元素的垂直对齐方式。它也能应用于<code>td、th</code>元素</p>
-<h4 id="合并边框"><a href="#合并边框" class="headerlink" title="合并边框"></a>合并边框</h4><p>当我们给<code>table、td</code>添加边框时，就会出现双层边框情况，此时我们需要使用<code>border-collapse</code>属性合并边框</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// target值为webworker、web或者不指定时</span></span><br><span class="line">resolve: &#123;</span><br><span class="line">  mainFields: [<span class="string">'browser'</span>, <span class="string">'module'</span>, <span class="string">'main'</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// target值其它（包括node）</span></span><br><span class="line">resolve: &#123;</span><br><span class="line">  mainFields: [<span class="string">'module'</span>, <span class="string">'main'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此时我们有下面的例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> D3 <span class="keyword">from</span> <span class="string">"d3"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line">&#123;</span><br><span class="line">  ...</span><br><span class="line">  "main": "build/d3.Node.js",</span><br><span class="line">  "browser": "build/d3.js",</span><br><span class="line">  "module": "index",</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里我们会使用<code>browser</code>解析文件，因为它是<code>mainFileds</code>中的第一项，如果是使用<code>webpack</code>打包的<code>node</code>应用程序，会使用<code>module</code>字段</p>
 <ul>
-<li>separate 默认值，边框被分开</li>
-<li>collapse 边框会合并为一个单一的边框</li>
-<li>inherit 从父元素继成<code>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;</code></li>
+<li>mainFiles <code>[string] = [&#39;index&#39;]</code> （<strong><em>依赖为目录时使用</em></strong>）当解析文件路径中不包含文件名时，按照顺序查询指定文件名</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">td</span>&gt;</span>11111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">td</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="表格布局算法"><a href="#表格布局算法" class="headerlink" title="表格布局算法"></a>表格布局算法</h4><p>表格布局算法使用<code>css table-layout</code>属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  mainFiles: [<span class="string">'index'</span>, <span class="string">'main'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 依次查找`/abc/path/index`、`/abc/path/main`</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"/abc/path/"</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>auto 默认值，列宽度由单元格<code>内容</code>设定（<code>max-width、min-width</code>有效）</li>
-<li>fixed 列宽由表格宽度和列宽度设定（所有<code>td</code>宽度之和与<code>table</code>宽度两者取最大值，<code>max-width、min-width</code>无效）</li>
-<li>inherit 从父元素继成<code>任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 &quot;inherit&quot;</code></li>
+<li>module <code>[string] = [&#39;node_modules&#39;]</code> 指定 <code>webpack</code>解析模块时搜索的目录，<code>相对路径</code>和<code>绝对路径</code>都适用</li>
 </ul>
-<h4 id="实例-滚动条"><a href="#实例-滚动条" class="headerlink" title="实例-滚动条"></a>实例-滚动条</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tbox"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>one<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>two<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>three<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>four<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">th</span>&gt;</span>five<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span>111111111111<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.tbox</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1000px</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">overflow-x</span>: scroll;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tbox</span> <span class="selector-tag">table</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">  <span class="attribute">table-layout</span>: fixed;</span><br><span class="line">  width: 100%; // 不设置此宽度，table宽度由td决定，当所有宽度之和大于table时，td设置宽度无效，宽度平分table父级宽度</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tbox</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.tbox</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> <span class="selector-tag">td</span>, <span class="selector-class">.tbox</span> <span class="selector-tag">table</span> <span class="selector-tag">tr</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid red;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://www.w3school.com.cn/cssref/pr_tab_border-collapse.asp" target="_blank" rel="noopener">border-collapse</a><br><a href="https://www.w3school.com.cn/cssref/pr_tab_table-layout.asp" target="_blank" rel="noopener">table-layout</a><br><a href="https://www.w3school.com.cn/tags/tag_table.asp" target="_blank" rel="noopener">HTML table 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_tr.asp" target="_blank" rel="noopener">HTML tr 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_td.asp" target="_blank" rel="noopener">HTML td 标签</a><br><a href="https://www.w3school.com.cn/tags/tag_th.asp" target="_blank" rel="noopener">HTML th 标签</a><br><a href="https://www.cnblogs.com/peterYong/p/10761757.html" target="_blank" rel="noopener">【CSS】Table样式</a><br><a href="https://www.jianshu.com/p/52b0c2a7ea29" target="_blank" rel="noopener">display: table-cell知识点总结</a></p>
+<blockquote>
+<ol>
+<li>相对路径，搜索当前目录及祖先目录即 <code>./node_modules</code>, <code>../node_modules</code> 等等），类似于<code>node</code>模块查询方式</li>
+<li>绝对路径，在给定目录中搜索</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 指定src目录也为目标目录，它将优先于node_modules</span></span><br><span class="line">resolve: &#123;</span><br><span class="line">  <span class="built_in">module</span>: [path.resolve(__dirname, <span class="string">"src"</span>), <span class="string">'node_modules'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>unsafeCache <code>RegExp</code> <code>[RegExp]</code> <code>boolean: true</code> 启用主动，但不安全的模块缓存，<code>true</code>将缓存所有</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  unsafeCache: <span class="regexp">/src\/utilities/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>plugins <code>[plugins]</code> 解析插件列表，如<a href="https://www.npmjs.com/package/directory-named-webpack-plugin" target="_blank" rel="noopener"><code>DirectoryNamedWebpackPlugin</code></a></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> DirectoryNamedWebpackPlugin()</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>preferRelative <code>boolean</code> 启动此项时，<code>webpack</code>会将<code>模块路径</code>解析当作<code>相对路径</code>方式解析</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resoluve: &#123;</span><br><span class="line">  preferRelative: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/index.js</span></span><br><span class="line"><span class="comment">// let's say `src/logo.svg` exists</span></span><br><span class="line"><span class="keyword">import</span> logo1 <span class="keyword">from</span> <span class="string">'logo.svg'</span>; <span class="comment">// this is viable when `preferRelative` enabled</span></span><br><span class="line"><span class="keyword">import</span> logo2 <span class="keyword">from</span> <span class="string">'./logo.svg'</span>; <span class="comment">// otherwise you can only use relative path to resolve logo.svg</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `preferRelative` is enabled by default for `new URL()` case</span></span><br><span class="line"><span class="keyword">const</span> b = <span class="keyword">new</span> URL(<span class="string">'module/path'</span>, <span class="keyword">import</span>.meta.url);</span><br><span class="line"><span class="keyword">const</span> a = <span class="keyword">new</span> URL(<span class="string">'./module/path'</span>, <span class="keyword">import</span>.meta.url);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>symlinks <code>boolean = true</code> 解析软链时，<code>true</code>解析为真实路径；<code>false</code>解析为链接位置</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  symlinks: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong><em>注意：</em></strong>当使用符号链接包(如npm link)的工具时，这可能会导致模块解析失败。</p>
+<ul>
+<li>restrictions <code>[string, RegExp]</code> 设置哪些文件不会被解析</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  restrictions: [<span class="regexp">/\.(sass|scss|css)$/</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>roots <code>[string]</code> 设定相对于服务的<code>url</code>（以<code>/</code>开头）的依赖路径的上下文列表，默认为<code>context</code>属性值， 在非<code>window</code>操作系统上，会首先做为<code>绝对路径</code>解析</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fixtures = path.resolve(__dirname, <span class="string">'fixtures'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  resolve: &#123;</span><br><span class="line">    roots: [__dirname, fixtures]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>importsFields <code>[string]</code> 设定以<code>#</code>开头的依赖路径，使用<code>package.json</code>中的哪个字段进行匹配</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  importFields: [<span class="string">'browser'</span>, <span class="string">'module'</span>, <span class="string">'main'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>fallback <code>boolean</code> 指定解析失败时，备用的路径</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">  fallback: &#123;</span><br><span class="line">    xyz: path.resolve(__dirname, <span class="string">'path/to/file.js'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="loader解析"><a href="#loader解析" class="headerlink" title="loader解析"></a>loader解析</h4><p><code>resolveLoader</code>配置<code>loader</code>的解析规则（默认使用文件的解析规则）</p>
+<p><code>object { modules [string] = [&#39;node_modules&#39;], extensions [string] = [&#39;.js&#39;, &#39;.json&#39;], mainFields [string] = [&#39;loader&#39;, &#39;main&#39;]}</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  resolveLoader: &#123;</span><br><span class="line">  modules: [<span class="string">'node_modules'</span>],</span><br><span class="line">  extensions: [<span class="string">'.js'</span>, <span class="string">'.json'</span>],</span><br><span class="line">  mainFields: [<span class="string">'loader'</span>, <span class="string">'main'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><del>moduleExtensions</del> <code>[string]</code> <code>webpack 5</code>中已废弃，解析加载器使用的扩展名/后缀，<strong><em>强烈建议使用全名</em></strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  resolveLoader: &#123;</span><br><span class="line">    moduleExtensions: [<span class="string">'-loader'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://webpack.js.org/configuration/resolve/" target="_blank" rel="noopener">webpack document Resolve</a><br><a href="https://www.webpackjs.com/configuration/resolve/" target="_blank" rel="noopener">webpack中文文档 Resolve</a></p>
 
       
 
@@ -546,7 +423,7 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">html</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
@@ -602,7 +479,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/07/28/html元素-table/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/10/09/webpack详解之resolve/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -616,18 +493,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/08/03/css-display-table-cell/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          css display table-cell
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/07/28/sass文档-操作符-布尔值/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sass文档-操作符-布尔值</div>
+    <a href="/2020/09/29/webpack详解之module/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webpack详解之module</div>
       <i class="icon-circle-right"></i>
     </a>
   

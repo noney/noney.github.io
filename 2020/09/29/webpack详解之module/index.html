@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面module用来处理项目中不同类型的模块 noParseRegExp [RegExp] function(resource) string [string] noParse配置需要被忽略的文件，可以使用它来忽略大型库（如jquery）来提高构建性能 123module: &amp;#123;  noParse: /jquery|lodash/&amp;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-30T09:33:17.831Z">
+<meta property="og:updated_time" content="2020-10-09T02:22:11.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack详解之module">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面module用来处理项目中不同类型的模块 noParseRegExp [RegExp] function(resource) string [string] noParse配置需要被忽略的文件，可以使用它来忽略大型库（如jquery）来提高构建性能 123module: &amp;#123;  noParse: /jquery|lodash/&amp;">
@@ -437,8 +437,7 @@ var _hmt = _hmt || [];
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        loader: <span class="string">'file-loader'</span>,</span><br><span class="line">        options: &#123;</span><br><span class="line">          outputPath: <span class="string">'svgs'</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      (info) =&gt; (&#123;</span><br><span class="line">        loader: <span class="string">'svgo-loader'</span>,</span><br><span class="line">        options: &#123;</span><br><span class="line">          plugins: [&#123;</span><br><span class="line">            cleanupIDs: &#123; <span class="attr">prefix</span>: basename(info.resource) &#125;</span><br><span class="line">          &#125;]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h4 id="模块上下文"><a href="#模块上下文" class="headerlink" title="模块上下文"></a><del>模块上下文</del></h4><p><strong><em>避免使用这些选项，因为它们已被弃用并将很快被删除。</em></strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">  <span class="built_in">module</span>: &#123;</span><br><span class="line">    exprContextCritical: <span class="literal">true</span>,</span><br><span class="line">    exprContextRecursive: <span class="literal">true</span>,</span><br><span class="line">    exprContextRegExp: <span class="literal">false</span>,</span><br><span class="line">    exprContextRequest: <span class="string">'.'</span>,</span><br><span class="line">    unknownContextCritical: <span class="literal">true</span>,</span><br><span class="line">    unknownContextRecursive: <span class="literal">true</span>,</span><br><span class="line">    unknownContextRegExp: <span class="literal">false</span>,</span><br><span class="line">    unknownContextRequest: <span class="string">'.'</span>,</span><br><span class="line">    wrappedContextCritical: <span class="literal">false</span>,</span><br><span class="line">    wrappedContextRecursive: <span class="literal">true</span>,</span><br><span class="line">    wrappedContextRegExp: <span class="regexp">/.*/</span>,</span><br><span class="line">    strictExportPresence: <span class="literal">false</span> <span class="comment">// since webpack 2.3.0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://webpack.js.org/configuration/module/" target="_blank" rel="noopener">webpack document Module</a></p>
-<p><a href="https://www.webpackjs.com/configuration/module/" target="_blank" rel="noopener">webpack中文文档 Module</a></p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://webpack.js.org/configuration/module/" target="_blank" rel="noopener">webpack document Module</a><br><a href="https://www.webpackjs.com/configuration/module/" target="_blank" rel="noopener">webpack中文文档 Module</a></p>
 
       
 
@@ -525,6 +524,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/10/09/webpack详解之resolve/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          webpack详解之resolve
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/29/webpack详解之mode和content/" id="article-nav-older" class="article-nav-link-wrap">
@@ -648,23 +656,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -676,11 +672,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -689,6 +693,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Zepto</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -704,11 +712,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">浏览器</a>
               </li>
              
               <li class="article-tag-list-item">
