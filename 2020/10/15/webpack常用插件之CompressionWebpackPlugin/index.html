@@ -6,16 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//noney.github.io">
-  <title>Tag: 日积月累 | 三人行必有我师</title>
+  <title>webpack常用插件之CompressionWebpackPlugin | 三人行必有我师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/tags/日积月累/page/7/index.html">
+  <meta name="description" content="—— 同时发表于coding 作者：Noney Li 写在前面为Content-Encoding提供压缩版本 安装1$ yarn add compression-webpack-plugin --dev">
+<meta name="keywords" content="日积月累,webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack常用插件之CompressionWebpackPlugin">
+<meta property="og:url" content="//noney.github.io/2020/10/15/webpack常用插件之CompressionWebpackPlugin/index.html">
 <meta property="og:site_name" content="三人行必有我师">
+<meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面为Content-Encoding提供压缩版本 安装1$ yarn add compression-webpack-plugin --dev">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-10-15T07:26:34.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="三人行必有我师">
+<meta name="twitter:title" content="webpack常用插件之CompressionWebpackPlugin">
+<meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面为Content-Encoding提供压缩版本 安装1$ yarn add compression-webpack-plugin --dev">
   
   
     <link rel="icon" href="/assets/img/favicon.ico">
@@ -163,36 +167,129 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-webpack常用插件之CompressionWebpackPlugin" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      webpack常用插件之CompressionWebpackPlugin
+    </h1>
+  
+
+        
+        <a href="/2020/10/15/webpack常用插件之CompressionWebpackPlugin/" class="archive-article-date">
+  	<time datetime="2020-10-15T03:15:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-15</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>为<code>Content-Encoding</code>提供压缩版本</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> yarn add compression-webpack-plugin --dev</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>属性值类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>test</td>
+<td>String 或 RegExp 或 Array<string 或 regexp></string></td>
+<td>undefined</td>
+<td>所有匹配的文件</td>
+</tr>
+<tr>
+<td>include</td>
+<td>String 或 RegExp 或 Array<string 或 regexp></string></td>
+<td>undefined</td>
+<td>需要包含的文件</td>
+</tr>
+<tr>
+<td>exclude</td>
+<td>String 或 RegExp 或 Array<string 或 regexp></string></td>
+<td>undefined</td>
+<td>需要排队的文件</td>
+</tr>
+<tr>
+<td>algorithm</td>
+<td>String 或 Function</td>
+<td>gzip</td>
+<td>压缩算法/功能</td>
+</tr>
+<tr>
+<td>compressionOptions</td>
+<td>Object</td>
+<td>{ level: 9 }</td>
+<td>压缩算法的参数</td>
+</tr>
+<tr>
+<td>threshold</td>
+<td>Number</td>
+<td>0</td>
+<td>只处理大于此设置的文件（单位k）</td>
+</tr>
+<tr>
+<td>minRatio</td>
+<td>Number</td>
+<td>0.8</td>
+<td>只处理压缩比大于此设置的文件（minRatio =压缩大小/原始大小）</td>
+</tr>
+<tr>
+<td>filename</td>
+<td>String 或 Function</td>
+<td>[path][base].gz</td>
+<td>生成的文件名模板</td>
+</tr>
+<tr>
+<td>deleteOriginalAssets</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否删除未压缩的源文件</td>
+</tr>
+<tr>
+<td>cache</td>
+<td>Boolean 或 String</td>
+<td>true</td>
+<td>是否启用缓存（<code>webpack 5</code>中已避免使用，使用<a href="https://webpack.js.org/configuration/other-options/#cache" target="_blank" rel="noopener">cache</a>代替）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">  <span class="keyword">new</span> CompressionPlugin(&#123;</span><br><span class="line">    test: <span class="regexp">/\.js(\?.*)?$/i</span>,</span><br><span class="line">    exclude: <span class="regexp">/\/excludes/</span>,</span><br><span class="line">    exclude: <span class="regexp">/\/excludes/</span>,</span><br><span class="line">    <span class="comment">/*使用自定义函数算法，则`compressionOptions`的默认值为`&#123;&#125;`*/</span></span><br><span class="line">    algorithm(input, compressionOptions, callback) &#123;</span><br><span class="line">      <span class="keyword">return</span> compressionFunction(input, compressionOptions, callback);</span><br><span class="line">    &#125;,</span><br><span class="line">    compressionOptions: &#123; <span class="attr">level</span>: <span class="number">1</span> &#125;,</span><br><span class="line">    threshold: <span class="number">8192</span>,</span><br><span class="line">    minRatio: <span class="number">0.8</span>,</span><br><span class="line">    filename(pathData) &#123;</span><br><span class="line">      <span class="comment">// The `pathData` argument contains all placeholders - `path`/`name`/`ext`/etc</span></span><br><span class="line">      <span class="comment">// Available properties described above, for the `String` notation</span></span><br><span class="line">      <span class="keyword">if</span> (<span class="regexp">/\.svg$/</span>.test(pathData.file)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'assets/svg/[path][base].gz'</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'assets/js/[path][base].gz'</span>;</span><br><span class="line">    &#125;,</span><br><span class="line">    deleteOriginalAssets: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">// 值为字符串目录时，表示开启缓存同时设置缓存文件存放目录</span></span><br><span class="line">    <span class="comment">// 默认的缓存目录`node_modules/.cache/compression-webpack-plugin`</span></span><br><span class="line">    cache: <span class="string">'path/to/cache'</span></span><br><span class="line">  &#125;),</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="minRatio"><a href="#minRatio" class="headerlink" title="minRatio"></a>minRatio</h4><p><code>minRatio</code>设置值说明</p>
+<ul>
+<li>设置<code>minRatio</code>为<code>1</code>处理所有比原始值小的文件</li>
+<li>设置<code>minRatio</code>为<code>Infinity</code>，处理所有文件，包括比原始值大的文件，或者原始字节为<code>0</code>的文件</li>
+<li>设置<code>minRatio</code>为<code>Number.MAX_SAFE_INTEGER</code>，处理所有文件，但不包括原始字节为<code>0</code>的文件</li>
+</ul>
+<h4 id="filename"><a href="#filename" class="headerlink" title="filename"></a>filename</h4><p><code>filename</code>中占位符对应的值如下（<code>assets/images/image.png?foo=bar#hash</code>）</p>
+<ul>
+<li>[path] 文件目录包括<code>/</code>（<code>assets/images/</code>）</li>
+<li>[file] 文件路径（<code>assets/images/image.png</code>）</li>
+<li>[base] 文件名加扩展名（<code>[name]</code> + <code>[ext]</code>）(<code>image.png</code>)</li>
+<li>[name] 文件名（<code>image</code>）</li>
+<li>[ext] 文件扩展名（<code>.png</code>）</li>
+<li>[query] 查询包括<code>?</code>（<code>?foo=bar</code>）</li>
+<li>[fragment] 片段（#hash）</li>
+</ul>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><p><a href="https://webpack.js.org/plugins/compression-webpack-plugin/" target="_blank" rel="noopener">webpack document CompressionWebpackPlugin</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/03/sass文档-流程控制/" class="archive-article-date">
-  	<time datetime="2020-06-03T06:09:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/03/sass文档-流程控制/">sass文档-流程控制</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,322 +299,118 @@ var _hmt = _hmt || [];
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://noney.github.io/2020/10/15/webpack常用插件之CompressionWebpackPlugin/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/02/sass文档-At-Rules-root/" class="archive-article-date">
-  	<time datetime="2020-06-02T08:09:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/10/15/webpack常用插件之ContextReplacementPlugin/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          webpack常用插件之ContextReplacementPlugin
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/13/webpack常用插件之CommonsChunkPlugin/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webpack常用插件之CommonsChunkPlugin</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/02/sass文档-At-Rules-root/">sass文档-At-Rules-root</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/02/sass文档-At-Rules-error-warn-debug/" class="archive-article-date">
-  	<time datetime="2020-06-02T07:37:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/02/sass文档-At-Rules-error-warn-debug/">sass文档-At-Rules-error-warn-debug</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/29/sass文档-At-Rules-extend/" class="archive-article-date">
-  	<time datetime="2020-05-29T07:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/29/sass文档-At-Rules-extend/">sass文档-At-Rules-extend</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/28/sass文档-At-Rules-function/" class="archive-article-date">
-  	<time datetime="2020-05-28T09:48:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/sass文档-At-Rules-function/">sass文档-At-Rules-function</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/28/sass文档-At-Rules-mixin-and-include/" class="archive-article-date">
-  	<time datetime="2020-05-28T06:52:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/28/sass文档-At-Rules-mixin-and-include/">sass文档-At-Rules-mixin-and-include</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/27/flex-实例一/" class="archive-article-date">
-  	<time datetime="2020-05-27T09:17:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/27/flex-实例一/">flex-实例一</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/25/sass文档-At-Rules-import/" class="archive-article-date">
-  	<time datetime="2020-05-25T08:36:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/25/sass文档-At-Rules-import/">sass文档-At-Rules-import</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/日积月累/page/6/">&laquo; Prev</a><a class="page-number" href="/tags/日积月累/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/日积月累/page/5/">5</a><a class="page-number" href="/tags/日积月累/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/tags/日积月累/page/8/">8</a><a class="page-number" href="/tags/日积月累/page/9/">9</a><a class="page-number" href="/tags/日积月累/page/10/">10</a><a class="extend next" rel="next" href="/tags/日积月累/page/8/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -541,9 +434,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

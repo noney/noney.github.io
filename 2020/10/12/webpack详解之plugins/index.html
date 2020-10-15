@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用plugins定制多种方式的构建过程，webpack提供了多种内置插件，也可以根据自己的需求编写插件。插件属性的值是一个数组 123456789101112131415161718var webpack = require(&apos;webpack&apos;);// importing plugins that do not come by def">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-13T10:28:32.604Z">
+<meta property="og:updated_time" content="2020-10-15T08:50:03.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack详解之plugins">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用plugins定制多种方式的构建过程，webpack提供了多种内置插件，也可以根据自己的需求编写插件。插件属性的值是一个数组 123456789101112131415161718var webpack = require(&apos;webpack&apos;);// importing plugins that do not come by def">
@@ -195,21 +195,26 @@ var _hmt = _hmt || [];
 <h4 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h4><table>
 <thead>
 <tr>
-<th>名称</th>
-<th>文档链接</th>
+<th>插件</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>bannerPlugin</td>
-<td></td>
+<td><a href="http://0kv30q.coding-pages.com/2020/10/13/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BbannerPlugin/" target="_blank" rel="noopener">bannerPlugin</a></td>
+<td>在每个<code>chunk</code>顶部添加一个<code>banner</code>标识</td>
 </tr>
 <tr>
-<td>CommonsChunkPlugin</td>
-<td></td>
+<td><a href="http://0kv30q.coding-pages.com/2020/10/13/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BCommonsChunkPlugin/" target="_blank" rel="noopener">CommonsChunkPlugin</a></td>
+<td>提取<code>多个入口</code>共享的公用模块</td>
 </tr>
 <tr>
-<td></td>
+<td><a href="http://0kv30q.coding-pages.com/2020/10/15/webpack常用插件之CompressionWebpackPlugin/" target="_blank" rel="noopener">CompressionWebpackPlugin</a></td>
+<td>为<code>Content-Encoding</code>提供压缩版本</td>
+</tr>
+<tr>
+<td>ContextReplacementPlugin</td>
+<td>替换解析<code>使用表达式方式引用模块</code>的规则</td>
 </tr>
 </tbody>
 </table>
