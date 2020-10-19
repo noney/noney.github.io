@@ -165,6 +165,182 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-webpack详解之resolve" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/09/webpack详解之resolve/">webpack详解之resolve</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/09/webpack详解之resolve/" class="archive-article-date">
+  	<time datetime="2020-10-09T02:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>resolve</code>帮助<code>webpack</code>找到模块的<code>绝对路径</code>。模块可以来自应用程序或第三方库，当代码中使用<code>require/import</code>依赖模块时，<code>webpack</code>使用 <a href="https://github.com/webpack/enhanced-resolve" target="_blank" rel="noopener">enhanced-resolve</a> 解析文件路径</p>
+<h4 id="解析规则"><a href="#解析规则" class="headerlink" title="解析规则"></a>解析规则</h4><ul>
+<li><code>绝对路径</code> 直接使用，不需要解析</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"/home/me/file"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"C:\\Users\\me\\file"</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>相对路径</code> 使用<code>require/import</code>引用依赖文件的<code>资源文件</code>所在目录做为<code>上下文目录</code>，根据相对路径，解析出绝对路径</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"../src/file1"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"./file2"</span>;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/10/09/webpack详解之resolve/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/09/webpack详解之resolve/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-webpack详解之module" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/29/webpack详解之module/">webpack详解之module</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/29/webpack详解之module/" class="archive-article-date">
+  	<time datetime="2020-09-29T07:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>module</code>用来处理项目中不同类型的模块</p>
+<h4 id="noParse"><a href="#noParse" class="headerlink" title="noParse"></a>noParse</h4><p><code>RegExp</code> <code>[RegExp]</code> <code>function(resource)</code> <code>string</code> <code>[string]</code></p>
+<p><code>noParse</code>配置需要被<code>忽略</code>的文件，可以使用它来忽略大型库（如<code>jquery</code>）来提高构建性能</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  noParse: <span class="regexp">/jquery|lodash/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  noParse: <span class="function">(<span class="params">content</span>) =&gt;</span> <span class="regexp">/jquery|lodash/</span>.test(content)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/09/29/webpack详解之module/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/29/webpack详解之module/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack详解之mode和content" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -691,210 +867,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-browserslist" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/17/browserslist/">browserslist</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/17/browserslist/" class="archive-article-date">
-  	<time datetime="2020-09-17T09:26:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">browserslist</a>为前端工具提供目标<code>浏览器、node</code>的范围版本，数据来自 <a href="http://caniuse.com/" target="_blank" rel="noopener">Can I Use</a> 网站</p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><code>borwserslist</code>可以在下列工具中使用</p>
-<ul>
-<li><a href="https://github.com/postcss/autoprefixer" target="_blank" rel="noopener">Autoprefixer</a></li>
-<li><a href="https://github.com/babel/babel/tree/master/packages/babel-preset-env" target="_blank" rel="noopener">Babel</a></li>
-<li><a href="https://github.com/jonathantneal/postcss-preset-env" target="_blank" rel="noopener">postcss-preset-env</a></li>
-<li><a href="https://github.com/amilajack/eslint-plugin-compat" target="_blank" rel="noopener">eslint-plugin-compat</a></li>
-<li><a href="https://github.com/ismay/stylelint-no-unsupported-browser-features" target="_blank" rel="noopener">stylelint-no-unsupported-browser-features</a></li>
-<li><a href="https://github.com/jonathantneal/postcss-normalize" target="_blank" rel="noopener">postcss-normalize</a></li>
-<li><a href="https://github.com/ElemeFE/obsolete-webpack-plugin" target="_blank" rel="noopener">obsolete-webpack-plugin</a></li>
-</ul>
-        
-          <a class="article-more-a" href="/2020/09/17/browserslist/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/17/browserslist/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-http-Content-Type" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/10/http-Content-Type/">http Content-Type</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/10/http-Content-Type/" class="archive-article-date">
-  	<time datetime="2020-09-10T09:25:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>Content-Type</code>字面意思就是内容类型，也叫做<a href="http://www.baidu.com" target="_blank" rel="noopener">MIME</a>类型。在<code>HTTP</code>中，存在于<code>request和response</code>中</p>
-<h4 id="request"><a href="#request" class="headerlink" title="request"></a>request</h4><p>在<code>HTTP request</code>中，我们可以通过下面几种方式设置它</p>
-<ul>
-<li><code>xhr</code>对象的<code>setRequestHeader</code>方法，默认值<code>text/plain;charset=UTF-8</code></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.setRequestHeader(<span class="string">"Content-type"</span>,<span class="string">"application/json"</span>); <span class="comment">// application/json 浏览器不进行任何处理</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>form</code>表单中设置<code>enctype</code>属性</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>application/x-www-form-urlencoded（默认值）</td>
-<td>在发送前编码所有字符</td>
-</tr>
-<tr>
-<td>multipart/form-data</td>
-<td>不对字符编码</td>
-</tr>
-<tr>
-<td>text/plain</td>
-<td>空格转换为 “+” 加号，但不对特殊字符编码</td>
-</tr>
-</tbody>
-</table>
-        
-          <a class="article-more-a" href="/2020/09/10/http-Content-Type/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">ajax</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/10/http-Content-Type/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
@@ -988,14 +960,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
               </li>
              
@@ -1012,11 +976,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">

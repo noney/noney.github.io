@@ -165,6 +165,184 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-webpack常用插件之DefinePlugin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/19/webpack常用插件之DefinePlugin/">webpack常用插件之DefinePlugin</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/19/webpack常用插件之DefinePlugin/" class="archive-article-date">
+  	<time datetime="2020-10-19T07:53:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>定义可在编译阶段使用的全局常量，可以在业务代码中使用。如可以使用它来区分构建环境</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> webpack.DefinePlugin(&#123;</span><br><span class="line">  <span class="string">'process.env.NODE_ENV'</span>: <span class="built_in">JSON</span>.stringify(process.env.NODE_ENV)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>每个传进<code>DefinePlugin</code>的<code>key</code>都是一个标识符或用多个<code>.</code>连接的标签符（对象）</p>
+<ul>
+<li>值为字符串，当作代码片段使用</li>
+<li>值为非字符串，被转换为字符串（包括函数）<strong><em>结果并非如此，待验证</em></strong></li>
+<li>值为对象，被多个<code>.</code>连接访问</li>
+<li><code>key</code>前面添加<code>typeof</code>，定义为<code>typeof</code>调用</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/10/19/webpack常用插件之DefinePlugin/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/19/webpack常用插件之DefinePlugin/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-webpack常用插件之CopyWebpackPlugin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/19/webpack常用插件之CopyWebpackPlugin/">webpack常用插件之CopyWebpackPlugin</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/19/webpack常用插件之CopyWebpackPlugin/" class="archive-article-date">
+  	<time datetime="2020-10-19T02:41:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>copy-webpack-plugin</code>插件将已经存在的<code>单个文件</code>或<code>整个目录</code>（构建完成的文件）复制到构建目录</p>
+<p><strong><em>注意：</em></strong></p>
+<ul>
+<li><code>webpack-copy-plugin</code>，复制<code>node_module</code>中的文件（源文件）供构建过程中使用</li>
+<li>如果希望<code>webpack-dev-server</code>在开发阶段，将文件写入到输出目录，需要强制设置 <a href="https://github.com/webpack/webpack-dev-middleware#writetodisk" target="_blank" rel="noopener"><code>writeToDisk</code></a>选项或使用 <a href="https://github.com/gajus/write-file-webpack-plugin" target="_blank" rel="noopener"><code>write-file-webpack-plugin</code></a>插件</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add copy-webpack-plugin --dev</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/10/19/webpack常用插件之CopyWebpackPlugin/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/19/webpack常用插件之CopyWebpackPlugin/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack常用插件之ContextReplacementPlugin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -668,182 +846,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-webpack详解之resolve" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/09/webpack详解之resolve/">webpack详解之resolve</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/09/webpack详解之resolve/" class="archive-article-date">
-  	<time datetime="2020-10-09T02:27:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>resolve</code>帮助<code>webpack</code>找到模块的<code>绝对路径</code>。模块可以来自应用程序或第三方库，当代码中使用<code>require/import</code>依赖模块时，<code>webpack</code>使用 <a href="https://github.com/webpack/enhanced-resolve" target="_blank" rel="noopener">enhanced-resolve</a> 解析文件路径</p>
-<h4 id="解析规则"><a href="#解析规则" class="headerlink" title="解析规则"></a>解析规则</h4><ul>
-<li><code>绝对路径</code> 直接使用，不需要解析</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"/home/me/file"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"C:\\Users\\me\\file"</span>;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>相对路径</code> 使用<code>require/import</code>引用依赖文件的<code>资源文件</code>所在目录做为<code>上下文目录</code>，根据相对路径，解析出绝对路径</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"../src/file1"</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">"./file2"</span>;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/10/09/webpack详解之resolve/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/09/webpack详解之resolve/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-webpack详解之module" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/29/webpack详解之module/">webpack详解之module</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/29/webpack详解之module/" class="archive-article-date">
-  	<time datetime="2020-09-29T07:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>module</code>用来处理项目中不同类型的模块</p>
-<h4 id="noParse"><a href="#noParse" class="headerlink" title="noParse"></a>noParse</h4><p><code>RegExp</code> <code>[RegExp]</code> <code>function(resource)</code> <code>string</code> <code>[string]</code></p>
-<p><code>noParse</code>配置需要被<code>忽略</code>的文件，可以使用它来忽略大型库（如<code>jquery</code>）来提高构建性能</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  noParse: <span class="regexp">/jquery|lodash/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  noParse: <span class="function">(<span class="params">content</span>) =&gt;</span> <span class="regexp">/jquery|lodash/</span>.test(content)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/09/29/webpack详解之module/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/29/webpack详解之module/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -937,14 +939,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
               </li>
              
@@ -961,11 +955,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">

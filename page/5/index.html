@@ -165,6 +165,187 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-sass文档-操作符-布尔值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/28/sass文档-操作符-布尔值/">sass文档-操作符-布尔值</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/28/sass文档-操作符-布尔值/" class="archive-article-date">
+  	<time datetime="2020-07-28T07:51:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>与JavaScript等语言不同，Sass使用文字而不是符号来表示布尔运算符。</p>
+<ul>
+<li><code>not &lt;expression&gt;</code>返回相反的值</li>
+<li><code>&lt;expression&gt; and &lt;expression&gt;</code>两个值都为<code>true</code>，返回<code>true</code>，否则返回<code>false</code></li>
+<li><code>&lt;expression&gt; or &lt;expression&gt;</code>两个值都为<code>false</code>，返回<code>false</code>，否则返回<code>true</code></li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> not true; <span class="comment">// false</span></span><br><span class="line">@<span class="keyword">debug</span> not false; <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> true and true; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> true and false; <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> true or false; <span class="comment">// true</span></span><br><span class="line">@<span class="keyword">debug</span> false or false; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/28/sass文档-操作符-布尔值/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/28/sass文档-操作符-布尔值/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-sass文档-操作符-字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/28/sass文档-操作符-字符串/">sass文档-操作符-字符串</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/28/sass文档-操作符-字符串/" class="archive-article-date">
+  	<time datetime="2020-07-28T07:13:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>提供下面几种生成<code>字符串</code>的操作符</p>
+<ul>
+<li><code>&lt;expression&gt; + &lt;expression&gt;</code>返回一个包含两个表达式值的字符串。如果任意一个值是用引号括起来的字符串，结果也会用引号括起来;否则，返回一个不带引号的字符串。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> <span class="string">"Helvetica"</span> + <span class="string">" Neue"</span>; <span class="comment">// "Helvetica Neue"</span></span><br><span class="line">@<span class="keyword">debug</span> sans- + serif; <span class="comment">// sans-serif</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&lt;expression&gt; / &lt;expression&gt;</code>返回一个不带引号的字符串，该字符串包含两个表达式的值，以/分隔。</li>
+</ul>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 10px / 10px; <span class="comment">//  10px/10px</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&lt;expression&gt; - &lt;expression&gt;</code>返回一个不带引号的字符串，该字符串包含两个表达式的值，以-分隔。这是一个遗留操作符，通常应该使用插值。</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/07/28/sass文档-操作符-字符串/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/28/sass文档-操作符-字符串/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-sass文档-操作符-数值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -674,173 +855,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-sass文档-数据类型-maps" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/24/sass文档-数据类型-maps/">sass文档-数据类型-maps</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/24/sass文档-数据类型-maps/" class="archive-article-date">
-  	<time datetime="2020-07-24T08:26:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>使用<code>(&lt;expression&gt;: &lt;expression&gt;, &lt;expression&gt;: &lt;expression&gt;)</code>来表示一个<code>map</code>。<code>:</code>前面而表示<code>key</code>，它是唯一的。<code>:</code>后面而表示<code>value</code>，它可以重复，<code>map</code>必须由<code>()</code>包裹，即使它里面没有值</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> (width: 10px, height: 20px);</span><br><span class="line">@<span class="keyword">debug</span> ();</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意：</em></strong>我们会发现空的<code>map</code>和空的<code>list</code>都可以使用<code>()</code>来表示，所以我们可以说它既是一个<code>map</code>也是一个<code>list</code>，其实每个<code>map</code>项都可以算做<code>两个list项</code>，比如<code>map (1:2, 3:4)</code>等同于<code>list (1 2, 3 4)</code></p>
-        
-          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-maps/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-maps/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-数据类型-lists" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/24/sass文档-数据类型-lists/">sass文档-数据类型-lists</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/24/sass文档-数据类型-lists/" class="archive-article-date">
-  	<time datetime="2020-07-24T06:26:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>中使用<code>逗号或者空格</code>来分列表项（必须一致，不能混用），列表项可以使用<code>()、[]</code>包裹，也可以不用包裹，列表项为空时，使用<code>()、[]</code>表示</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sizes0</span>: <span class="number">0</span>, <span class="number">0</span>;</span><br><span class="line"><span class="variable">$sizes1</span>: <span class="number">1px</span> <span class="number">1px</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$sizes2</span>: ();</span><br><span class="line"><span class="variable">$sizes3</span>: (<span class="number">3px</span> <span class="number">3px</span>);</span><br><span class="line"><span class="variable">$sizes4</span>: (<span class="number">4px</span>, <span class="number">4px</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$sizes5</span>: [];</span><br><span class="line"><span class="variable">$sizes6</span>: [<span class="number">6px</span>, <span class="number">6px</span>];</span><br><span class="line"><span class="variable">$sizes7</span>: [<span class="number">7px</span> <span class="number">7px</span>];</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-lists/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/24/sass文档-数据类型-lists/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/">Next &raquo;</a>
@@ -934,14 +948,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
               </li>
              
@@ -958,11 +964,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">

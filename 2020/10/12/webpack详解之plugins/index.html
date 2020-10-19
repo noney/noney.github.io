@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用plugins定制多种方式的构建过程，webpack提供了多种内置插件，也可以根据自己的需求编写插件。插件属性的值是一个数组 123456789101112131415161718var webpack = require(&apos;webpack&apos;);// importing plugins that do not come by def">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-15T08:50:03.197Z">
+<meta property="og:updated_time" content="2020-10-19T07:53:40.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack详解之plugins">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面使用plugins定制多种方式的构建过程，webpack提供了多种内置插件，也可以根据自己的需求编写插件。插件属性的值是一个数组 123456789101112131415161718var webpack = require(&apos;webpack&apos;);// importing plugins that do not come by def">
@@ -213,8 +213,16 @@ var _hmt = _hmt || [];
 <td>为<code>Content-Encoding</code>提供压缩版本</td>
 </tr>
 <tr>
-<td>ContextReplacementPlugin</td>
+<td><a href="http://0kv30q.coding-pages.com/2020/10/15/webpack%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E4%B9%8BContextReplacementPlugin/" target="_blank" rel="noopener">ContextReplacementPlugin</a></td>
 <td>替换解析<code>使用表达式方式引用模块</code>的规则</td>
+</tr>
+<tr>
+<td>CopyWebpackPlugin</td>
+<td>将已经存在的<code>单个文件</code>或<code>整个目录</code>复制到构建目录</td>
+</tr>
+<tr>
+<td>DefinePlugin</td>
+<td>创建可在编译时配置的全局常量</td>
 </tr>
 </tbody>
 </table>
@@ -437,14 +445,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
               </li>
              
@@ -461,11 +461,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ESLint</a>
               </li>
              
               <li class="article-tag-list-item">
