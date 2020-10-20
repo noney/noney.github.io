@@ -11,7 +11,7 @@
   <meta name="keywords" content="前端,es6,vue,webpack,express,thinkjs,nodejs">
 <meta property="og:type" content="website">
 <meta property="og:title" content="三人行必有我师">
-<meta property="og:url" content="//noney.github.io/page/7/index.html">
+<meta property="og:url" content="//noney.github.io/page/13/index.html">
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
@@ -165,20 +165,20 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-sass文档-数据类型-colors" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-webpack终极优化之dll篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/09/sass文档-数据类型-colors/">sass文档-数据类型-colors</a>
+      <a class="article-title" href="/2017/09/01/webpack终极优化之dll篇/">webpack终极优化之dll篇</a>
     </h1>
   
 
         
-        <a href="/2020/06/09/sass文档-数据类型-colors/" class="archive-article-date">
-  	<time datetime="2020-06-09T02:56:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-09</time>
+        <a href="/2017/09/01/webpack终极优化之dll篇/" class="archive-article-date">
+  	<time datetime="2017-09-01T03:40:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-01</time>
 </a>
         
       </header>
@@ -187,10 +187,12 @@ var _hmt = _hmt || [];
       
         <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
 <p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>内置了对<code>color</code>的支持</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> <span class="number">#f2ece4</span>; <span class="comment">// #f2ece4</span></span><br><span class="line">@<span class="keyword">debug</span> <span class="number">#b37399aa</span>; <span class="comment">// rgba(179, 115, 153, 67%)</span></span><br><span class="line">@<span class="keyword">debug</span> midnightblue; <span class="comment">// #191970</span></span><br><span class="line">@<span class="keyword">debug</span> rgb(<span class="number">204</span>, 102, 153); <span class="comment">// #c69</span></span><br><span class="line">@<span class="keyword">debug</span> rgba(<span class="number">107</span>, 113, 127, 0.8); <span class="comment">// rgba(107, 113, 127, 0.8)</span></span><br><span class="line">@<span class="keyword">debug</span> hsl(<span class="number">228</span>, 7%, 86%); <span class="comment">// #dadbdf</span></span><br><span class="line">@<span class="keyword">debug</span> hsla(<span class="number">20</span>, 20%, 85%, 0.7); <span class="comment">// rgb(225, 215, 210, 0.7)</span></span><br></pre></td></tr></table></figure>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>最近webpack很火，并且确实很好用，但是入手并不是很容易，过程中会遇到很多的坑，今天和大家踩的坑是关于第三方库的。在我们构建前端项目的时间，使用到第三方库的几率非常大，因为我们不需要自己造轮子，而且当前前端生态圈如此火热，涌现出一大批优秀的库和库架，如react、angular、vue 、jquery等。</p>
+<p>当我们用到这些库或框架的时候，我们用webpack打包的时候往往不需要把它们和逻辑代码打到一起，因为第三方库我们不需要去对它进行经常更新，需逻辑代码是我们需要经常更新的，而且如果每次我们修改逻辑代码的时候都要打包第三方库或框架，还会拖慢打包构建速度，做了一些无用功，所以接下来就和大家一起讨论一下如何单独打包第三方库或框架，我们的主角要登场了，那就是dll。</p>
+<h4 id="使用CommonsChunkPlugin"><a href="#使用CommonsChunkPlugin" class="headerlink" title="使用CommonsChunkPlugin"></a>使用CommonsChunkPlugin</h4><p>webpack官方建议使用CommonsChunkPlugin插件去处理第三方库或框架，它的作用是可以把第三方库或框架放在entry的vendor里面单独打包下面是部分代码完整代码请查看[bingoo]工具</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attribute">entry</span>: &#123;</span><br><span class="line">        <span class="attribute">vendors</span>: [<span class="string">'vue'</span>, <span class="string">'vuex'</span>]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attribute">plugins</span>: [</span><br><span class="line">        new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">            <span class="attribute">name</span>: [<span class="string">'vendors'</span>],</span><br><span class="line">            <span class="attribute">filename</span>: <span class="string">'vendors.js'</span>,</span><br><span class="line">            <span class="attribute">minChunks</span>: <span class="number">2</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2020/06/09/sass文档-数据类型-colors/#more">more >></a>
+          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/#more">more >></a>
         
       
 
@@ -204,11 +206,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">前端工具</a>
         		</li>
       		
 		</ul>
@@ -218,606 +220,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/09/sass文档-数据类型-colors/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-数据类型-string" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/08/sass文档-数据类型-string/">sass文档-数据类型-string</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/08/sass文档-数据类型-string/" class="archive-article-date">
-  	<time datetime="2020-06-08T08:56:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>支持带引号的字符串和不带引号的字符串。</p>
-<ul>
-<li><code>string.unquote()</code>函数，将带引号的字符串转换为不带引号的字符串</li>
-<li><code>string.quote()</code>函数，将不带引号的字符串转换为带引号的字符串</li>
-</ul>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:string"</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">debug</span> string.unquote(<span class="string">".widget:hover"</span>); <span class="comment">// .widget:hover</span></span><br><span class="line">@<span class="keyword">debug</span> string.quote(bold); <span class="comment">// "bold"</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/06/08/sass文档-数据类型-string/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/08/sass文档-数据类型-string/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-数据类型-number" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/08/sass文档-数据类型-number/">sass文档-数据类型-number</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/08/sass文档-数据类型-number/" class="archive-article-date">
-  	<time datetime="2020-06-08T03:28:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>中<code>number</code>类型包括两个部分，数字本身和单位（可以没有单位，也可以有多个单位）。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 100; <span class="comment">// 100</span></span><br><span class="line">@<span class="keyword">debug</span> 0.8; <span class="comment">// 0.8</span></span><br><span class="line">@<span class="keyword">debug</span> 16px; <span class="comment">// 16px</span></span><br><span class="line">@<span class="keyword">debug</span> 5px * 2px; <span class="comment">// 10px*px (read "square pixels")</span></span><br></pre></td></tr></table></figure>
-<p>Sass数字支持与CSS数字相同的格式，包括科学表示法，该表示法在数字和它的10次方之间使用一个e。由于浏览器对科学表示法的支持历来参差不齐，Sass总是将其编译为完全扩展的数字。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">debug</span> 5.2e3; <span class="comment">// 5200</span></span><br><span class="line">@<span class="keyword">debug</span> 6e-2; <span class="comment">// 0.06</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/06/08/sass文档-数据类型-number/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/08/sass文档-数据类型-number/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-At-Rules-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/03/sass文档-At-Rules-css/">sass文档-At-Rules-css</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/03/sass文档-At-Rules-css/" class="archive-article-date">
-  	<time datetime="2020-06-03T07:25:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>支持所有<code>CSS at-rule</code>规则。为了兼容未来的原生规则和向前兼容，<code>sass</code>提供了几乎覆盖所有的<code>CSS at-rule</code>规则，<code>CSS at-rule</code>写法<code>@&lt;name&gt; &lt;value&gt;, @&lt;name&gt; { ... }, or @&lt;name&gt; &lt;value&gt; { ... }</code>，名称必须是一个<code>标识符</code>，值可以是任何东西。名称和值都可以是<code>插值表达式</code></p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">namespace</span> svg url(http://www.w3.org/<span class="number">2000</span>/svg);</span><br><span class="line"></span><br><span class="line">@font-face &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Open Sans"</span>;</span><br><span class="line">    src: url(<span class="string">"/fonts/OpenSans-Regular-webfont.woff2"</span>) format(<span class="string">"woff2"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@counter-style thumbs &#123;</span><br><span class="line">    system: cyclic;</span><br><span class="line">    symbols: <span class="string">"\1F44D"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/06/03/sass文档-At-Rules-css/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/03/sass文档-At-Rules-css/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-流程控制" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/03/sass文档-流程控制/">sass文档-流程控制</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/03/sass文档-流程控制/" class="archive-article-date">
-  	<time datetime="2020-06-03T06:09:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>sass</code>提供了四种流程控制的规则，可以在<code>@function、@mixin</code>中使用：</p>
-<ul>
-<li><code>@if</code> 条件控制</li>
-<li><code>@each map</code>遍历</li>
-<li><code>@for</code> 次数遍历</li>
-<li><code>@while</code> 条件控制，直到条件满足</li>
-</ul>
-<h4 id="if-amp-else"><a href="#if-amp-else" class="headerlink" title="@if &amp; @else"></a>@if &amp; @else</h4><p>根据表达式返回值为<code>true、false</code>控制流程</p>
-        
-          <a class="article-more-a" href="/2020/06/03/sass文档-流程控制/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/03/sass文档-流程控制/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-At-Rules-root" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/02/sass文档-At-Rules-root/">sass文档-At-Rules-root</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/02/sass文档-At-Rules-root/" class="archive-article-date">
-  	<time datetime="2020-06-02T08:09:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@root &lt;selector&gt; { ... }</code> 跳出嵌套，以文档的<code>根部</code>为起点。</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@use <span class="string">"sass:selector"</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">mixin</span> unify-parent(<span class="variable">$child</span>) &#123;</span><br><span class="line">    @at-root #&#123;selector<span class="selector-class">.unify</span>(&amp;, <span class="variable">$child</span>)&#125; &#123;</span><br><span class="line">        @<span class="keyword">content</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrapper</span> <span class="selector-class">.field</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> unify-parent(<span class="string">"input"</span>) &#123;</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">include</span> unify-parent(<span class="string">"select"</span>) &#123;</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/06/02/sass文档-At-Rules-root/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/02/sass文档-At-Rules-root/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-At-Rules-error-warn-debug" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/02/sass文档-At-Rules-error-warn-debug/">sass文档-At-Rules-error-warn-debug</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/02/sass文档-At-Rules-error-warn-debug/" class="archive-article-date">
-  	<time datetime="2020-06-02T07:37:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>当<code>@mixin、@function</code>在接收参数时</p>
-<ul>
-<li>如果不是我们预期的格式和类型时，可以用<code>@error</code>来中断并报错</li>
-<li>如果传递的值并不是理想的值时，可以用@warn来做一个警告。</li>
-</ul>
-<p>我们可以使用<code>@debug</code>来做调试，可以使用它来打印<code>变量或者表达式</code>的值，同时还会输出<code>文件名和行号</code>。</p>
-<h4 id="error"><a href="#error" class="headerlink" title="error"></a>error</h4><p><code>@error &lt;expression&gt;</code> 打印输出错误</p>
-        
-          <a class="article-more-a" href="/2020/06/02/sass文档-At-Rules-error-warn-debug/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/02/sass文档-At-Rules-error-warn-debug/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sass文档-At-Rules-extend" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/29/sass文档-At-Rules-extend/">sass文档-At-Rules-extend</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/29/sass文档-At-Rules-extend/" class="archive-article-date">
-  	<time datetime="2020-05-29T07:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>@extend</code>扩展样式，解决一个类中拥有其它类相同的样式和属于自己的样式，这时我们就可以扩展相同的样式。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"error error--serious"</span>&gt;</span></span><br><span class="line">    Oh no! You've been hacked!</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.error</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#f00</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#fdd</span>;</span><br><span class="line"></span><br><span class="line">    &amp;--serious &#123;</span><br><span class="line">        @<span class="keyword">extend</span> .error;</span><br><span class="line">        <span class="attribute">border-width</span>: <span class="number">3px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/05/29/sass文档-At-Rules-extend/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/29/sass文档-At-Rules-extend/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/09/01/webpack终极优化之dll篇/">展开全文 >></a>
         </p>
       
 
@@ -849,7 +252,7 @@ var _hmt = _hmt || [];
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/6/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/8/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/12/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
     </nav>
   
 
