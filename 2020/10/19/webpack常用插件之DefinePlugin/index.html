@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="三人行必有我师">
 <meta property="og:description" content="—— 同时发表于coding 作者：Noney Li 写在前面定义可在编译阶段使用的全局常量，可以在业务代码中使用。如可以使用它来区分构建环境 123new webpack.DefinePlugin(&amp;#123;  &apos;process.env.NODE_ENV&apos;: JSON.stringify(process.env.NODE_ENV)&amp;#125;); 每个传进DefinePlugin的key都是一">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-19T09:06:14.550Z">
+<meta property="og:updated_time" content="2020-10-19T09:27:55.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack常用插件之DefinePlugin">
 <meta name="twitter:description" content="—— 同时发表于coding 作者：Noney Li 写在前面定义可在编译阶段使用的全局常量，可以在业务代码中使用。如可以使用它来区分构建环境 123new webpack.DefinePlugin(&amp;#123;  &apos;process.env.NODE_ENV&apos;: JSON.stringify(process.env.NODE_ENV)&amp;#125;); 每个传进DefinePlugin的key都是一">
@@ -203,8 +203,8 @@ var _hmt = _hmt || [];
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="built_in">console</span>.log(wa, wb, wc, wd, wd.d, wf, wf[<span class="number">0</span>], wg, <span class="keyword">typeof</span> <span class="built_in">window</span>); <span class="comment">// 1, b, (() =&gt; 'c'), (&#123;"d":1&#125;), 1, [a,b], a, true, "object1"</span></span><br></pre></td></tr></table></figure>
 <p><strong><em>注意：</em></strong></p>
 <ul>
-<li>我们需要使用<code>process.env.NODE_ENV</code>去覆盖<code>NODE_ENV</code>，定义<code>process</code>、<code>process.env</code>会覆盖整个进行对象</li>
-<li>由于插件将直接替换为文本，所以值必须包含字符串本身内部的引号。如<code>&#39;&quot;production&quot;&#39;</code>或<code>JSON.stringify(&#39;production&#39;)</code></li>
+<li>我们需要使用<code>process.env.NODE_ENV</code>去覆盖<code>NODE_ENV</code>，定义<code>process</code>、<code>process.env</code>会覆盖整个进程对象</li>
+<li>由于插值将直接替换为文本，所以值必须包含字符串本身内部的引号。如<code>&#39;&quot;production&quot;&#39;</code>或<code>JSON.stringify(&#39;production&#39;)</code></li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> webpack.DefinePlugin(&#123;</span><br><span class="line">  <span class="string">'process.env.NODE_ENV'</span>: <span class="string">'"production"'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line"><span class="keyword">new</span> webpack.DefinePlugin(&#123;</span><br><span class="line">  <span class="string">'process.env.NODE_ENV'</span>: <span class="built_in">JSON</span>.stringify(<span class="string">'production'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="built_in">console</span>.log(process.env.NODE_ENV); <span class="comment">// "production"</span></span><br></pre></td></tr></table></figure>
@@ -307,6 +307,15 @@ var _hmt = _hmt || [];
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/10/19/webpack常用插件之DllPlugin/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          webpack常用插件之DllPlugin
+        
+      </div>
+    </a>
   
   
     <a href="/2020/10/19/webpack常用插件之CopyWebpackPlugin/" id="article-nav-older" class="article-nav-link-wrap">
@@ -430,19 +439,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">

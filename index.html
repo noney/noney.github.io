@@ -165,6 +165,97 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-webpack常用插件之DllPlugin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/19/webpack常用插件之DllPlugin/">webpack常用插件之DllPlugin</a>
+    </h1>
+  
+
+        
+        <a href="/2020/10/19/webpack常用插件之DllPlugin/" class="archive-article-date">
+  	<time datetime="2020-10-19T09:32:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
+<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
+<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p>分割<code>bundle</code>，提高构建性能，和<code>DllReferencePlugin</code>配合使用</p>
+<h4 id="DllPlugin"><a href="#DllPlugin" class="headerlink" title="DllPlugin"></a>DllPlugin</h4><p>使用单独的配置构建一个<code>dll</code>包。它生成一个<code>manifest.json</code>，<code>DllReferencePlugin</code>使用该文件映射依赖关系</p>
+<h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><ul>
+<li>context <code>可选</code> <code>manifest</code>文件中包含模块的解析上下文（默认值为<code>webpack</code>的上下文）</li>
+<li>format <code>boolean=false</code>，值为<code>true</code>时，生成的<code>manifest.json</code>文件会被格式化</li>
+<li>name <code>dll</code>暴露的对象名（<code>manifest.json</code>中的<code>name</code>字段），可以使用<a href="https://github.com/webpack/webpack/blob/master/lib/TemplatedPathPlugin.j" target="_blank" rel="noopener">点位符</a>: <code>[fullhash]</code> &amp; <code>[name]</code></li>
+<li>path <code>manifest json</code>文件的输出路径（<code>绝对路径</code>，必须指定文件名）</li>
+<li>entryOnly <code>boolean=true</code>，值为<code>true</code>时，只有入口文件才会被导出</li>
+<li>type <code>dll bundle</code>类型</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/10/19/webpack常用插件之DllPlugin/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/10/19/webpack常用插件之DllPlugin/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-webpack常用插件之DefinePlugin" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -760,92 +851,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-webpack详解之optimization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/10/webpack详解之optimization/">webpack详解之optimization</a>
-    </h1>
-  
-
-        
-        <a href="/2020/10/10/webpack详解之optimization/" class="archive-article-date">
-  	<time datetime="2020-10-10T06:29:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>—— 同时发表于<a href="http://0kv30q.coding-pages.com/" target="_blank" rel="noopener">coding</a></em></p>
-<p><strong>作者：<a href="https://github.com/noney/" title="noneyli" target="_blank" rel="noopener">Noney Li</a></strong></p>
-<h4 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h4><p><code>webpack 4</code>开始会根据不同<code>模式</code>内置相应的<code>优化配置</code>（有效的简化的复杂配置），但还是支持<code>手动配置</code>和对内置优化配置的<code>覆盖</code></p>
-<h4 id="最小化"><a href="#最小化" class="headerlink" title="最小化"></a>最小化</h4><ul>
-<li>minimize <code>boolean = true</code> 设置是否使用 <a href="https://webpack.js.org/plugins/terser-webpack-plugin/" target="_blank" rel="noopener">TerserPlugin</a>插件对<code>bundle</code>进行<code>最小化</code>处理，当值为<code>true</code>时，还可以使用<code>optimization.minimizer</code>配置覆盖默认最小化设置</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">optimization: &#123;</span><br><span class="line">  minimize: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/10/10/webpack详解之optimization/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日积月累</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">webpack</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/10/10/webpack详解之optimization/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -939,19 +944,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Jmeter</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">性能测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">日积月累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MarkDown</a>
               </li>
              
               <li class="article-tag-list-item">
